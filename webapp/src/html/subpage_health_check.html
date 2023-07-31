@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/head.html')
+</head>
+
+<body>
+    <!--  data-theme="dark" -->
+    <div class="wrap">
+        <div class="header" data-content="new">
+            <div class="title">
+                <button type="button" class="btn-back">뒤로가기</button>
+                <h2 class="sub-title">기준정보관리 Health Check</h2>
+            </div>
+            <div class="member">
+                <div>
+                    <span class="name">홍길동</span> <span class=" rank">팀장</span> (<span class="team">CTO 인프라아키텍처담당
+                        SINGLEX아키텍처팀</span>)
+                </div>
+            </div>
+        </div>
+        <div class="content" data-content="new">
+            <div class="top-area type-sub">
+                <!-- 2022-07-11 태그 수정 -->
+                <div class="btn-sort total">
+                    <span class="status good">Total tenant</span>
+                    <span class="count">2</span>
+                </div>
+                <div class="btn-sort good">
+                    <span class="tit">Good <small>(99% 이상)</small></span>
+                    <span class="count">1</span>
+                </div>
+                <div class="btn-sort warn">
+                    <span class="tit">Warning <small>(70~99% 미만)</small></span>
+                    <span class="count">1</span>
+                </div>
+                <div class="btn-sort bad">
+                    <span class="tit">Bad <small>(70% 미만)</small></span>
+                    <span class="count">0</span>
+                </div>
+                <!-- // 2022-07-11 태그 수정 -->
+            </div>
+            <div class="content-tit">Health Check by Indicator</div>
+            <!-- 2022-07-21 아코디언 구조 수정 -->
+            <div class="main-area-half">
+                <div class="main-area accordion">
+                    <div class="sort-box">
+                        <div class="type-accordion one">
+                            <div class="accordion-wrap good">
+                                <!-- 2022-06-27 아코디언 구조 수정 (아코디언 클릭영역 수정) -->
+                                <div class="accordion-box">
+                                    <button class="accordion-tit">
+                                        <span class="svc-name">기준정보 관리(MDM)</span>
+                                        <span class="svc-status">
+                                            <span class="status good">3</span>
+                                            <span class="status warn">1</span>
+                                            <span class="status bad">0</span>
+                                        </span>
+                                    </button>
+                                    <button type="button" class="btn-popup cl-black">Health check Report 팝업 열기</button>
+                                </div>
+                                <div class="accordion-cont">
+                                    <ul class="health-check cl-black">
+                                        <li>
+                                            <p class="health-check-name">Database Health Check</p>
+                                            <p class="status good">Good</p>
+                                            <div class="all-status">
+                                                <div class="status-bar-area">
+                                                    <span class="status good"></span>
+                                                    <span class="status warn"></span>
+                                                    <span class="status bad"></span>
+                                                    @@for (var i = 0; i < 47; i++) { <span class="status good"></span>
+                                                        }
+                                                </div>
+                                                <div class="time-area">
+                                                    <p class="time">11:20</p>
+                                                    <p class="time">13:20</p>
+                                                    <p class="time">15:20</p>
+                                                    <p class="time">17:20</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="health-check-name">Frontend Health Check</p>
+                                            <p class="status warn">Warning</p>
+                                            <div class="all-status">
+                                                <div class="status-bar-area">
+                                                    <span class="status good"></span>
+                                                    <span class="status warn"></span>
+                                                    <span class="status bad"></span>
+                                                    @@for (var i = 0; i < 47; i++) { <span class="status good"></span>
+                                                        }
+                                                </div>
+                                                <div class="time-area">
+                                                    <p class="time">11:20</p>
+                                                    <p class="time">13:20</p>
+                                                    <p class="time">15:20</p>
+                                                    <p class="time">17:20</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="health-check-name">Backend Health Check</p>
+                                            <p class="status bad">Bad</p>
+                                            <div class="all-status">
+                                                <div class="status-bar-area">
+                                                    <span class="status good"></span>
+                                                    <span class="status warn"></span>
+                                                    <span class="status bad"></span>
+                                                    @@for (var i = 0; i < 47; i++) { <span class="status good"></span>
+                                                        }
+                                                </div>
+                                                <div class="time-area">
+                                                    <p class="time">11:20</p>
+                                                    <p class="time">13:20</p>
+                                                    <p class="time">15:20</p>
+                                                    <p class="time">17:20</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sort-box">
+                        <div class="type-accordion one">
+                            @@include('./include/accordion_one_service01.html')
+                        </div>
+                    </div>
+                    <div class="sort-box">
+                        <div class="type-accordion one">
+                            @@include('./include/accordion_one_service01.html')
+                        </div>
+                    </div>
+                    <div class="sort-box">
+                        <div class="type-accordion one">
+                            @@include('./include/accordion_one_service01.html')
+                        </div>
+                    </div>
+                </div>
+                <div class="main-area accordion">
+                    <div class="sort-box">
+                        <div class="type-accordion one">
+                            <div class="accordion-wrap good">
+                                <!-- 2022-06-27 아코디언 구조 수정 (아코디언 클릭영역 수정) -->
+                                <div class="accordion-box">
+                                    <button class="accordion-tit">
+                                        <span class="svc-name">기준정보 관리(MDM)</span>
+                                        <span class="svc-status">
+                                            <span class="status good">3</span>
+                                            <span class="status warn">1</span>
+                                            <span class="status bad">0</span>
+                                        </span>
+                                    </button>
+                                    <button type="button" class="btn-popup cl-black">Health check Report 팝업 열기</button>
+                                </div>
+                                <div class="accordion-cont">
+                                    <ul class="health-check cl-black">
+                                        <li>
+                                            <p class="health-check-name">Database Health Check</p>
+                                            <p class="status good">Good</p>
+                                            <div class="all-status">
+                                                <div class="status-bar-area">
+                                                    <span class="status good"></span>
+                                                    <span class="status warn"></span>
+                                                    <span class="status bad"></span>
+                                                    @@for (var i = 0; i < 47; i++) { <span class="status good"></span>
+                                                        }
+                                                </div>
+                                                <div class="time-area">
+                                                    <p class="time">11:20</p>
+                                                    <p class="time">13:20</p>
+                                                    <p class="time">15:20</p>
+                                                    <p class="time">17:20</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="health-check-name">Frontend Health Check</p>
+                                            <p class="status warn">Warning</p>
+                                            <div class="all-status">
+                                                <div class="status-bar-area">
+                                                    <span class="status good"></span>
+                                                    <span class="status warn"></span>
+                                                    <span class="status bad"></span>
+                                                    @@for (var i = 0; i < 47; i++) { <span class="status good"></span>
+                                                        }
+                                                </div>
+                                                <div class="time-area">
+                                                    <p class="time">11:20</p>
+                                                    <p class="time">13:20</p>
+                                                    <p class="time">15:20</p>
+                                                    <p class="time">17:20</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="health-check-name">Backend Health Check</p>
+                                            <p class="status bad">Bad</p>
+                                            <div class="all-status">
+                                                <div class="status-bar-area">
+                                                    <span class="status good"></span>
+                                                    <span class="status warn"></span>
+                                                    <span class="status bad"></span>
+                                                    @@for (var i = 0; i < 47; i++) { <span class="status good"></span>
+                                                        }
+                                                </div>
+                                                <div class="time-area">
+                                                    <p class="time">11:20</p>
+                                                    <p class="time">13:20</p>
+                                                    <p class="time">15:20</p>
+                                                    <p class="time">17:20</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sort-box">
+                        <div class="type-accordion one">
+                            @@include('./include/accordion_one_service01.html')
+                        </div>
+                    </div>
+                    <div class="sort-box">
+                        <div class="type-accordion one">
+                            @@include('./include/accordion_one_service01.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mode">
+            <input type="checkbox" id="mode" checked>
+            <label for="mode">라이트모드</label>
+        </div>
+    </div>
+
+    <div id="modal1" class="modal-wrap information">
+        <strong class="tit">상세정보</strong>
+        <dl class="table">
+            <dt>Indicator</dt>
+            <dd>Latency - 결재선 찾기</dd>
+            <dt>SLO</dt>
+            <dd>99%</dd>
+            <dt>State</dt>
+            <dd class="up warn">Warning 81.1</dd>
+            <dt>Error Budget</dt>
+            <dd>67’</dd>
+            <dt>잔여 Error Budget</dt>
+            <dd class="warn">24’</dd>
+            <dt>Details</dt>
+            <dd>원인을 상세하게 작성합니다.</dd>
+        </dl>
+        <button type="button" class="btn-close">닫기</button>
+    </div>
+
+    <script>
+        // popup
+        $(document).on({
+            click: function () {
+                const popupData = $(this).data("modal");
+                const thisPopup = $("#" + popupData);
+                const position = $(this).offset();
+
+                if (thisPopup.hasClass("information")) {
+                    $(".modal-wrap").hide();
+                    thisPopup.show();
+                    thisPopup.css("top", (position.top) - 270 + "px");
+                    thisPopup.css("left", (position.left) - 420 + "px");
+                    thisPopup.focus();
+                    return;
+                }
+
+                $(".modal-wrap").hide();
+                thisPopup.show();
+                thisPopup.css("top", (position.top) + 37 + "px");
+                thisPopup.css("left", (position.left) - 250 + "px");
+                thisPopup.focus();
+            }
+        }, ".modal-open")
+
+        // popup 닫기 이벤트
+        $(document).on({
+            click: function () {
+                const popup = $(this).parents(".modal-wrap");
+                popup.hide();
+            }
+        }, ".modal-wrap .btn-close")
+
+        // accordion
+        $(document).on({
+            click: function () {
+                const accordionWrap = $(this).closest(".accordion-wrap");
+
+                if (accordionWrap.hasClass("on")) {
+                    accordionWrap.removeClass("on")
+                } else {
+                    accordionWrap.addClass("on")
+                }
+            }
+        }, ".accordion-tit")
+
+        // switch
+        $(document).on({
+            click: function () {
+                const switchCheck = $(".mode input[type='checkbox']");
+                const switchTxt = $(".mode label");
+                const body = $("body");
+
+                if (switchCheck.is(":checked")) {
+                    switchTxt.html("라이트모드")
+                    body.attr("data-theme", "")
+                } else {
+                    switchTxt.html("다크<br>모드")
+                    body.attr("data-theme", "dark")
+                }
+            }
+        }, ".mode")
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+/* tab */
+.tab-menu
+    position: relative
+    .btn-help
+        position: absolute
+        top: 0
+        right: 0
+.tab-btn 
+    display: inline-flex
+    border: 1px solid var(--border-tab)
+        bottom: none
+    a 
+        /* width: 200px */
+        padding: 7px 71.5px
+        
+        color: var(--text-tab)
+        border-left: 1px solid var(--border-tab)
+        cursor: pointer
+        background: var(--bg-tab)
+
+        &:first-child 
+            border-left: none
+        
+        &.on 
+            background: var(--bg-tab-active)
+            color: var(--text-tab-active)
+        
+        .tab-title
+            font:
+                size: 12px
+                weight: 700
+            line-height: 18px
+    
+.tab-wrap
+
+.tab-content 
+    display: none
+    padding-top: 15px
+    border-top: 1px solid var(--border-tab-content)
+
+
+    &.on
+        display: block
+    
+    .top-area 
+        display: flex
+
+.accordion-cont,
+#MainFrame .accordion-cont
+    .tab-btn
+        border: none
+        button
+            @include reset-bt
+            position: relative
+            background: transparent !important
+            border-left: none
+            line-height: 32px
+            margin-left: 18px
+            
+            .tab-title
+                font:
+                    size: 14px
+                    weight: 500
+                color: var(--text-tab2) !important
+            
+            &.on
+                .tab-title
+                    color: var(--text-tab-active2) !important
+                &::after
+                   content: ""
+                   display: block
+                   position: absolute
+                   left: 0
+                   bottom: 0
+                   width: 100%
+                   height: 2px
+                   background: var(--bg-tab-active-bar) !important
+
+    .tab-content-wrap
+        border-top: none
+        margin-top: 8px
+    
+    .tab-content
+        background: var(--bg-tenant-data)
+        padding-top: 0  
+        border-top: none  

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout Guide</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover">
+	<link rel="stylesheet" href="../../css/style.css">
+
+	<!-- 가이드용 -->
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/pretty.css">
+	<!--//  가이드용 -->
+
+	<style>
+		.tag:not(body){
+			align-items : baseline;
+			background : none;
+			display : inline;
+			padding : 0;
+			height : auto;
+		}
+	</style>
+</head>
+<body>
+
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">Layout</h1>
+	<h2 class="h2_guide">head</h2>
+	<div class="d_desc code">
+	<!-- code -->
+	<xmp class="prettyprint linenums javascript">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../lib/c3/c3.min.css">
+	<link rel="stylesheet" href="../lib/swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../lib/jquery/jquery.min.js"></script>
+	<script src="../lib/c3/d3-5.4.0.min.js"></script>
+	<script src="../lib/c3/c3.min.js"></script>
+	<script src="../lib/swiper/swiper-bundle.min.js"></script>
+
+	<title>SINGLEX Dashboard</title>
+</head>
+	</xmp>
+	<!-- // code -->
+	</div>
+
+	<h2 class="h2_guide">header</h2>
+	<div class="d_desc code">
+	<!-- code -->
+	<xmp class="prettyprint linenums javascript">
+<div class="header" data-content="new">
+	<div class="title">
+		<h1 class="main-title">서비스 운영 현황</h1>
+		<button type="button" class="btn-bookmark">즐겨찾기</button>
+		<a href="javascript:;" class="link">바로가기</a>
+	</div>
+	<div class="member">
+		<div>
+			<span class="name">홍길동</span> <span class=" rank">팀장</span> (<span class="team">CTO 인프라아키텍처담당 SINGLEX아키텍처팀</span>)
+		</div>
+	</div>
+</div>
+	</xmp>
+	<!-- // code -->
+	</div>
+
+	<h2 class="h2_guide">Main page layout</h2>
+	<div class="d_desc code">
+	<!-- code -->
+	<xmp class="prettyprint linenums javascript">
+/*
+* 탭 콘텐츠 상단 영역(top-area) + 콘텐츠 내부(main-area) 4분할 section으로 분리
+*/
+<div class="wrap">
+	<div class="header">
+		<div class="title"><!-- 타이틀 --></div>
+		<div class="member"><!-- 회원정보 --></div>
+	</div>
+	<div class="content">
+		<div class="tab-btn"><!-- 탭 버튼 --></div>
+		<div class="tab-content-wrap">
+			<!-- Service Tab -->
+			<div class="tab-content">
+				<div class="top-area"><!-- 셀렉트박스 & chip 등 상단영역 --></div>
+		
+				<div class="main-area">
+					<section>
+						<div class="type"><!-- 차트 or 아코디언 --></div>
+					</section>
+
+					<section>
+						<div class="type"><!-- 차트 or 아코디언 --></div>
+					</section>
+		
+					<section>
+						<div class="type"><!-- 차트 or 아코디언 --></div>
+					</section>
+					
+					<section>
+						<div class="type"><!-- 차트 or 아코디언 --></div>
+					</section>
+				</div>
+			</div>
+			<!-- Tenant Tab -->
+			<div class="tab-content">
+				<div class="top-area"><!-- 셀렉트박스, 버튼 등 상단영역 --></div>
+				<div class="main-area accordion">
+					<!-- "sort=-box"는 좌우 정렬 박스입니다 -->
+					<div class="sort-box">
+						<div class="type-accordion tenant"><!--아코디언 --></div>
+					</div>
+					<div class="sort-box">
+						<div class="type-accordion tenant"><!--아코디언 --></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- dark & light mode -->
+	<div class="mode">
+		<input type="checkbox" id="mode">
+		<label for="mode">모드</label>
+	</div>
+</div>
+
+	</xmp>
+	<!-- // code -->
+	</div>
+
+	<h2 class="h2_guide">Sub page layout</h2>
+	<div class="d_desc code">
+	<!-- code -->
+	<xmp class="prettyprint linenums javascript">
+<div class="wrap">
+	<div class="header">
+		<div class="title"><!-- 타이틀 --></div>
+		<div class="member"><!-- 회원정보 --></div>
+	</div>
+	<div class="content">
+		<!-- Service Tab -->
+		<div class="tab-content">
+			<div class="top-area"><!-- 소팅버튼 영역 --></div>
+	
+			<div class="content-tit"><!-- 콘텐츠 타이틀 --></div>
+			<div class="main-area accordion">
+				<div class="sort-box">
+					<div class="type"><!-- 아코디언 --></div>
+				</div>
+				<div class="sort-box">
+					<div class="type"><!-- 아코디언 --></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- dark & light mode -->
+	<div class="mode">
+		<input type="checkbox" id="mode">
+		<label for="mode">모드</label>
+	</div>
+</div>
+
+	</xmp>
+	<!-- // code -->
+	</div>
+
+	<h2 class="h2_guide">Popup layout</h2>
+	<div class="d_desc code">
+	<!-- code -->
+	<xmp class="prettyprint linenums javascript">
+<modal>
+	<div>
+		<wsg-dialog>
+			<wd-title><!-- 팝업 타이틀명 --></wd-title>
+			<wd-message>
+				<div class="legend type-table"><!-- 범례 --></div>
+				<table><!-- 테이블 내용 --></table>
+		
+				<button type="button" class="btn-close">닫기</button>
+			</wd-message>
+		</wsg-dialog>
+	</div>
+</modal>
+	</xmp>
+	<!-- // code -->
+	</div>
+
+</div>
+<script type="text/javascript" src="../../coding_list/js/pretty.js"></script>
+</body>
+</html>

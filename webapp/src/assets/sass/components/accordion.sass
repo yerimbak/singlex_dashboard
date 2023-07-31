@@ -1,0 +1,688 @@
+/* accordion */
+.type-accordion,
+#MainFrame .type-accordion
+    overflow: hidden
+    .accordion-title
+        color: var(--text-section-title)
+        @include font-h3
+        padding-bottom: 12px
+
+    .accordion-wrap 
+        width: 100%
+        margin-top: 5px
+        line-height: 20px
+        background: var(--bg-accordion)
+        &:first-child 
+            margin-top: 0
+
+        &.good 
+            .accordion-tit
+                .svc-name::before 
+                    background: var(--status-confirmed) !important
+
+        &.warn
+            .accordion-tit
+                .svc-name::before 
+                    background: var(--status-warning) !important
+
+        &.bad 
+            .accordion-tit
+                .svc-name::before 
+                    background: var(--status-error) !important
+
+        &.on 
+            .accordion-tit
+                &::after 
+                    background: url("../image/light/icon-accordion-arrow-on.png") center no-repeat !important
+            .accordion-cont
+                @include flex-box
+                flex-wrap: wrap
+        
+    .accordion-tit 
+        @include reset-bt
+        position: relative
+        display: block
+        width: 100%
+        @include flex-box-sb
+        align-items: center
+        flex-wrap: wrap
+        color: var(--text-accordion) !important
+        padding: 20px 50px 20px 20px
+        &::after 
+            content: ""
+            display: block
+            width: 12px
+            height: 12px
+            position: absolute
+            right: 20px
+            top: 50%
+            transform: translateY(-50%)
+            background: url("../image/light/icon-accordion-arrow-off.png") center no-repeat !important
+            margin-left: 20px
+ 
+        .svc-name 
+            display: block
+            @include ellipsis
+            @include font-h5
+            position: relative
+            flex-basis: calc(100% - 124px)
+            text-align: left
+            padding-left: 26px
+            &::before 
+                content: ""
+                display: block
+                position: absolute
+                left: 0
+                top: 2px
+                width: 16px
+                height: 16px
+                border-radius: 9999px
+            
+        .svc-status
+            width: 112px
+            display: block
+            @include flex-box
+            justify-content: flex-end
+            align-items: center
+            // width: 112px
+
+            .status 
+                display: block
+                // float: left
+                @include flex-box
+                align-items: center
+                @include font-number
+                @include font-h6
+                position: relative
+                margin-left: 13px
+                color: var(--text-accordion-status)
+                &:first-child
+                    margin-left: 0
+                &::before 
+                    content: ""
+                    display: block
+                    // position: absolute
+                    // left: 0
+                    // top: 4.5px
+                    width: 10px
+                    height: 10px
+                    border-radius: 9999px
+                    margin:
+                        top: 2px
+                        right: 6px
+                &.good::before 
+                    background: var(--status-confirmed)
+                
+                &.warn::before 
+                    background: var(--status-warning)
+                
+                &.bad::before 
+                    background: var(--status-error)
+
+                // &::after
+                //     content: ""
+                //     display: block
+                //     clear: both   
+
+
+    &.multi
+        width: 100%
+        .service
+            // @include flex-box-sb
+            // align-items: flex-start
+            // flex-wrap: wrap
+            .accordion-wrap 
+                width: 100%
+                margin-top: 5px
+                &:first-child
+                    margin-top: 0
+
+    &.simple
+        .svc-name
+            flex-basis: calc(100% - 78px)
+            padding-left: 0
+            &::before
+                display: none
+
+        .accordion-wrap
+            &.good
+                .status
+                    color: var(--status-confirmed)
+            &.warn
+                .status
+                    color: var(--status-warning)
+            &.bad
+                .status
+                    color: var(--status-error)
+
+        .accordion-tit
+            .status
+                flex-basis: 78px
+                font: 
+                    size: 14px
+                    weight: 700
+                text-align: left
+                &::before
+                    content: "●"
+                    display: inline-block
+                    font:
+                        size: 14px
+                        weight: 700
+                    margin-right: 6px
+            
+            &::after
+                margin-left: 10px
+
+    .accordion-cont
+        display: none
+        width: 100%
+        padding:
+            right: 20px
+            bottom: 20px
+            left: 20px
+        gap: 6px 
+
+        > a
+            padding: 6.5px 20px
+            border-radius: 25px
+            color: #FFFFFF
+            font:
+                size: 12px
+                weight: 700
+            line-height: 17px
+            word-break: keep-all
+
+            &.good
+                background: var(--status-confirmed)
+            &.warn
+                background: var(--status-warning)
+            &.bad
+                background: var(--status-error)
+
+            .minute
+                &::before
+                    content: ""
+                    display: inline-block
+                    margin:
+                        left: 5px
+                        right: 5px
+                &.up
+                    &::before
+                        content: "▲"
+                &.down
+                    &::before
+                        content: "▼"
+
+    .health-check
+        width: 100%
+        background: var(--bg-healthcheck-list)
+        // padding: 16px
+        li
+            @include flex-box-sb
+            align-items: center
+            padding: 12px 44px
+            border-bottom: 1px solid var(--border-healthcheck-list)
+            .health-check-name
+                flex-basis: calc(100% - 426px) //331
+
+            > .status
+                position: relative
+                flex-basis: 218px
+                font:
+                    size: 14px
+                    weight: 500
+                text-align: left
+                line-height: 20px
+                padding-left: 16px
+
+                &.good
+                    color: var(--status-confirmed)
+                    &::before
+                        background: var(--status-confirmed)
+                &.warn
+                    color: var(--status-warning)
+                    &::before
+                        background: var(--status-warning)
+                &.bad
+                    color: var(--status-error)
+                    &::before
+                        background: var(--status-error)
+                &::before
+                    content: ""
+                    display: block
+                    position: absolute
+                    left: 0
+                    top: 5.5px
+                    width: 10px
+                    height: 10px
+                    margin-right: 5px
+                    border-radius: 50px
+
+        .health-check-name
+            font:
+                size: 14px
+                weight: 500
+            color: var(--text-ul-title)
+
+        .all-status
+            width: 208px
+
+        .status-bar-area
+            @include flex-box-sb
+            gap: 2px
+            .status
+                display: block
+                width: 2px
+                height: 14px
+
+                &.good
+                    background: var(--status-confirmed)
+                &.warn
+                    background: var(--status-warning)
+                &.bad
+                    background: var(--status-error)
+        
+        .time-area
+            @include flex-box-sb
+            margin-top: 4px
+
+            .time
+                font:
+                    size: 12px
+                line-height: 18px
+                color: var(--text-healthcheck-time)
+
+    .health-check
+        &.cl-black
+            li
+                background: var(--bg-healthcheck-list2)
+
+    .slo
+        width: 100%
+        li
+            // @include flex-box-sb
+            display: flex
+            border-bottom: 1px solid var(--border-slo-list)
+            // height: 71px
+
+        .slo-name
+            // flex-grow: 1
+            flex-shrink: 0
+            font:
+                size: 13px
+                weight: 500
+            line-height: 20px
+            padding: 25px 12px
+            flex-basis: calc( 100% - 514px )
+            // width: 372px
+            color: var(--text-ul-title)
+            background: var(--bg-slo01)
+            // word-break: break-all
+
+        .slo-info
+            width: 514px
+            @include flex-box
+            flex-grow: 0
+            > *
+                line-height: 20px
+                padding: 20px 0
+
+            > .status
+                flex-basis: 190px
+                flex-grow: 0
+                flex-shrink: 0
+                word-break: break-all
+                padding: 25px 10px
+                background: var(--bg-slo02)
+                // &::before
+                //     content: "●"
+                //     margin-right: 5px
+
+                font:
+                    size: 16px
+                    weight: 700
+                text-align: left
+
+                &.good
+                    color: var(--status-confirmed)
+                // &.warn
+                //     color: var(--status-warning)
+                &.bad
+                    color: var(--status-error)
+
+
+        .error-budget
+            flex-basis: 123px
+            flex-grow: 0
+            flex-shrink: 0
+            word-break: break-all
+            font:
+                size: 13px
+                weight: 700
+            color: var(--text-error-budget)
+            padding: 25px 10px
+            background: var(--bg-slo03)
+
+        .residual
+            flex-basis: 135px
+            flex-grow: 0
+            flex-shrink: 0
+            word-break: break-all
+            padding: 25px 15px
+            background: var(--bg-slo02)
+            &::before
+                content: "●"
+                font:
+                    size: 15px
+                    weight: 700
+                margin-right: 5px
+            // &.up
+            //     &::before
+            //         content: "▲"
+            // &.down
+            //     &::before
+            //         content: "▼"                    
+
+            &.good
+                color: var(--status-confirmed)
+            &.warn
+                color: var(--status-warning)
+            &.bad
+                color: var(--status-error)
+
+        .btn
+            height: inherit
+            font-size: 0
+            flex-grow: 0
+            flex-shrink: 0
+            flex-basis: 66px
+            padding: 25px 15px
+            background: var(--bg-slo02)
+            transition: none !important
+            .tooltip
+                margin-left: 0
+
+
+    &.tenant
+        padding: 0
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08)
+        border-radius: 5px
+            
+        .accordion-wrap
+            background: var(--bg-tenant-accordion)
+
+            .accordion-tit
+                display: block
+                padding: 15px 15px 10px
+                &::after
+                    width: 16px
+                    height: 16px
+                    background: url("../image/light/icon-accordion-arrow2-off.png") center no-repeat
+            
+            &.on
+                .accordion-tit
+                    &::after
+                        background: url("../image/light/icon-accordion-arrow2-on.png") center no-repeat
+                
+        .content
+            padding-top: 5px
+
+        .svc-name
+            padding-left: 0
+            text-align: left
+
+        .tenant-data
+            @include flex-box-sb
+            // padding-top: 10px
+            padding: 0 15px 15px
+
+        .inner
+            position: relative
+            width: calc((100% - 20px) / 2)
+            background: var(--bg-tenant-data)
+            border-radius: 10px
+            padding: 20px
+
+            .tit
+                font:
+                    size: 13px
+                    weight: 700
+                line-height: 19px
+                color: var(--text-section-title)
+                cursor: pointer
+                small
+                    font:
+                        size: 12px
+                        weight: 400
+                    color: var(--text-tenant-title-small)
+            
+            .status
+                position: relative
+                width: 91px
+                font:
+                    size: 24px
+                    weight: 700
+                line-height: 33px
+                margin: 24px auto
+                padding-left: 28px
+                &::before
+                    content: ""
+                    display: block
+                    position: absolute
+                    left: 0
+                    top: 6.5px
+                    width: 20px
+                    height: 20px
+                    border-radius: 20px
+                &.good
+                    color: var(--status-confirmed)
+                    &::before
+                        background: var(--status-confirmed)
+                &.warn
+                    color: var(--status-warning)
+                    &::before
+                        background: var(--status-warning)
+                &.bad
+                    color: var(--status-error)
+                    &::before
+                        background: var(--status-error)
+            .no-data
+                > div
+                    height: 98px
+        .tooltip
+            vertical-align: bottom
+            margin-left: 11px
+
+        .btn-popup
+            position: absolute
+            right: 20px
+            top: 16px
+        .health-check li
+            background: var(--bg-chart-info)
+    &.one
+        .accordion-wrap
+
+            .accordion-tit
+                @include flex-box-sb
+                padding: 21px 370px 21px 20px
+
+                &::after
+                    width: 16px
+                    height: 16px
+                    background: url("../image/light/icon-accordion-arrow2-off.png") center no-repeat
+
+                &.sub
+                    padding: 21px 260px 21px 20px  
+                    .svc-status
+                        @include flex-box-sb
+                        width: 250px
+                        .status
+                            &::before
+                                display: none
+                            display: block
+                            font:
+                                size: 16px
+                            &.good
+                                color: var(--status-confirmed)
+                            &.bad
+                                color: var(--status-error)
+                            
+                            i 
+                                color: var(--text-subpage-status)
+
+
+            &.on
+                .accordion-tit
+                    &::after
+                        background: url("../image/light/icon-accordion-arrow2-on.png") center no-repeat
+
+                .accordion-cont
+                    display: block
+
+            .svc-name
+                font:
+                    size: 16px
+                    weight: 700
+                line-height: 22px
+                flex-basis: auto
+
+            .svc-status
+                .status
+                    font:
+                        size: 16px
+                        weight: 700
+                    line-height: 22px
+
+        .accordion-box
+            position: relative
+            .btn-popup
+                position: absolute
+                right: 48px
+                top: 20px
+
+        // .btn-more
+        //     width: 12px
+        //     height: 12px
+        //     display: block
+        //     right: 20px
+        //     top: 50%
+        //     transform: translateY(-50%)
+        
+        // .health-check
+        //     li
+        //         background: var(--bg-healthcheck-list)
+        //         border-top: 1px solid var(--border-healthcheck-list)
+
+        .accordion-cont
+            padding: 0
+
+        .health-check
+            background: var(--bg-healthcheck-list)
+            li
+                border-bottom: 1px solid var(--border-healthcheck-list)
+
+        .slo
+            li
+                height: auto // 텍스트 문제로 auto 변경 subpage_slo.html
+                &:first-child
+                    border-top: none
+        
+        .slo-name
+            padding: 20px
+
+        .slo-info
+            width: 514px
+            > *
+                line-height: 20px
+
+            .status
+                background: var(--bg-slo04)
+                padding: 20px 10px
+                small
+                    font-size: 12px
+
+        .error-budget
+            padding: 20px 10px
+
+        .residual
+            padding: 20px 15px
+            background: var(--bg-slo04)
+            small
+                font-size: 12px
+
+        .btn
+            padding: 20px 15px
+            background: var(--bg-slo04)
+
+.legend
+    font:
+        size: 11px
+    line-height: 17px
+    color: var(--text-legend)
+    text-align: center
+    vertical-align: bottom
+
+    span
+        display: inline-block
+        line-height: 17px
+        margin-left: 8px
+        &::before
+            content: "●"
+            margin-right: 3px
+        &.good
+            &::before
+                color: var(--status-confirmed)
+        &.warn
+            &::before
+                color: var(--status-warning)
+        &.bad
+            &::before
+                color: var(--status-error)
+
+    .tooltip
+        width: 16px
+        height: 17px
+        background: url("../image/light/icon-info-s.png") center center no-repeat
+        margin-left: 8px !important
+        
+.legend-area
+    width: 100%
+    line-height: 16px
+    padding: 11px 10px 11px 11px
+    @include flex-box-sb
+    background: var(--bg-legend-area)
+
+    &.only
+        @include flex-box
+        justify-content: flex-end
+
+
+.one-service
+    .type-accordion
+        min-height: 445px
+        .svc-name
+            &::before
+                border-radius: 3px
+
+.main-area
+    &.accordion
+        .type-accordion
+            &.one
+                .accordion-wrap
+                    background: var(--bg-accordion2)
+
+section
+    .type-accordion
+        &.one
+            .accordion-wrap
+                .svc-name
+                    font:
+                        size: 14px
+                        weight: 500
+                    line-height: 20px
+                .svc-status
+                    .status
+                        font:
+                            size: 13px
+                            weight: 400
+                        line-height: 19px

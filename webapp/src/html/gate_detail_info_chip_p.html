@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../lib/jquery/jquery.min.js"></script>
+
+    <title>Gate상세정보</title>  
+</head>
+<body data-theme="dark">
+  <modal>
+    <div style="height:100%;">
+      <wsg-dialog style="max-width: 120rem; width: 810px;">
+        <wd-title>
+          Gate상세정보
+          <div class="entire">
+              <p>Service 전체</p>
+          </div>
+        </wd-title>
+        <button type="button" class="close">닫기</button>
+        <div class="detail-info">
+          <div class="detail-box">
+            <div class="top-area">
+              <p class="detail-status">단계</p>
+            </div>
+            <div class="box">
+              <p>Operator & Monitor</p>
+            </div>
+          </div>
+          <div class="detail-box">
+            <div class="top-area">
+              <p class="detail-status">게이트명</p>
+            </div>
+            <div class="box">
+              <p>서비스 기본기능 점검</p>
+            </div>
+          </div>
+        </div>
+        <div class="detail-info">
+          <div class="detail-box">
+            <div class="top-area">
+              <p class="detail-status">지표상태</p>
+            </div>
+            <div class="box">
+              <div class="status-box">
+                <span class="fail">Failed</span>
+              </div>
+            </div>
+          </div>
+          <div class="detail-box">
+            <div class="top-area">
+              <p class="detail-status">지표명</p>
+            </div>
+            <div class="box">
+              <p>HealthCheck 점검(Daily)</p>
+            </div>
+          </div>
+        </div>
+        <wd-message>
+            <div class="top-area">
+              <p class="detail-status" style="padding: 2px 0">서비스별 상세상태 <span>(서비스: 15개,테넌트: 3개)</span></p>
+              <div class="detail-icon-area">
+                <button class="detail-icon">크게보기</button>
+              </div>
+            </div>
+            <!-- "type4" class 추가 -->
+            <table class="type4 scroll">
+              <caption class="caption">서비스, 테넌트, 완료, 진행, 2일이상대기, 데이터생성시간, 연결시스템에 대한 표</caption>
+              <colgroup>
+              <col style="width: 100px;">
+              <col style="width: 120px;">
+              <col style="width: 80px;">
+              <col style="width: 130px;">
+              <col style="width: 100px;">
+              <col style="width: 100px;">
+              <col style="width: 120px;">
+              </colgroup>
+              <thead>
+              <tr>
+                  <th scope="col">서비스</th>
+                  <th scope="col">테넌트</th>
+                  <th scope="col" class="time">Start Time</th>
+                  <th scope="col" class="sort-time">Pass/Fail/Warning</th>
+                  <th scope="col" class="time">Running Time</th>
+                  <th scope="col" class="occurrencetime">데이터생성시간</th>
+                  <th scope="col">연결시스템</th>
+              </tr>
+              </thead>
+              <tbody style="max-height:204px">
+              <tr>
+                  <td class="detail service" scope="row">설비관리(EMS)</td>
+                  <td class="detail tenant" scope="row">LG에너지솔루션</td>
+                  <td class="">8:00</td>
+                  <td class="">8:00</td>
+                  <td class="timerunning pass"><span>Passed</span></td>
+                  <td class="occurrencetime">2022.12.12 14:20</td>
+                  <td class="connectedsystem">JenKins</td>
+              </tr>
+              <tr>
+                  <td class="detail service" scope="row">설비관리(EMS)</td>
+                  <td class="detail tenant" scope="row">LG이노텍</td>
+                  <td class="">8:00</td>
+                  <td class="">8:00</td>
+                  <td class="timerunning fail"><span>Failed</span></td>
+                  <td class="occurrencetime">2022.12.12 14:20</td>
+                  <td class="connectedsystem">JenKins</td>
+              </tr>
+              <tr>
+                  <td class="detail service" scope="row">설비관리(EMS)</td>
+                  <td class="detail tenant" scope="row">LG전자</td>
+                  <td class="">8:00</td>
+                  <td class="">8:00</td>
+                  <td class="timerunning pass"><span>Passed</span></td>
+                  <td class="occurrencetime">2022.12.12 14:20</td>
+                  <td class="connectedsystem">JenKins</td>
+              </tr>
+              <tr>
+                  <td class="detail service" scope="row">설비관리(EMS)</td>
+                  <td class="detail tenant" scope="row">LX판토스</td>
+                  <td class="">8:00</td>
+                  <td class="">8:00</td>
+                  <td class="timerunning pass"><span>Passed</span></td>
+                  <td class="occurrencetime">2022.12.12 14:20</td>
+                  <td class="connectedsystem">JenKins</td>
+              </tr>
+              <tr>
+                  <td class="detail service" scope="row">설비관리(EMS)</td>
+                  <td class="detail tenant" scope="row">LG전자</td>
+                  <td class="">8:00</td>
+                  <td class="">8:00</td>
+                  <td class="timerunning pass"><span>Passed</span></td>
+                  <td class="occurrencetime">2022.12.12 14:20</td>
+                  <td class="connectedsystem">JenKins</td>
+              </tr>
+              </tbody>
+          </table>
+        </wd-message>
+        <div class="block-detail-box">
+            <div class="top-area">
+              <p class="detail-status">지표 목적</p>
+            </div>
+            <div class="block-box">
+              <p>Prod단계 배포 이후, 주요 기능들에 대한 HealthCheck를 점검하는 단계입니다.</p>
+            </div>
+        </div>
+      </wsg-dialog>
+    </div>
+  </modal>
+</body>
+</html>

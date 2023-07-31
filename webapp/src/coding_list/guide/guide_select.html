@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<title>Form Guide</title>
+
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/assets/css/modules.css"> -->
+
+	<!-- 가이드용 -->
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/pretty.css">
+	<!--//  가이드용 -->
+
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.js"></script>
+
+
+	<style>
+		.tag:not(body){
+			align-items : baseline;
+			background : none;
+			display : inline;
+			padding : 0;
+			height : auto;
+		}
+	</style>
+</head>
+<body>
+
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">Select box Guide</h1>
+
+	<h2 class="h2_guide">01. Default</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="select-box service" style="width:200px">
+			<button class="label">Service 전체</button>
+			<ul class="option">
+				<li><a href="javascript:;" data-value="Service 전체">Service 전체</a></li>
+				<li><a href="javascript:;" data-value="A Service">A Service</a></li>
+				<li><a href="javascript:;" data-value="B Service">B Service</a></li>
+				<li><a href="javascript:;" data-value="C Service">C Service</a></li>
+				<li><a href="javascript:;" data-value="가 Service">가 Service</a></li>
+				<li><a href="javascript:;" data-value="나 Service">나 Service</a></li>
+				<li><a href="javascript:;" data-value="다 Service">다 Service</a></li>
+				<li><a href="javascript:;" data-value="라 Service">라 Service</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<!-- "select-box"에 "on" class 추가되면서 열림 -->
+<!-- service & tenant & refresh class 넣기 -->
+<div class="select-box service" style="width:200px">
+	<button class="label">Service 전체</button>
+	<ul class="option">
+		<li><a href="javascript:;" data-value="Service 전체">Service 전체</a></li>
+		<li><a href="javascript:;" data-value="A Service">A Service</a></li>
+		<li><a href="javascript:;" data-value="B Service">B Service</a></li>
+		<li><a href="javascript:;" data-value="C Service">C Service</a></li>
+		<li><a href="javascript:;" data-value="가 Service">가 Service</a></li>
+		<li><a href="javascript:;" data-value="나 Service">나 Service</a></li>
+		<li><a href="javascript:;" data-value="다 Service">다 Service</a></li>
+		<li><a href="javascript:;" data-value="라 Service">라 Service</a></li>
+	</ul>
+</div>
+		</xmp>
+	</div>
+	<!-- // code -->
+
+	<h2 class="h2_guide">02. Check type</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="select-box type-check" style="width:200px">
+			<button class="label">Tenant 전체</button>
+			<ul class="option">
+				<li class="all" data-code="0000">
+					<input type="checkbox" id="tenant01">
+					<label for="tenant01">전체</label>
+				</li>
+				<li data-code="0001">
+					<input type="checkbox" id="tenant02">
+					<label for="tenant02">LG CNS</label>
+				</li>
+				<li data-code="0002">
+					<input type="checkbox" id="tenant03">
+					<label for="tenant03">LG 디스플레이1</label>
+				</li>
+				<li data-code="0003">
+					<input type="checkbox" id="tenant04">
+					<label for="tenant04">LG 디스플레이2</label>
+				</li>
+				<li data-code="0004">
+					<input type="checkbox" id="tenant05">
+					<label for="tenant05">LG 디스플레이3</label>
+				</li>
+				<li data-code="0005">
+					<input type="checkbox" id="tenant06">
+					<label for="tenant06">LG 디스플레이4</label>
+				</li>
+				<li data-code="0006">
+					<input type="checkbox" id="tenant07">
+					<label for="tenant07">LG 디스플레이5</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<!-- "type-check" class 추가 -->
+<!-- service & tenant & refresh class 넣기 -->
+<div class="select-box tenant type-check" style="width:200px">
+	<button class="label">Tenant 전체</button>
+	<ul class="option">
+		<li class="all" data-code="0000">
+			<input type="checkbox" id="tenant01">
+			<label for="tenant01">전체</label>
+		</li>
+		<li data-code="0001">
+			<input type="checkbox" id="tenant02">
+			<label for="tenant02">LG CNS</label>
+		</li>
+		<li data-code="0002">
+			<input type="checkbox" id="tenant03">
+			<label for="tenant03">LG 디스플레이1</label>
+		</li>
+		<li data-code="0003">
+			<input type="checkbox" id="tenant04">
+			<label for="tenant04">LG 디스플레이2</label>
+		</li>
+		<li data-code="0004">
+			<input type="checkbox" id="tenant05">
+			<label for="tenant05">LG 디스플레이3</label>
+		</li>
+		<li data-code="0005">
+			<input type="checkbox" id="tenant06">
+			<label for="tenant06">LG 디스플레이4</label>
+		</li>
+		<li data-code="0006">
+			<input type="checkbox" id="tenant07">
+			<label for="tenant07">LG 디스플레이5</label>
+		</li>
+	</ul>
+</div>
+		</xmp>
+	</div>
+	<!-- // code -->
+
+	<h2 class="h2_guide">03. script</h2>
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+// Select Box Default
+// Open
+$(document).on({
+	click: function(){
+		if($(this).closest('.select-box').hasClass('on')){
+			$(this).closest('.select-box').removeClass('on')  
+		} else {
+			$(this).closest('.select-box').addClass('on');
+		};
+	}
+}, '.select-box .label');
+
+// 2022-06-22 셀렉트박스 스크립트 수정
+// Option selected
+$(document).on({
+	click: function(){
+		if($(this).closest('.select-box').hasClass('type-check')){
+			return;
+		};
+
+		const selectWrap = $(this).parents('.option').parents('.select-box');
+		const value = $(this).data('value');
+		const index = $(this).closest('li').index();
+
+		// alert(`value : ${value} / index : ${index}`)
+		$(".select-box .option a").removeClass('checked');
+		if(selectWrap.hasClass("service")) {
+			$(this).closest('.select-box').find('.label').text("Service " + value);
+		} else if(selectWrap.hasClass("tenant")) {
+			$(this).closest('.select-box').find('.label').text("Tenant " + value);
+		} else if(selectWrap.hasClass("refresh")) {
+			$(this).closest('.select-box').find('.label').text("Refresh " + value);
+		}
+		$(this).closest('.select-box').removeClass("on");
+		$(this).addClass('checked');
+	}
+}, '.select-box .option a');
+
+// Select Box Type Check
+
+// 2022-06-27 셀렉트 박스 제어함수 추가
+const changeCheckbox = (target) => {
+	const selectBox = $(target).closest('.select-box'),
+		textTarget = selectBox.find('.label span'),
+		checkedItems = selectBox.find('input[type="checkbox"]:checked');
+		targetStr = $(checkedItems[0]).parent().find('label').text();
+	let resultStr = '';
+
+	// console.log(checkedItems, targetStr, checkedItems.length)
+	if(targetStr !== '전체' && checkedItems.length > 1) {
+		resultStr = `<span class="result-txt">${targetStr}</span> 외 ${checkedItems.length-1}개`;
+	} else {
+		resultStr = targetStr;
+	}
+	textTarget.html(resultStr);
+};
+const deleteChips = (item, target) => {
+	const code = $(item).attr('data-code');
+	const allItem = $(`.select-box.${target}`).find('.all')
+	const targetItem = $(`.select-box.${target}`).find(`[data-code="${code}"]`)
+	// console.log(item, code, targetItem)
+	allItem.find('input[type="checkbox"]').prop('checked', false)
+	targetItem.find('input[type="checkbox"]').prop('checked', false)
+	changeCheckbox(targetItem)
+};
+$(document).on({
+	click: function(){
+
+		const checked = $(this).is(':checked'),
+				chipArea = $('.chip-area');
+
+		if($(this).closest('li').hasClass('all')){
+			// 전체 선택시
+			if(checked){
+				$.each($(this).closest('.option').find('li'), function(k, v){                            
+					if(k != 0){
+						const value = $(this).find('label').text(),
+								code = $(this).data('code'),
+								itemChecked = $(this).find('input[type="checkbox"]').is(':checked');
+						if(!itemChecked){
+							let html = `
+								<div class="chip" data-code="${code}">
+									<a href="#">${value}</a>
+									<button type="button" class="btn-delete">삭제하기</button>
+								</div>
+							`;
+							$(this).find('input[type="checkbox"]').prop('checked', true);
+							chipArea.append(html);
+						};                                
+					}
+				});
+			} else {
+				$.each($(this).closest('.option').find('li'), function(){
+					$(this).find('input[type="checkbox"]').prop('checked', false);
+				});
+				$.each(chipArea.find('.chip'), function(){
+					$(this).remove();
+				});
+			};
+		} else {
+			// 개별 선택시
+			const value = $(this).closest('li').find('label').text(),
+					code = $(this).closest('li').data('code');
+			let itemChecked = true;
+			if(checked){
+				let html = `
+					<div class="chip" data-code="${code}">
+						<a href="#">${value}</a>
+						<button type="button" class="btn-delete">삭제하기</button>
+					</div>
+				`;
+				chipArea.append(html);
+			} else {
+				chipArea.find(`div[data-code="${code}"]`).remove();                        
+			};
+			$.each($(this).closest('.select-box').find('li'), function(k, v){
+				if(!itemChecked) return;
+				if(k != 0){
+					if(!$(this).find('input[type="checkbox"]').is(':checked')){
+						itemChecked = false;
+					} else {
+						itemChecked = true;
+					};
+				};
+			});
+			if(!itemChecked){
+				$(this).closest('.select-box').find('.all input[type="checkbox"]').prop('checked', false);
+			} else {
+				$(this).closest('.select-box').find('.all input[type="checkbox"]').prop('checked', true);
+			};
+			if(chipArea.find('.chip').length > 1){
+				// 타이틀 변경
+			}
+
+			
+			
+		};
+		if($(this).checked) {
+			$(this).closest("li").addClass("checked");
+		}
+		// chip-area 2줄 이상
+		if($(".chip-area").outerHeight() > 34) {
+			$(".btn-more").css("display", "block")
+		} else {
+			$(".btn-more").css("display", "none")
+		}
+		// 2022-06-27 셀렉트 박스 제어함수 호출
+		changeCheckbox(this);
+	}
+}, '.select-box.type-check input[type="checkbox"]');
+
+// 외부영역 클릭 시 셀렉트 박스
+$(document).mouseup(function (e){
+	const selectBox = $(".select-box");
+	if(selectBox.has(e.target).length === 0){
+		selectBox.removeClass("on");
+	}
+});
+		</xmp>
+	</div>
+	<!-- // code -->
+
+
+</div>
+<script type="text/javascript" src="../../coding_list/js/pretty.js"></script>
+<script>
+	// Select Box Default
+        // Open
+        $(document).on({
+            click: function(){
+                if($(this).closest('.select-box').hasClass('on')){
+                    $(this).closest('.select-box').removeClass('on')  
+                } else {
+                    $(this).closest('.select-box').addClass('on');
+                };
+            }
+        }, '.select-box .label');
+
+        // 2022-06-22 셀렉트박스 스크립트 수정
+        // Option selected
+        $(document).on({
+            click: function(){
+                if($(this).closest('.select-box').hasClass('type-check')){
+                    return;
+                };
+
+                const selectWrap = $(this).parents('.option').parents('.select-box');
+                const value = $(this).data('value');
+                const index = $(this).closest('li').index();
+
+                // alert(`value : ${value} / index : ${index}`)
+                $(".select-box .option a").removeClass('checked');
+                if(selectWrap.hasClass("service")) {
+                    $(this).closest('.select-box').find('.label').text("Service " + value);
+                } else if(selectWrap.hasClass("tenant")) {
+                    $(this).closest('.select-box').find('.label').text("Tenant " + value);
+                } else if(selectWrap.hasClass("refresh")) {
+                    $(this).closest('.select-box').find('.label').text("Refresh " + value);
+                }
+                $(this).closest('.select-box').removeClass("on");
+                $(this).addClass('checked');
+            }
+        }, '.select-box .option a');
+
+        // Select Box Type Check
+
+        // 2022-06-27 셀렉트 박스 제어함수 추가
+        const changeCheckbox = (target) => {
+            const selectBox = $(target).closest('.select-box'),
+                textTarget = selectBox.find('.label span'),
+                checkedItems = selectBox.find('input[type="checkbox"]:checked');
+                targetStr = $(checkedItems[0]).parent().find('label').text();
+            let resultStr = '';
+
+            // console.log(checkedItems, targetStr, checkedItems.length)
+            if(targetStr !== '전체' && checkedItems.length > 1) {
+                resultStr = `<span class="result-txt">${targetStr}</span> 외 ${checkedItems.length-1}개`;
+            } else {
+                resultStr = targetStr;
+            }
+            textTarget.html(resultStr);
+        };
+        const deleteChips = (item, target) => {
+            const code = $(item).attr('data-code');
+            const allItem = $(`.select-box.${target}`).find('.all')
+            const targetItem = $(`.select-box.${target}`).find(`[data-code="${code}"]`)
+            // console.log(item, code, targetItem)
+            allItem.find('input[type="checkbox"]').prop('checked', false)
+            targetItem.find('input[type="checkbox"]').prop('checked', false)
+            changeCheckbox(targetItem)
+        };
+        $(document).on({
+            click: function(){
+
+                const checked = $(this).is(':checked'),
+                      chipArea = $('.chip-area .box .sort-box');
+
+                if($(this).closest('li').hasClass('all')){
+                    // 전체 선택시
+                    if(checked){
+                        $.each($(this).closest('.option').find('li'), function(k, v){                            
+                            if(k != 0){
+                                const value = $(this).find('label').text(),
+                                      code = $(this).data('code'),
+                                      itemChecked = $(this).find('input[type="checkbox"]').is(':checked');
+                                if(!itemChecked){
+                                    let html = `
+                                        <div class="chip" data-code="${code}">
+                                            <a href="#">${value}</a>
+                                            <button type="button" class="btn-delete">삭제하기</button>
+                                        </div>
+                                    `;
+                                    $(this).find('input[type="checkbox"]').prop('checked', true);
+                                    chipArea.append(html);
+                                };                                
+                            }
+                        });
+                    } else {
+                        $.each($(this).closest('.option').find('li'), function(){
+                            $(this).find('input[type="checkbox"]').prop('checked', false);
+                        });
+                        $.each(chipArea.find('.chip'), function(){
+                            $(this).remove();
+                        });
+                    };
+                } else {
+                    // 개별 선택시
+                    const value = $(this).closest('li').find('label').text(),
+                          code = $(this).closest('li').data('code');
+                    let itemChecked = true;
+                    if(checked){
+                        let html = `
+                            <div class="chip" data-code="${code}">
+                                <a href="#">${value}</a>
+                                <button type="button" class="btn-delete">삭제하기</button>
+                            </div>
+                        `;
+                        chipArea.append(html);
+                    } else {
+                        chipArea.find(`div[data-code="${code}"]`).remove();                        
+                    };
+                    $.each($(this).closest('.select-box').find('li'), function(k, v){
+                        if(!itemChecked) return;
+                        if(k != 0){
+                            if(!$(this).find('input[type="checkbox"]').is(':checked')){
+                                itemChecked = false;
+                            } else {
+                                itemChecked = true;
+                            };
+                        };
+                    });
+                    if(!itemChecked){
+                        $(this).closest('.select-box').find('.all input[type="checkbox"]').prop('checked', false);
+                    } else {
+                        $(this).closest('.select-box').find('.all input[type="checkbox"]').prop('checked', true);
+                    };
+                    if(chipArea.find('.chip').length > 1){
+                        // 타이틀 변경
+                    }
+
+                    
+                    
+                };
+                if($(this).checked) {
+                    $(this).closest("li").addClass("checked");
+                }
+                // chip-area 2줄 이상
+                // 2022-06-28 chip 스크립트 수정
+                if($(".chip-area .box").outerHeight() > 34) {
+                    $(".btn-more").css("display", "block")
+                } else {
+                    $(".btn-more").css("display", "none")
+                }
+                // 2022-06-27 셀렉트 박스 제어함수 호출
+                changeCheckbox(this);
+            }
+        }, '.select-box.type-check input[type="checkbox"]');
+
+        // 외부영역 클릭 시 셀렉트 박스
+        $(document).mouseup(function (e){
+            const selectBox = $(".select-box");
+            if(selectBox.has(e.target).length === 0){
+                selectBox.removeClass("on");
+            }
+        });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/head.html')
+</head>
+
+<body>
+    <!--  data-theme="dark" -->
+    <div class="wrap">
+        @@include('./include/header.html')
+        <div class="content" data-content="new">
+            <div class="tab-btn" data-tab="tab1">
+                <a href="./main_service.html">
+                    <h2 class="tab-title">Service</h2>
+                </a>
+                <a href="./main_tenant.html" class="on">
+                    <h2 class="tab-title">Tenant</h2>
+                </a>
+            </div>
+            <div class="tab-content-wrap" id="tab1">
+                <!-- 2022-06-22 tab 내용 1개로 수정 -->
+                <div class="tab-content on">
+                    <div class="top-area">
+                        <div>
+                            <!-- 2022-06-27 selectbox 내용 수정 -->
+                            <!-- tenant class 추가 -->
+                            <div class="select-box tenant" style="width:200px">
+                                <button class="label">Tenant</button>
+                                <ul class="option">
+                                    <li><a href="javascript:;" data-value="LG 이노텍">LG 이노텍</a></li>
+                                    <li><a href="javascript:;" data-value="A Service">A Service</a></li>
+                                    <li><a href="javascript:;" data-value="B Service">B Service</a></li>
+                                    <li><a href="javascript:;" data-value="C Service">C Service</a></li>
+                                    <li><a href="javascript:;" data-value="가 Service">가 Service</a></li>
+                                    <li><a href="javascript:;" data-value="나 Service">나 Service</a></li>
+                                    <li><a href="javascript:;" data-value="다 Service">다 Service</a></li>
+                                    <li><a href="javascript:;" data-value="라 Service">라 Service</a></li>
+                                </ul>
+                            </div>
+                            <!-- 2022-07-05 버튼 추가-->
+                            <!-- <div>
+                                <button class="btn-result">적용</button>
+                            </div> -->
+                            <!-- // 2022-07-05 버튼 추가-->
+                        </div>
+                        <div>
+                            <p class="tenant-name">LG 이노텍</p>
+                            <div class="btn-wrap">
+                                <button type="button" class="btn health-check-pop">Health Check 통합 Report</button>
+                                <button type="button" class="btn slo-report-pop">SLO 통합 Report</button>
+                            </div>
+                            <!-- 2022-07-11 마크업 위치 이동 -->
+                            <div class="select-box refresh" style="width:136px">
+                                <button class="label">Refresh 10분</button>
+                                <ul class="option">
+                                    <li><a href="javascript:;" data-value="10분">10분</a></li>
+                                    <li><a href="javascript:;" data-value="20분">20분</a></li>
+                                    <li><a href="javascript:;" data-value="30분">30분</a></li>
+                                    <li><a href="javascript:;" data-value="40분">40분</a></li>
+                                    <li><a href="javascript:;" data-value="50분">50분</a></li>
+                                </ul>
+                            </div>
+                            <!-- // 2022-07-11 마크업 위치 이동 -->
+                        </div>
+                    </div>
+                    <div class="main-area accordion">
+                        <!-- 2022-06-21 <section>태그 삭제 -->
+                        <div class="sort-box">
+                            <div class="type-accordion tenant">
+                                <div class="accordion-wrap">
+                                    <button type="button" class="accordion-tit">
+                                        <span class="svc-name">기준정보 관리(MDM)</span>
+                                    </button>
+                                    <div class="tenant-data">
+                                        <div class="inner">
+                                            <p class="tit">
+                                                Health Check Status
+                                                <small>(12.24 12:22)</small>
+                                            </p>
+                                            <p class="status good">Good</p>
+                                            <!-- 2022-06-29 범례 수정 -->
+                                            <div class="legend">
+                                                범례 : 
+                                                <span class="good">99% 이상</span>
+                                                <span class="warn">70~99% 미만</span>
+                                                <span class="bad">70% 미만</span>
+                                            </div>
+                                            <button type="button" class="btn-popup cl-black">Health check Report 팝업</button>
+                                        </div>
+                                        <div class="inner">
+                                            <p class="tit">
+                                                SLO Check Status
+                                                <small>(12.24 12:22)</small>
+                                            </p>
+                                            <p class="status good">Good</p>
+                                            <!-- 2022-06-29 범례 수정 -->
+                                            <div class="legend">
+                                                범례 : 
+                                                <span class="good">SLO 99% 이상</span>
+                                                <span class="warn">SLO 70~99% 미만</span>
+                                                <span class="bad">SLO 70% 미만</span>
+                                            </div>
+                                            <button type="button" class="btn-popup cl-black">Health check Report 팝업</button>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-cont">
+                                        <div class="content">
+                                            <div class="tab-btn" data-tab="tab2">
+                                                <button type="button" class="on"><span class="tab-title">Health Check</span></button>
+                                                <button type="button"><span class="tab-title">SLO</span></button>
+                                            </div>
+                                            <div class="tab-content-wrap" id="tab2">
+                                                <div class="tab-content on">
+                                                    <ul class="health-check">
+                                                        <li>
+                                                            <p class="health-check-name">Database Health Check</p>
+                                                            <p class="status good">Good</p>
+                                                            <div class="all-status">
+                                                                <div class="status-bar-area">
+                                                                    <span class="status good"></span>
+                                                                    <span class="status warn"></span>
+                                                                    <span class="status bad"></span>
+                                                                    @@for (var i = 0; i < 47; i++) {
+                                                                        <span class="status good"></span>
+                                                                    }
+                                                                </div>
+                                                                <div class="time-area">
+                                                                    <p class="time">11:20</p>
+                                                                    <p class="time">13:20</p>
+                                                                    <p class="time">15:20</p>
+                                                                    <p class="time">17:20</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p class="health-check-name">Database Health Check</p>
+                                                            <p class="status warn">Warning</p>
+                                                            <div class="all-status">
+                                                                <div class="status-bar-area">
+                                                                    <span class="status good"></span>
+                                                                    <span class="status warn"></span>
+                                                                    <span class="status bad"></span>
+                                                                    @@for (var i = 0; i < 47; i++) {
+                                                                        <span class="status good"></span>
+                                                                    }
+                                                                </div>
+                                                                <div class="time-area">
+                                                                    <p class="time">11:20</p>
+                                                                    <p class="time">13:20</p>
+                                                                    <p class="time">15:20</p>
+                                                                    <p class="time">17:20</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p class="health-check-name">Database Health Check</p>
+                                                            <p class="status bad">Bad</p>
+                                                            <div class="all-status">
+                                                                <div class="status-bar-area">
+                                                                    <span class="status good"></span>
+                                                                    <span class="status warn"></span>
+                                                                    <span class="status bad"></span>
+                                                                    @@for (var i = 0; i < 47; i++) {
+                                                                        <span class="status good"></span>
+                                                                    }
+                                                                </div>
+                                                                <div class="time-area">
+                                                                    <p class="time">11:20</p>
+                                                                    <p class="time">13:20</p>
+                                                                    <p class="time">15:20</p>
+                                                                    <p class="time">17:20</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-content">
+                                                    <ul class="slo">
+                                                        <li>
+                                                            <p class="slo-name">Availability - 신규등록시 존재여부체크11111111111111111111111존재여부체크11111111111111111111111존재여부체크11111111111111111111111</p>
+                                                            <div class="slo-info">
+                                                                <p class="status good">Satisfied</p>
+                                                                <p class="error-budget">Error Budget1111111111111111</p>
+                                                                <p class="residual up good">34분 (00%)</p>
+                                                                <p class="btn">
+                                                                    <button type="button" class="tooltip"></button>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p class="slo-name">Availability - 신규등록시 존재여부체크</p>
+                                                            <div class="slo-info">
+                                                                <p class="status good">Satisfied</p>
+                                                                <p class="error-budget">Error Budget</p>
+                                                                <p class="residual up good">34분 (00%)</p>
+                                                                <p class="btn">
+                                                                    <button type="button" class="tooltip"></button>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p class="slo-name">Availability - 신규등록시 존재여부체크</p>
+                                                            <div class="slo-info">
+                                                                <p class="status bad">Unsatisfied</p>
+                                                                <p class="error-budget">Error Budget</p>
+                                                                <p class="residual up good">34분 (00%)</p>
+                                                                <p class="btn">
+                                                                    <button type="button" class="tooltip"></button>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2022-06-21 <section>태그 삭제 -->
+                        <div class="sort-box">
+                            <div class="type-accordion tenant">
+                                <div class="accordion-wrap">
+                                    <button type="button" class="accordion-tit">
+                                        <span class="svc-name">기준정보 관리(MDM)</span>
+                                    </button>
+                                    <div class="tenant-data">
+                                        <div class="inner">
+                                            <p class="tit">
+                                                Health Check Status
+                                                <small>(12.24 12:22)</small>
+                                            </p>
+                                            <p class="status good">Good</p>
+                                            <!-- 2022-06-29 범례 수정 -->
+                                            <div class="legend">
+                                                범례 : 
+                                                <span class="good">99% 이상</span>
+                                                <span class="warn">70~99% 미만</span>
+                                                <span class="bad">70% 미만</span>
+                                            </div>
+                                            <button type="button" class="btn-popup cl-black">Health check Report 팝업</button>
+                                        </div>
+                                        <div class="inner">
+                                            <p class="tit">
+                                                SLO Check Status
+                                                <small>(12.24 12:22)</small>
+                                            </p>
+                                            <!-- 2022-07-07 추가 -->
+                                            <div class="no-data">
+                                                <div>
+                                                    <p>제공되는 정보가 없습니다.</p>
+                                                </div>
+                                            </div>
+                                            <!-- // 2022-07-07 추가 -->
+                                        </div>
+                                    </div>
+                                    <div class="accordion-cont">
+                                        <div class="content">
+                                            <div class="tab-btn" data-tab="tab4">
+                                                <button type="button" class="on"><span class="tab-title">Health Check</span></button>
+                                                <button type="button"><span class="tab-title">SLO</span></button>
+                                            </div>
+                                            <div class="tab-content-wrap" id="tab4">
+                                                <div class="tab-content on">
+                                                    <ul class="health-check">
+                                                        <li>
+                                                            <p class="health-check-name">Database Health Check</p>
+                                                            <p class="status good">Good</p>
+                                                            <div class="all-status">
+                                                                <div class="status-bar-area">
+                                                                    <span class="status good"></span>
+                                                                    <span class="status warn"></span>
+                                                                    <span class="status bad"></span>
+                                                                    @@for (var i = 0; i < 47; i++) {
+                                                                        <span class="status good"></span>
+                                                                    }
+                                                                </div>
+                                                                <div class="time-area">
+                                                                    <p class="time">11:20</p>
+                                                                    <p class="time">13:20</p>
+                                                                    <p class="time">15:20</p>
+                                                                    <p class="time">17:20</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p class="health-check-name">Database Health Check</p>
+                                                            <p class="status warn">Warning</p>
+                                                            <div class="all-status">
+                                                                <div class="status-bar-area">
+                                                                    <span class="status good"></span>
+                                                                    <span class="status warn"></span>
+                                                                    <span class="status bad"></span>
+                                                                    @@for (var i = 0; i < 47; i++) {
+                                                                        <span class="status good"></span>
+                                                                    }
+                                                                </div>
+                                                                <div class="time-area">
+                                                                    <p class="time">11:20</p>
+                                                                    <p class="time">13:20</p>
+                                                                    <p class="time">15:20</p>
+                                                                    <p class="time">17:20</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p class="health-check-name">Database Health Check</p>
+                                                            <p class="status bad">Bad</p>
+                                                            <div class="all-status">
+                                                                <div class="status-bar-area">
+                                                                    <span class="status good"></span>
+                                                                    <span class="status warn"></span>
+                                                                    <span class="status bad"></span>
+                                                                    @@for (var i = 0; i < 47; i++) {
+                                                                        <span class="status good"></span>
+                                                                    }
+                                                                </div>
+                                                                <div class="time-area">
+                                                                    <p class="time">11:20</p>
+                                                                    <p class="time">13:20</p>
+                                                                    <p class="time">15:20</p>
+                                                                    <p class="time">17:20</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-content">
+                                                    <ul class="slo">
+                                                        <li>
+                                                            <p class="slo-name">Availability - 신규등록시 존재여부체크</p>
+                                                            <div class="slo-info">
+                                                                <p class="status good">Satisfied</p>
+                                                                <p class="error-budget">Error Budget</p>
+                                                                <p class="residual up good">34분 (00%)</p>
+                                                                <p class="btn">
+                                                                    <button type="button" class="tooltip"></button>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p class="slo-name">Availability - 신규등록시 존재여부체크</p>
+                                                            <div class="slo-info">
+                                                                <p class="status good">Satisfied</p>
+                                                                <p class="error-budget">Error Budget</p>
+                                                                <p class="residual up good">34분 (00%)</p>
+                                                                <p class="btn">
+                                                                    <button type="button" class="tooltip"></button>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <p class="slo-name">Availability - 신규등록시 존재여부체크</p>
+                                                            <div class="slo-info">
+                                                                <p class="status bad">Unsatisfied</p>
+                                                                <p class="error-budget">Error Budget</p>
+                                                                <p class="residual up good">34분 (00%)</p>
+                                                                <p class="btn">
+                                                                    <button type="button" class="tooltip"></button>
+                                                                </p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mode">
+            <input type="checkbox" id="mode" checked>
+            <label for="mode">라이트모드</label>
+        </div>
+    </div>
+
+
+    <script>
+        // tab
+        $(document).on({
+            click: function(){
+                const tabBtn = $(this).parents(".tab-btn");
+                const tabNum = tabBtn.attr("data-tab");
+                const thisTabCon = $("#" + tabNum).children(".tab-content");
+                const tabContWrap = $(".tab-content-wrap");
+                const tabBtnIdx = $(this).index();
+
+                tabBtn.find("button").removeClass("on");
+                thisTabCon.removeClass("on");
+                $(this).addClass("on");
+                thisTabCon.eq(tabBtnIdx).addClass("on");
+            }
+        }, ".tab-btn button")
+
+        // Select Box Default
+        // Open
+        $(document).on({
+            click: function(){
+                if($(this).closest('.select-box').hasClass('on')){
+                    $(this).closest('.select-box').removeClass('on')  
+                } else {
+                    $(this).closest('.select-box').addClass('on');
+                };
+            }
+        }, '.select-box .label');
+
+        // 2022-06-22 셀렉트박스 스크립트 수정
+        // Option selected
+        $(document).on({
+            click: function(){
+                if($(this).closest('.select-box').hasClass('type-check')){
+                    return;
+                };
+
+                const selectWrap = $(this).parents('.option').parents('.select-box');
+                const value = $(this).data('value');
+                const index = $(this).closest('li').index();
+
+                // alert(`value : ${value} / index : ${index}`)
+                $(".select-box .option a").removeClass('checked');
+                if(selectWrap.hasClass("service")) {
+                    $(this).closest('.select-box').find('.label').text("Service " + value);
+                } else if(selectWrap.hasClass("tenant")) {
+                    $(this).closest('.select-box').find('.label').text("Tenant " + value);
+                } else if(selectWrap.hasClass("refresh")) {
+                    $(this).closest('.select-box').find('.label').text("Refresh " + value);
+                }
+                $(this).closest('.select-box').removeClass("on");
+                $(this).addClass('checked');
+            }
+        }, '.select-box .option a');
+
+        // 외부영역 클릭 시 셀렉트 박스
+        $(document).mouseup(function (e){
+            const selectBox = $(".select-box");
+            if(selectBox.has(e.target).length === 0){
+                selectBox.removeClass("on");
+            }
+        });
+
+        // accordion
+        $(document).on({
+            click: function(){
+                const accordionWrap = $(this).closest(".accordion-wrap");
+
+                if(accordionWrap.hasClass("on")) {
+                    accordionWrap.removeClass("on")
+                } else {
+                    accordionWrap.addClass("on")
+                }
+            }
+        }, ".accordion-tit")
+
+        // <!-- 2022-07-21 아코디언 열림 스크립트 추가 -->
+        $(document).on({
+            click: function(){
+                const checkNone = $(this).parent().find(".no-data"); 
+                if(checkNone.length) return;
+                const accordionWrap = $(this).closest(".accordion-wrap");
+
+                if(accordionWrap.hasClass("on")) {
+                    accordionWrap.removeClass("on")
+                } else {
+                    accordionWrap.addClass("on")
+                }
+            }
+        }, ".tenant-data .tit")
+
+        // switch
+        $(document).on({
+            click: function(){
+                const switchCheck = $(".mode input[type='checkbox']");
+                const switchTxt = $(".mode label");
+                const body = $("body");
+
+                if(switchCheck.is(":checked")) {
+                    switchTxt.html("라이트모드")
+                    body.attr("data-theme", "")
+                } else {
+                    switchTxt.html("다크<br>모드")
+                    body.attr("data-theme", "dark")
+                }
+            }
+        }, ".mode")
+    </script>
+</body>
+
+</html>

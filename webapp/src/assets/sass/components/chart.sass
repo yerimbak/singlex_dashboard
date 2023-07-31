@@ -1,0 +1,289 @@
+/* chart */
+.type-chart 
+    position: relative
+    .title 
+        // @include flex-box-sb
+        padding-bottom: 22px
+        color: var(--text-section-title)
+        > div 
+            @include flex-box
+            align-items: baseline
+
+        .chart-title
+            @include font-h2
+            ling-height: 25px
+        
+        small 
+            font:
+                size: 12px
+                weight: 400
+            line-height: 25px
+            color: var(--text-section-title-small)
+            padding-left: 3px
+        
+    .box 
+        @include flex-box-sb
+        > div 
+            width: calc((100% - 38px) / 2)
+            
+    .chart-content 
+        background: var(--bg-chart-info)
+        border-radius: 10px
+        padding: 40px 30px
+        height: 235px
+        .chart-info 
+            li 
+                @include flex-box-sb
+                margin-top: 12px
+                &:first-child 
+                    margin-top: 0
+                [class*="type"] 
+                    width: calc(100% - 50px)
+                    @include flex-box
+                    // > .chart-status
+                    //     flex-basis: 150px
+
+                .type-txt
+                    align-items: baseline
+                    
+                .type-tooltip
+                    align-items: center
+                    .tooltip
+                        margin:
+                            top: 1px
+                            left: 8px
+            
+            .chart-status 
+                position: relative
+                @include font-h2
+                color: var(--text-main-color)
+                padding-left: 20px
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 7.5px
+                    width: 10px
+                    height: 10px
+                    border-radius: 99px
+                &.good::before
+                    background: var(--status-confirmed)
+                &.warn::before
+                    background: var(--status-warning)
+                &.bad::before
+                    background: var(--status-error)
+
+            .txt
+                font:
+                    size: 12px
+                    weight: 400
+                line-height: 25px
+                margin-left: 6px
+                color: var(--text-chart-info-small)
+        
+                      
+        .total-service
+            font:
+                size: 14px
+                weight: 500
+            text-align: right
+            color: var(--text-chart-info-small)
+            margin-top: 12px
+
+        .count,
+        .sum
+            @include font-number
+            font:
+                size: 18px
+                weight: 400
+            width: 50px
+            text-align: right
+            color: var(--text-main-color)
+
+    .btn-popup
+        position: absolute
+        right: 22px
+        top: 19px
+    
+    &.dot 
+        .chart-area
+            width: 378px
+            height: 235px
+            @include flex-box
+            flex-wrap: wrap
+            align-content: flex-start
+            gap: 6px
+            .dot
+                display: block
+                width: 42px
+                height: 42px
+                border-radius: 9999px
+                &.good
+                    background: var(--status-confirmed)
+                &.warn
+                    background: var(--status-warning)
+                &.bad
+                    background: var(--status-error)
+    &.donut // Gate상세정보 지표상세상태 도넛 차트 영역
+        &.detail
+            position: relative
+            width: 100%
+            margin: 20px 0 20px 0
+            .box
+                margin-top: 4px
+                background: var(--bg-popup-detail-box)
+                border: 1px solid var(--bg-popup-detail-border)
+                border-radius: 3px
+                display: flex
+                align-items: center
+                padding-right: 43px
+                .chart-area
+                    margin-right: auto
+                    width: 100%
+                    height: 100%
+                    margin: 7.5px 10px
+                    position: relative
+                    .title-box
+                        width: 116px
+                        height: 116px
+                        position: absolute
+                        left: 50%
+                        .inner-box
+                            height: 116px
+                            > div
+                                color: var(--text-chart-inner)
+                            .title
+                                font-size: 12px
+                                font-weight: 700
+                                padding: 0
+                            .percent
+                                font-size: 12px
+                            .count
+                                font-weight: 700
+                                font-size: 24px
+                                line-height: 18px
+                            .count+.title
+                                font-size: 11px
+                    .legend
+                        font-size: 11px
+                        line-height: 17px
+                        color: var(--text-legend-type2)
+                        text-align: center
+                        vertical-align: bottom
+                        span
+                            display: inline-block
+                            line-height: 17px
+                            margin-left: 8px
+                            &::before
+                                display: none
+                .chart-content
+                    width: auto
+                    height: 100%
+                    padding: 15px 20px
+                    background: var(--bg-chart-result)
+                    border: 1px solid var(--border-chart-result)
+                    border-radius: 3px
+                    .chart-info
+                        width: 180px
+                        font-size: 12px
+                        white-space: nowrap
+                        li
+                            margin-top: 0
+                            .type-txt
+                                .detail
+                                    position: relative
+                                    font-size: 12px
+                                    line-height: 25px
+                                    color: var(--text-chart-info-small)
+                                    padding-left: 20px
+                                    &::before
+                                        content: ""
+                                        position: absolute
+                                        left: 0
+                                        top: 8.5px
+                                        width: 8px
+                                        height: 8px
+                                        border-radius: 99px
+                                    &.good::before
+                                        background: var(--status-confirmed)
+                                    &.warning::before
+                                        background: var(--status-warning-standby)
+                                    &.error::before
+                                        background: var(--status-error)
+                                    &.fail::before
+                                        background: var(--status-bad-box)
+                                    &.pass::before
+                                        background: var(--status-pass)
+                                    &.pass_type2::before
+                                        background: var(--status-pass-type2)
+                            .count
+                                color: var(--text-chart-info-small)
+                                font-size: 13px
+                                span
+                                    font-weight: 700
+                .total-case
+                    font-size: 12px
+                    color: var(--text-chart-info-small)
+                    margin-left: 20px
+                    display: block
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    .result
+                        .sum
+                            font-weight: 700
+                            color: var(--text-chart-info-small)
+                            font-size: 13px
+                            text-align: right
+                            margin-left: auto
+
+.chart-area 
+    position: relative
+    .title-box
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        .inner-box
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        .count
+            font:
+                size: 34px
+                weight: 700
+            line:
+                height: 50px
+            color: var(--text-accordion)
+        .title
+            font:
+                size: 16px
+            line:
+                height: 23px
+    #chart
+        position: relative
+        text-align: center
+        z-index: 2
+        .c3-chart-arcs 
+            width: 200px
+            margin: 0 auto
+        
+        .c3-chart-arcs-title 
+            font-size: 30px
+            fill: var(--text-main-color)
+            font-weight: 700
+
+        .c3-chart-arc 
+            path 
+                stroke: none 
+        
+        .c3-tooltip
+            td
+                color: #000
+
+.one-service
+    .type-chart.dot
+        .chart-area
+            .dot
+                border-radius: 5px

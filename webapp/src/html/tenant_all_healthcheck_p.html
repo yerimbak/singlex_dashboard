@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../lib/jquery/jquery.min.js"></script>
+
+    <title>서비스별 Health Check 월별 현황</title>  
+</head>
+<body>
+    <!-- 2022-06-27 팝업페이지 구조 변경 -->
+    <modal>
+        <div style="height:100%;">
+            <wsg-dialog style="max-width: 120rem; width: 960px;">
+                <wd-title>
+                    서비스별 Health Check 월별 현황
+                    <small>(기간 : <i>2021.08~2022.01</i>)</small>
+                </wd-title>
+                <button type="button" class="btn-close">닫기</button>
+                <wd-message>
+                    <div class="legend type-table">
+                        범례 : 
+                        <span class="good">Good</span>
+                        <span class="warn">Warning</span>
+                        <span class="bad">Bad</span>
+                    </div>
+                    <table class="type1">
+                        <caption class="caption">Tenant(기준정보관리, 사용자경비관리, Common Infra, 설비관리(EMS), Common Service)의 월별 현황에 대한 표</caption>
+                        <colgroup>
+                            <col style="width:180px">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">Tenant</th>
+                                <th scope="col">Jan 2022</th>
+                                <th scope="col">Dec 2021</th>
+                                <th scope="col">Nov 2021</th>
+                                <th scope="col">Nov 2021</th>
+                                <th scope="col">Nov 2021</th>
+                                <th scope="col">Nov 2021</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">기준정보관리</th>
+                                <td class="good">3</td>
+                                <td class="warn">3</td>
+                                <td class="bad">3</td>
+                                <td class="good">3</td>
+                                <td class="good">3</td>
+                                <td class="good">3</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">사용자경비관리</th>
+                                <td class="bad">3</td>
+                                <td class="good">3</td>
+                                <td class="warn">3</td>
+                                <td class="good">3</td>
+                                <td class="good">3</td>
+                                <td class="good">3</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Common Infra</th>
+                                <td class="good">3</td>
+                                <td class="good">3</td>
+                                <td class="good">3</td>
+                                <td class="warn">3</td>
+                                <td class="warn">3</td>
+                                <td class="warn">3</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">설비관리(EMS)</th>
+                                <td class="good">3</td>
+                                <td class="good">3</td>
+                                <td class="good">3</td>
+                                <td class="warn">3</td>
+                                <td class="warn">3</td>
+                                <td class="warn">3</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Common Service</th>
+                                <td class="good">3</td>
+                                <td class="good">3</td>
+                                <td class="good">3</td>
+                                <td class="warn">3</td>
+                                <td class="warn">3</td>
+                                <td class="warn">3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
+                    <p class="tenant-name">기준정보관리</p>
+                    <table>
+                        <caption class="caption">Indicatore, 전일, 전주, 전월 에 대한 표</caption>
+                        <colgroup>
+                            <col style="width:400px">
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                            <th scope="col">Indicatore</th>
+                            <th scope="col">Jan 2022</th>
+                            <th scope="col">Dec 2021</th>
+                            <th scope="col">Nov 2021</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- 상황에 따라 good & warn & bad class 추가 -->
+                                <th scope="row">Database Health Check</th>
+                                <td class="good">Good</td>
+                                <td class="good">Good</td>
+                                <td class="warn">Warning</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Frontend Health Check</th>
+                                <td class="good">Good</td>
+                                <td class="warn">Warning</td>
+                                <td class="warn">Warning</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Backend Health Check</th>
+                                <td class="good">Good</td>
+                                <td class="good">Good</td>
+                                <td class="warn">Warning</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        
+                    <p class="tenant-name">사용자경비관리</p>
+                    <table>
+                        <caption class="caption">Indicatore, 전일, 전주, 전월 에 대한 표</caption>
+                        <colgroup>
+                            <col style="width:400px">
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                            <th scope="col">Indicatore</th>
+                            <th scope="col">Jan 2022</th>
+                            <th scope="col">Dec 2021</th>
+                            <th scope="col">Nov 2021</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <!-- 상황에 따라 good & warn & bad class 추가 -->
+                                <th scope="row">Database Health Check</th>
+                                <td class="good">Good</td>
+                                <td class="warn">Warning</td>
+                                <td class="warn">Warning</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Frontend Health Check</th>
+                                <td class="good">Good</td>
+                                <td class="warn">Warning</td>
+                                <td class="bad">Bad</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Backend Health Check</th>
+                                <td class="good">Good</td>
+                                <td class="good">Good</td>
+                                <td class="warn">Warning</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </wd-message>
+            </wsg-dialog>
+        </div>
+    </modal>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<title>Accordian Guide</title>
+
+	<link rel="stylesheet" href="../../lib/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="../../lib/c3/c3.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<!-- 가이드용 -->
+	<script src="../../lib/c3/d3-5.4.0.min.js"></script>
+	<script src="../../lib/c3/c3.min.js"></script>
+	<script type="text/javascript" src="../../lib/swiper/swiper-bundle.min.js"></script>	
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/pretty.css">
+	<!--//  가이드용 -->
+	
+
+	
+	<style>
+		.tag:not(body){
+			align-items : baseline;
+			background : none;
+			display : inline;
+			padding : 0;
+			height : auto;
+		}
+		body {
+			background: transparent
+		}
+    .type-chart .chart-area #chart .c3-chart-arcs-title {
+      font-size: 34px;
+      fill: var(--text-main-color);
+      font-weight: 700;
+    }
+	</style>
+</head>
+<body>
+
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">Chart Guide</h1>
+
+	<h2 class="h2_guide">01. Donut Chart</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="chart-area">
+      <div id="chart"></div>
+    </div>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<div class="chart-area">
+  <div id="chart"><!-- 이 곳에 차트가 생성됩니다 --></div>
+</div>
+
+// donut chart script
+<!-- 차트 생성 -->
+var chart = c3.generate({
+  <!-- 데이터 값 입력 -->
+  data: {
+    columns: [
+      ['data1', 1],
+      ['data2', 1],
+      ['data3', 3]
+    ],
+    <!-- 타입 지정 -->
+    type: 'donut',
+    <!-- 데이터 별 색상 지정 -->
+    colors: {
+      'data1': 'var(--status-confirmed)',
+      'data2': 'var(--status-warning)',
+      'data3': 'var(--status-error)'
+    }
+  },
+  donut: {
+    <!-- 센터에 들어갈 텍스트 지정 -->
+    title: "Bad",
+    <!-- 차트 라인 너비 -->
+    width: 20,
+    <!-- 데이터 별 라벨 노출 여부 -->
+    label: {
+      show: false
+    }
+  },
+  <!-- 범례 노출 여부 -->
+  legend: {
+    show: false
+  }
+});
+<!-- 차트 영역 사이즈 지정 -->
+chart.resize({ width: 200, height: 235 });
+		</xmp>
+	</div>
+	<!-- // code -->
+
+  <h2 class="h2_guide">01. Dot Chart</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="type-chart dot">
+      <div class="chart-area" data-num="40">
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+        <span class="dot good"></span>
+      </div>
+    </div>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<!-- "dot" class 추가 -->
+<div class="type-chart dot">
+  <!-- data-num 에 현재 원 갯수 넣기 -->
+  <div class="chart-area" data-num="40">
+    <!-- good & warn & bad 클래스로 원 색깔 변형 -->
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+    <span class="dot good"></span>
+  </div>
+</div>
+		</xmp>
+	</div>
+	<!-- // code -->
+</body>
+<script type="text/javascript" src="../../coding_list/js/pretty.js"></script>
+<script>
+	// donut chart
+  var chart = c3.generate({
+    data: {
+      columns: [
+        ['data1', 1],
+        ['data2', 1],
+        ['data3', 3]
+      ],
+      type: 'donut',
+      colors: {
+        'data1': 'var(--status-confirmed)',
+        'data2': 'var(--status-warning)',
+        'data3': 'var(--status-error)'
+      }
+    },
+    donut: {
+      title: "Bad",
+      width: 20,
+      label: {
+        show: false
+      }
+    },
+    legend: {
+      show: false
+    }
+  });
+  chart.resize({ width: 200, height: 235 });
+</script>
+</body>
+</html>

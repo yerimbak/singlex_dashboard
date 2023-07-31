@@ -1,0 +1,95 @@
+[data-theme="dark"]
+    .type-accordion
+        .accordion-tit
+            &::after 
+                background: url("../image/dark/icon-accordion-arrow-off.png") center no-repeat
+        .accordion-wrap
+            &.on
+                .accordion-tit
+                    &::after
+                        background: url("../image/dark/icon-accordion-arrow-on.png") center no-repeat
+        &.tenant
+            .accordion-tit
+                &::after
+                    background: url("../image/dark/icon-accordion-arrow2-off.png") center no-repeat
+            .accordion-wrap
+                &.on
+                    .accordion-tit
+                        &::after
+                            background: url("../image/dark/icon-accordion-arrow2-on.png") center no-repeat
+
+        &.tenant
+            .accordion-wrap
+                .accordion-tit
+                    &::after
+                        background: url("../image/dark/icon-accordion-arrow2-off.png") center no-repeat
+                &.on
+                    .accordion-tit
+                        &::after
+                            background: url("../image/dark/icon-accordion-arrow2-on.png") center no-repeat
+
+    .btn-bookmark
+        background: url("../image/dark/icon-star01.png") center no-repeat
+        &.devops
+            background: url("../image/dark/icon-star03.png") center no-repeat
+
+    .link
+        background: url("../image/dark/icon-link.png") center no-repeat
+        &.devops
+            background: url("../image/dark/icon-link02.png") center no-repeat
+
+    .member
+        &::after
+            background: url("../image/dark/icon-member.png") no-repeat
+
+    .btn-popup
+        background: url("../image/dark/icon-btn-pop.png") center no-repeat
+
+    .btn-popup
+        &.cl-black
+            background: url("../image/dark/icon-btn-pop.png") center no-repeat
+
+    .detail-icon
+        width: 16px
+        height: 16px
+        font-size: 0
+        background: url(../image/dark/icon-table-expansion.png) center no-repeat !important
+    .detail-list-next
+        font-size: 0
+        width: 16px
+        height: 16px
+        background: url(../image/dark/icon-list-step-on.png) center no-repeat !important
+
+    .btn-wrap
+        .btn
+            &.bookmark-pop
+                background: url("../image/dark/icon-star02.png") no-repeat
+            &.bookmark-list-pop
+                background: url("../image/dark/icon-dot.png") no-repeat
+            &.health-check-pop,
+            &.slo-report-pop
+                background: var(--bg-btn) url("../image/dark/icon-btn-pop.png") center right 10px no-repeat
+
+    .btn-more
+        background: url("../image/dark/icon-chip-arrow-off.png") center no-repeat
+        
+    .chip-area
+        &.on
+            .btn-more
+                background: url("../image/dark/icon-chip-arrow-on.png") center no-repeat
+
+    .chip
+        background: var(--bg-chip) url("../image/dark/icon-chip-x.png") right 6px center no-repeat
+
+    .select-box
+        .label
+            &::after
+                background: url("../image/dark/icon-arrow-off.png") center no-repeat
+        &.on
+            .label
+                &::after
+                    background: url("../image/dark/icon-arrow-on.png") center no-repeat
+    .no-data
+        p
+            background:
+                image: url('../image/dark/warning.png')

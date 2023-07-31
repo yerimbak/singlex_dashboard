@@ -1,0 +1,63 @@
+/* font */
+@mixin font-number
+  font-family: 'SpoqaHanSans', sans-serif
+
+@mixin font-h1
+  font:
+      size: 24px
+      weight: 700
+  line-height: 33px
+
+@mixin font-h2
+  font:
+    weight: 700
+    size: 18px
+  line-height: 25px
+
+@mixin font-h3
+  font:
+    weight: 700
+    size: 16px
+  line-height: 22px
+
+@mixin font-h4
+  font:
+    weight: 700
+    size: 15px
+  line-height: 22px
+
+@mixin font-h5
+  font:
+    weight: 500
+    size: 14px
+  line-height: 20px
+
+@mixin font-h6
+  font:
+    weight: 400
+    size: 13px
+  line-height: 19px
+
+/* flex */  
+@mixin flex-box
+ display: flex
+  
+@mixin flex-box-sb
+  display: flex
+  justify-content: space-between
+
+@mixin flex-box-ct
+  display: flex
+  justify-content: center
+
+
+/* ellipsis */
+@mixin ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+@mixin reset-bt
+  background-color: transparent !important
+  border-color: transparent !important
+  

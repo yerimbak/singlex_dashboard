@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	@@include('./include/head.html')
+</head>
+
+<body>
+	<!--  data-theme="dark" -->
+	<div class="wrap" id="MainFrame">
+		@@include('./include/header.html')
+		<!-- content에 one-service 클래스 추가 시 하나의 서비스에 대한 디자인 적용 -->
+		<div class="content" data-content="new">
+			<!-- 2022-08-12 추가 -->
+			<div class="tab-menu">
+				<div class="tab-btn" data-tab="tab1">
+					<a href="./main_service.html" class="on">
+						<h2 class="tab-title">Service</h2>
+					</a>
+					<a href="./main_tenant.html">
+						<h2 class="tab-title">Tenant</h2>
+					</a>
+				</div>
+				<a class="btn-help" href="javascript:;"><span>Help</span></a>
+			</div>
+			<!-- // 2022-08-12 추가 -->
+			<div class="tab-content-wrap" id="tab1">
+				<!-- 2022-06-22 tab 내용 1개로 수정 -->
+				<div class="tab-content on">
+					<div class="top-area">
+						<div>
+							<!-- 2022-06-27 selectbox 내용 수정 -->
+							<div class="select-area">
+								<!-- service class 추가 -->
+								<div class="select-box service" style="width:200px">
+									<button class="label">Service 전체</button>
+									<ul class="option">
+										<li><a href="javascript:;" data-value="Service 전체">Service 전체</a></li>
+										<li><a href="javascript:;" data-value="A Service">A Service</a></li>
+										<li><a href="javascript:;" data-value="B Service">B Service</a></li>
+										<li><a href="javascript:;" data-value="C Service">C Service</a></li>
+										<li><a href="javascript:;" data-value="가 Service">가 Service</a></li>
+										<li><a href="javascript:;" data-value="나 Service">나 Service</a></li>
+										<li><a href="javascript:;" data-value="다 Service">다 Service</a></li>
+										<li><a href="javascript:;" data-value="라 Service">라 Service</a></li>
+									</ul>
+								</div>
+								<!-- tenant class 추가 -->
+								<div class="select-box tenant type-check" style="width:200px">
+									<!-- 2022-07-29 셀렉트 박스 전체 수정 -->
+									<button class="label">Tenant <span>전체</span></button>
+									<ul class="option">
+										<li class="all" data-code="0000">
+											<!-- 2022-07-29 셀렉트 박스 전체 수정 -->
+											<input type="checkbox" id="tenant01" checked>
+											<label for="tenant01">전체</label>
+										</li>
+										<li data-code="0001">
+											<input type="checkbox" id="tenant02">
+											<label for="tenant02">LG CNS</label>
+										</li>
+										<li data-code="0002">
+											<input type="checkbox" id="tenant03">
+											<label for="tenant03">LG 디스플레이</label>
+										</li>
+										<li data-code="0003">
+											<input type="checkbox" id="tenant04">
+											<label for="tenant04">LG 이노텍</label>
+										</li>
+										<li data-code="0004">
+											<input type="checkbox" id="tenant05">
+											<label for="tenant05">LG 전자</label>
+										</li>
+										<li data-code="0005">
+											<input type="checkbox" id="tenant06">
+											<label for="tenant06">LG 화학</label>
+										</li>
+										<li data-code="0006">
+											<input type="checkbox" id="tenant07">
+											<label for="tenant07">LX 판토스</label>
+										</li>
+										<li data-code="0007">
+											<input type="checkbox" id="tenant08">
+											<label for="tenant08">교보생명</label>
+										</li>
+										<li data-code="0008">
+											<input type="checkbox" id="tenant09">
+											<label for="tenant09">지투알</label>
+										</li>
+										<li data-code="0009">
+											<input type="checkbox" id="tenant10">
+											<label for="tenant10">투썸플레이스</label>
+										</li>
+										<li data-code="0010">
+											<input type="checkbox" id="tenant11">
+											<label for="tenant11">스타벅스</label>
+										</li>
+										<li data-code="0011">
+											<input type="checkbox" id="tenant12">
+											<label for="tenant12">웅진코웨이</label>
+										</li>
+										<li data-code="0012">
+											<input type="checkbox" id="tenant13">
+											<label for="tenant13">LG 화학</label>
+										</li>
+										<li data-code="0013">
+											<input type="checkbox" id="tenant14">
+											<label for="tenant14">LX 판토스</label>
+										</li>
+										<li data-code="0014">
+											<input type="checkbox" id="tenant15">
+											<label for="tenant15">교보생명</label>
+										</li>
+										<li data-code="0015">
+											<input type="checkbox" id="tenant16">
+											<label for="tenant16">LX 지투알</label>
+										</li>
+									</ul>
+								</div>
+								<!-- 2022-07-05 버튼 추가-->
+								<div>
+									<button class="btn-result">적용</button>
+								</div>
+								<!-- // 2022-07-05 버튼 추가-->
+							</div>
+							<!-- 2022-06-28 chip-area 구조 수정 -->
+							<!-- 2022-07-22 선택시 적용버튼수정: off class제거-->
+							<div class="chip-area">
+								<div class="box">
+									<div class="sort-box"></div>
+									<button type="button" class="btn-more">더보기</button>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="select-box refresh" style="width:136px">
+								<button class="label">Refresh 10분</button>
+								<ul class="option">
+									<li><a href="javascript:;" data-value="10분">10분</a></li>
+									<li><a href="javascript:;" data-value="20분">20분</a></li>
+									<li><a href="javascript:;" data-value="30분">30분</a></li>
+									<li><a href="javascript:;" data-value="40분">40분</a></li>
+									<li><a href="javascript:;" data-value="50분">50분</a></li>
+									<li><a href="javascript:;" data-value="60분">60분</a></li>
+								</ul>
+							</div>
+							<div class="btn-wrap">
+								<button type="button" class="btn modal-open bookmark-pop" data-modal="modal1">Tenant 즐겨찾기 등록 팝업</button>
+								<button type="button" class="btn modal-open bookmark-list-pop" data-modal="modal2">Tenant 즐겨찾기 리스트 팝업</button>
+							</div>
+						</div>
+					</div>
+	
+					<div class="main-area">
+						<section>
+							<div class="type-chart dot">
+								<div class="title">
+									<h3 class="chart-title">Health Check Status - Service 전체</h3>
+									<small>(12.24 12:22)</small>
+								</div>
+								<div class="box">
+									<!-- 2022-06-28 data-num 속성 추가 -->
+									<!-- data-num="원의 갯수" -->
+									<div class="chart-area" data-num="50">
+										@@for (var i = 0; i < 50; i++) { 
+											<span class="dot good" data-modal="modal3"></span>
+										}
+									</div>
+									<div class="chart-content">
+										<ul class="chart-info">
+											<li>
+												<!-- 2022-06-29 툴팁 삭제 -->
+												<div class="type-text">
+													<p class="chart-status good">Good</p>
+													<span class="txt">(99% 이상)</span>
+												</div>
+												<p class="count">34</p>
+											</li>
+											<li>
+												<div class="type-text">
+													<p class="chart-status warn">Warning</p>
+													<span class="txt">(70~99% 미만)</span>
+												</div>
+												<p class="count">2</p>
+											</li>
+											<li>
+												<div class="type-text">
+													<p class="chart-status bad">Bad</p>
+													<span class="txt">(70% 미만)</span>
+												</div>
+												<p class="count">1</p>
+											</li>
+										</ul>
+										<p class="total-service">Total Services : <i class="sum">37</i></p>
+									</div>
+								</div>
+								<button class="btn-popup">전체서비스의 SLO 상태 제공 팝업 열기</button>
+							</div>
+						</section>
+	
+						<section>
+							<div class="type-chart donut">
+								<div class="title">
+									<h3 class="chart-title">SLO Status - Service 전체</h3>
+									<small>(12.01~12.24 12:22)</small>
+								</div>
+								<div class="box">
+									<div class="chart-area">
+										<div id="chart"></div>
+										<!-- 2022-07-11 추가 -->
+										<div class="title-box" style="width:200px;height:235px">
+											<div class="inner-box" style="height:235px">
+												<div class="count">5</div>
+												<div class="title">Total</div>
+											</div>
+										</div>
+										<!-- // 2022-07-11 추가 -->
+									</div>
+									<div class="chart-content">
+										<ul class="chart-info">
+											<li>
+												<div class="type-txt">
+													<p class="chart-status good">Good</p>
+													<span class="txt">(SLO 99% 이상)</span>
+												</div>
+												<p class="count">1</p>
+											</li>
+											<li>
+												<div class="type-txt">
+													<p class="chart-status warn">Warning</p>
+													<span class="txt">(SLO 70~99% 미만)</span>
+												</div>
+												<p class="count">1</p>
+											</li>
+											<li>
+												<div class="type-txt">
+													<p class="chart-status bad">Bad</p>
+													<span class="txt">(SLO 70% 미만)</span>
+												</div>
+												<p class="count">3</p>
+											</li>
+										</ul>
+										<p class="total-service">Total Services : <i class="sum">5</i></p>
+									</div>
+								</div>
+								<button class="btn-popup">전체서비스의 SLO 상태 제공 팝업 열기</button>
+							</div>
+						</section>
+	
+						<section>
+							<div class="type-accordion multi">
+								<div class="title">
+									<!-- 2022-06-29 타이틀 수정 -->
+									<h3 class="accordion-title">Health Check by Services</h3>
+								</div>
+								<!-- 2022-06-24 id 속성 추가 -->
+								<div class="multi-slide" id="swiper1">
+									<div class="swiper-wrapper service">
+										<div class="swiper-slide">
+											<div class="accordion-wrap good">
+												<button type="button" class="accordion-tit">
+													<span class="svc-name">기준정보 관리(MDM)</span>
+
+													<span class="svc-status">
+														<span class="status good">3</span>
+														<span class="status warn">1</span>
+														<span class="status bad">0</span>
+													</span>
+												</button>
+												<div class="accordion-cont">
+													<a href="javascript:;" class="good">LG이노텍</a>
+													<a href="javascript:;" class="good">LG화학</a>
+													<a href="javascript:;" class="good">LX판토스</a>
+													<a href="javascript:;" class="warn">LGCNS</a>
+													<a href="javascript:;" class="bad">지투알</a>
+												</div>
+											</div>
+											<div class="accordion-wrap warn">
+												<button type="button" class="accordion-tit">
+													<span class="svc-name">기준정보 관리(MDM)</span>
+													<span class="svc-status">
+														<span class="status good">3</span>
+														<span class="status warn">1</span>
+														<span class="status bad">0</span>
+													</span>
+												</button>
+												<div class="accordion-cont">
+													<a href="javascript:;" class="good">LG이노텍</a>
+													<a href="javascript:;" class="good">LG화학</a>
+													<a href="javascript:;" class="good">LX판토스</a>
+													<a href="javascript:;" class="warn">LGCNS</a>
+													<a href="javascript:;" class="bad">지투알</a>
+												</div>
+											</div>
+											<div class="accordion-wrap bad">
+												<button type="button" class="accordion-tit">
+													<span class="svc-name">기준정보 관리(MDM)</span>
+													<span class="svc-status">
+														<span class="status good">3</span>
+														<span class="status warn">1</span>
+														<span class="status bad">0</span>
+													</span>
+												</button>
+												<div class="accordion-cont">
+													<a href="javascript:;" class="good">LG이노텍</a>
+													<a href="javascript:;" class="good">LG화학</a>
+													<a href="javascript:;" class="good">LX판토스</a>
+													<a href="javascript:;" class="warn">LGCNS</a>
+													<a href="javascript:;" class="bad">지투알</a>
+												</div>
+											</div>
+											@@for (var i = 0; i < 2; i++) { 
+												@@include('./include/accordion_default.html') 
+											}
+										</div>
+										<div class="swiper-slide">
+											@@for (var i = 0; i < 5; i++) {
+												@@include('./include/accordion_default.html') 
+											}
+										</div>
+										<div class="swiper-slide">
+											@@for (var i = 0; i < 5; i++) {
+												@@include('./include/accordion_default.html')
+											}
+										</div>
+										<div class="swiper-slide">
+											@@for (var i = 0; i < 5; i++) {
+												@@include('./include/accordion_default.html') 
+											}
+										</div>
+									</div>
+									<!-- 2022-06-27 이전 다음버튼 생성 -->
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+	
+									<!-- 2022-06-24 일시정지버튼 생성 -->
+									<div class="bottom-area">
+										<div class="swiper-pagination"></div>
+										<button type="button" class="btn-stop" data-swiper="swiper1">일시정지</button>
+									</div>
+								</div>
+							</div>
+						</section>
+	
+						<section>
+							<div class="type-accordion" style="width: 60%">
+								<div class="title">
+									<!-- 2022-06-29 타이틀 수정 -->
+									<h3 class="accordion-title">SLO by Services</h3>
+								</div>
+								<!-- 2022-06-24 id 속성 추가 -->
+								<div class="default-slide" id="swiper2">
+									<div class="swiper-wrapper service">
+										<div class="swiper-slide">
+											<div class="accordion-wrap good">
+												<button type="button" class="accordion-tit">
+													<span class="svc-name">기준정보 관리(MDM)</span>
+													<span class="svc-status">
+														<span class="status good">3</span>
+														<span class="status warn">1</span>
+														<span class="status bad">0</span>
+													</span>
+												</button>
+												<div class="accordion-cont">
+													<a href="javascript:;" class="good">LG이노텍</a>
+													<a href="javascript:;" class="good">LG화학</a>
+													<a href="javascript:;" class="good">LX판토스</a>
+													<a href="javascript:;" class="warn">LGCNS</a>
+													<a href="javascript:;" class="bad">지투알</a>
+												</div>
+											</div>
+											<!-- <div class="accordion-wrap warn">
+												<button type="button" class="accordion-tit">
+													<span class="svc-name">기준정보 관리(MDM)</span>
+													<span class="svc-status">
+														<span class="status good">3</span>
+														<span class="status warn">1</span>
+														<span class="status bad">0</span>
+													</span>
+												</button>
+												<div class="accordion-cont">
+													<a href="javascript:;" class="good">LG이노텍</a>
+													<a href="javascript:;" class="good">LG화학</a>
+													<a href="javascript:;" class="good">LX판토스</a>
+													<a href="javascript:;" class="warn">LGCNS</a>
+													<a href="javascript:;" class="bad">지투알</a>
+												</div>
+											</div>
+											<div class="accordion-wrap bad">
+												<button type="button" class="accordion-tit">
+													<span class="svc-name">기준정보 관리(MDM)</span>
+													<span class="svc-status">
+														<span class="status good">3</span>
+														<span class="status warn">1</span>
+														<span class="status bad">0</span>
+													</span>
+												</button>
+												<div class="accordion-cont">
+													<a href="javascript:;" class="good">LG이노텍</a>
+													<a href="javascript:;" class="good">LG화학</a>
+													<a href="javascript:;" class="good">LX판토스</a>
+													<a href="javascript:;" class="warn">LGCNS</a>
+													<a href="javascript:;" class="bad">지투알</a>
+												</div>
+											</div> -->
+											@@for (var i = 0; i < 2; i++) {
+												@@include('./include/accordion_default.html')
+											}
+										</div>
+										<!--#촘
+										<div class="swiper-slide">
+											@@for (var i = 0; i < 5; i++) {
+												@@include('./include/accordion_default.html') 
+											}
+										</div>
+										-->
+									</div>
+									<!-- 2022-06-27 이전 다음버튼 생성 -->
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+
+									<!-- 2022-06-24 일시정지버튼 생성 -->
+									<div class="bottom-area">
+										<div class="swiper-pagination"></div>
+										<button type="button" class="btn-stop" data-swiper="swiper2">일시정지</button>
+									</div>
+								</div>
+							</div>
+							<div class="type-accordion simple" style="width: 40%">
+								<div class="title">
+									<!-- 2022-06-29 타이틀 수정 -->
+									<h3 class="accordion-title">Error Budget</h3>
+								</div>
+								<!-- 2022-06-24 id 속성 추가 -->
+								<div class="default-slide" id="swiper3">
+									<div class="swiper-wrapper service">
+										<div class="swiper-slide">
+											<div class="accordion-wrap good">
+												<button type="button" class="accordion-tit">
+													<span class="svc-name">Common Service</span>
+													<span class="status">Good</span>
+												</button>
+												<div class="accordion-cont">
+													<a href="javascript:;" class="good"><i class="tenent">LG 이노텍</i><i
+															class="minute up">100’</i></a>
+													<a href="javascript:;" class="warn"><i class="tenent">LG전자</i><i
+															class="minute up">80’</i></a>
+												</div>
+											</div>
+											<div class="accordion-wrap warn">
+												<button type="button" class="accordion-tit">
+													<span class="svc-name">Common Service</span>
+													<span class="status">Warning</span>
+												</button>
+												<div class="accordion-cont">
+													<a href="javascript:;" class="good"><i class="tenent">LG 이노텍</i><i
+															class="minute up">100’</i></a>
+													<a href="javascript:;" class="warn"><i class="tenent">LG전자</i><i
+															class="minute up">80’</i></a>
+												</div>
+											</div>
+											<div class="accordion-wrap bad">
+												<button type="button" class="accordion-tit">
+													<span class="svc-name">Common Service</span>
+													<span class="status">Bad</span>
+												</button>
+												<div class="accordion-cont">
+													<a href="javascript:;" class="good"><i class="tenent">LG 이노텍</i>
+													<i class="minute up">100’</i></a>
+													<a href="javascript:;" class="warn"><i class="tenent">LG전자</i>
+													<i class="minute up">80’</i></a>
+												</div>
+											</div>
+											@@for (var i = 0; i < 2; i++) {
+												@@include('./include/accordion_simple.html')
+											}
+										</div>
+										<div class="swiper-slide">
+											@@for (var i = 0; i < 5; i++) {
+												@@include('./include/accordion_simple.html')
+											}
+										</div>
+									</div>
+									<!-- 2022-06-27 이전 다음버튼 생성 -->
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+
+									<!-- 2022-06-24 일시정지버튼 생성 -->
+									<div class="bottom-area">
+										<div class="swiper-pagination"></div>
+										<button type="button" class="btn-stop" data-swiper="swiper3">일시정지</button>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mode">
+			<input type="checkbox" id="mode" checked>
+			<label for="mode">라이트모드</label>
+		</div>
+	</div>
+	<!-- 2022-06-21 팝업 생성 -->
+	<div id="modal1" class="modal-wrap">
+		<strong class="tit">즐겨찾는 그룹 저장</strong>
+		<div class="input-box">
+			<input type="text" id="bookmark-tit">
+			<label for="bookmark-tit">제목</label>
+		</div>
+		<div class="btn-wrap">
+			<button type="button" class="basic cl-gray">저장</button>
+			<button type="button" class="basic">취소</button>
+		</div>
+		<button type="button" class="btn-close">닫기</button>
+	</div>
+
+	<!-- 2022-06-27 즐겨찾는 그룹 목록 레이어팝업 내용 수정 -->
+	<div id="modal2" class="modal-wrap bookmark-list">
+		<strong class="tit">즐겨찾는 그룹 목록</strong>
+		<div class="input-box">
+			<input type="radio" id="bookmark-item1">
+			<label for="bookmark-item1">엘지전자 외 5건</label>
+		</div>
+		<div class="input-box">
+			<input type="radio" id="bookmark-item2">
+			<label for="bookmark-item2">엘지화학, 엘지전자, LG 디스플레이</label>
+		</div>
+		<div class="btn-wrap">
+			<button type="button" class="basic cl-gray">확인</button>
+			<button type="button" class="basic">취소</button>
+		</div>
+		<button type="button" class="btn-close">닫기</button>
+	</div>
+
+	<!-- 2022-06-27 원 차트 레이어팝업 생성 -->
+	<div id="modal3" class="modal-wrap dot">
+		<ul>
+			<li>
+				Service : <i class="service">기준정보관리(MDM)</i>
+			</li>
+			<li>
+				Health Check : <i class="hc-status bad">Bad</i>
+			</li>
+		</ul>
+		<div class="tenant-box">
+			<p class="tenant">Tanant</p>
+			<p class="status good">Good : <i>3</i></p>
+			<p class="status warn">Warning : <i>1</i></p>
+			<p class="status bad">Bad : <i>1</i></p>
+		</div>
+		<div class="tenant-name">
+			<span class="status warn">LG CNS</span>
+			<span class="status bad">지투알</span>
+		</div>
+	</div>
+	<script>
+		// 2022-06-24 팝업 스크립트 추가
+		// popup
+		$(document).on({
+			click: function(){
+				const popupData = $(this).data("modal");
+				const thisPopup = $("#" + popupData);
+				const position = $(this).offset();
+				
+				if(thisPopup.hasClass("information")) {
+					$(".modal-wrap").hide();
+					thisPopup.show();
+					thisPopup.css("top", (position.top) - 270 + "px");
+					thisPopup.css("left", (position.left) - 420 + "px");
+					thisPopup.focus();
+					return;
+				}
+
+				$(".modal-wrap").hide();
+				thisPopup.show();
+				thisPopup.css("top", (position.top) + 37 + "px");
+				thisPopup.css("left", (position.left) - 250 + "px");
+				thisPopup.focus();
+			}   
+		}, ".modal-open")
+
+		// 2022-06-27 원 차트에 마우스 오버 시 팝업 이벤트
+		// 2022-07-13 TOP값 변경
+		$(document).on({
+			mouseenter: function(){
+				const popupData = $(this).data("modal");
+				const thisPopup = $("#" + popupData);
+				const position = $(this).offset();
+				const top = (position.top) + $(this).outerHeight();
+				const left = (position.left) - 100 > 0 ? (position.left) - 100 : 0;
+				
+				$(".modal-wrap").hide();
+				thisPopup.show();
+				thisPopup.css("top", top + "px");
+				thisPopup.css("left", left + "px");
+				thisPopup.focus();
+			}
+		}, ".type-chart.dot .chart-area .dot")
+		// <!-- 2022-07-28 hover수정 -->
+		$(document).on({
+			mouseleave: function(){
+				$(".modal-wrap").hide();
+			}
+		}, ".modal-wrap.dot")
+
+		// popup 닫기 이벤트
+		$(document).on({
+			click: function(){
+				const popup = $(this).parents(".modal-wrap");
+				popup.hide();
+			}
+		}, ".modal-wrap .btn-close")
+
+		// 외부영역 클릭 시 popup 닫기
+		$(document).mouseup(function (e){
+			const modalWrap = $('.modal-wrap');
+			if(!modalWrap.is(e.target) && modalWrap.has(e.target).length === 0){
+				modalWrap.hide();
+			}
+		});
+
+		// Select Box Default
+		// Open
+		$(document).on({
+			click: function(){
+				if($(this).closest('.select-box').hasClass('on')){
+					$(this).closest('.select-box').removeClass('on')  
+				} else {
+					$(this).closest('.select-box').addClass('on');
+				};
+			}
+		}, '.select-box .label');
+
+		// 2022-06-22 셀렉트박스 스크립트 수정
+		// Option selected
+		$(document).on({
+			click: function(){
+				if($(this).closest('.select-box').hasClass('type-check')){
+					return;
+				};
+
+				const selectWrap = $(this).parents('.option').parents('.select-box');
+				const value = $(this).data('value');
+				const index = $(this).closest('li').index();
+
+				// alert(`value : ${value} / index : ${index}`)
+				$(".select-box .option a").removeClass('checked');
+				if(selectWrap.hasClass("service")) {
+					$(this).closest('.select-box').find('.label').text("Service " + value);
+				} else if(selectWrap.hasClass("tenant")) {
+					$(this).closest('.select-box').find('.label').text("Tenant " + value);
+				} else if(selectWrap.hasClass("refresh")) {
+					$(this).closest('.select-box').find('.label').text("Refresh " + value);
+				}
+				$(this).closest('.select-box').removeClass("on");
+				$(this).addClass('checked');
+			}
+		}, '.select-box .option a');
+
+		// Select Box Type Check
+
+		// 2022-06-27 셀렉트 박스 제어함수 추가
+		const changeCheckbox = (target) => {
+			const selectBox = $(target).closest('.select-box'),
+				textTarget = selectBox.find('.label span'),
+				checkedItems = selectBox.find('input[type="checkbox"]:checked');
+				targetStr = $(checkedItems[0]).parent().find('label').text();
+			let resultStr = '';
+
+			// console.log(checkedItems, targetStr, checkedItems.length)
+			if(targetStr !== '전체' && checkedItems.length > 1) {
+				resultStr = `<span class="result-txt">${targetStr}</span> 외 ${checkedItems.length-1}개`;
+			} else {
+				resultStr = targetStr;
+			}
+			
+			// 2022-07-11 추가
+			if(checkedItems.length < 1){
+				// <!-- 2022-07-29 셀렉트 박스 전체 수정 -->
+				textTarget.html('전체');
+				$(`.select-box.tenant .all`).find('input[type="checkbox"]').prop('checked', true)
+			} else {
+				textTarget.html(resultStr);
+			}
+		};
+		const deleteChips = (item, target) => {
+			const code = $(item).attr('data-code');
+			const allItem = $(`.select-box.${target}`).find('.all')
+			const targetItem = $(`.select-box.${target}`).find(`[data-code="${code}"]`)
+			// console.log(item, code, targetItem)
+			allItem.find('input[type="checkbox"]').prop('checked', false)
+			targetItem.find('input[type="checkbox"]').prop('checked', false)
+			// <!-- 2022-07-22 선택시 적용버튼수정 -->
+			/*
+			if ($(`.select-box.${target}`).find('input[type="checkbox"]:checked').length === 0) {
+				$('.chip-area').addClass('off'); 
+			}
+			*/
+			changeCheckbox(targetItem)
+		};
+		// <!-- 2022-07-22 선택시 적용버튼수정-->
+		const generateChips = (target) => {
+			let result = '';
+			const targets = $(`.select-box.${target}`).find('input[type="checkbox"]:checked');
+			// console.log(targets)
+			$.each(targets, (idx, target) => {
+				const value = $(target).closest('li').find('label').text(),
+						code = $(target).closest('li').data('code');
+				const html = `
+					<div class="chip" data-code="${code}">
+						<a href="#">${value}</a>
+						<button type="button" class="btn-delete">삭제하기</button>
+					</div>
+				`;
+				result += html;
+			});
+
+			return result;
+		}
+		const renderChips = () => {
+			const renderChipsString = generateChips('tenant');
+			// console.log(renderChipsString)
+			const chipArea = $('.chip-area .box .sort-box');
+			$.each(chipArea.find('.chip'), (idx, target) => {
+				$(target).remove();
+			});
+			chipArea.append(renderChipsString);
+		};
+		$(document).on({
+			click: function(){
+
+				const checked = $(this).is(':checked'),
+					  chipArea = $('.chip-area .box .sort-box');
+
+				// 2022-07-11 수정
+				if($(this).closest('li').hasClass('all')){
+					// 전체 선택시
+					if(checked){
+						$.each($(this).closest('.option').find('li'), function(){
+							// <!-- 2022-07-28 셀렉트 박스 전체 수정 -->
+							if ($(this).hasClass('all')) return
+							$(this).find('input[type="checkbox"]').prop('checked', false);
+						});
+					}
+					// <!-- 2022-07-22 선택시 적용버튼수정 -->
+					/*
+					$.each(chipArea.find('.chip'), function(){
+						$(this).remove();
+					});
+					*/
+				} else {
+					// 개별 선택시
+					// <!-- 2022-07-22 선택시 적용버튼수정 -->
+					/*
+					const value = $(this).closest('li').find('label').text(),
+						  code = $(this).closest('li').data('code');
+					*/
+					let itemChecked = true;
+					// <!-- 2022-07-22 선택시 적용버튼수정 -->
+					/*
+					if(checked){
+						let html = `
+							<div class="chip" data-code="${code}">
+								<a href="#">${value}</a>
+								<button type="button" class="btn-delete">삭제하기</button>
+							</div>
+						`;
+						chipArea.append(html);
+					} else {
+						chipArea.find(`div[data-code="${code}"]`).remove();                        
+					}; 
+					*/
+					$.each($(this).closest('.select-box').find('li'), function(k, v){
+						if(!itemChecked) return;
+						if(k != 0){
+							if(!$(this).find('input[type="checkbox"]').is(':checked')){
+								itemChecked = false;
+							} else {
+								itemChecked = true;
+							};
+						};
+					});
+					if(!itemChecked){
+						$(this).closest('.select-box').find('.all input[type="checkbox"]').prop('checked', false);
+					} else {
+						$(this).closest('.select-box').find('.all input[type="checkbox"]').prop('checked', true);
+					};
+				};
+				if($(this).checked) {
+					$(this).closest("li").addClass("checked");
+				}
+				// chip-area 2줄 이상
+				// 202t2-06-28 chip 스크립트 수정
+				if($(".chip-area .box").outerHeight() > 34) {
+					$(".btn-more").css("display", "block")
+				} else {
+					$(".btn-more").css("display", "none")
+				}
+				// 2022-06-27 셀렉트 박스 제어함수 호출
+				changeCheckbox(this);
+			}
+		}, '.select-box.type-check input[type="checkbox"]');
+
+		// <!-- 2022-07-21 선택시 적용버튼(class추가및, 스크립트수정) -->
+		$(document).on({
+			click: function(){
+				if ($(`.select-box.tenant`).find('input[type="checkbox"]:checked').length === 0) {
+					alert('선택된 값이 없습니다');
+				} else {
+					// <!-- 2022-07-22 선택시 적용버튼수정 -->
+					// $('.chip-area').removeClass('off'); 
+					renderChips();
+				}
+			}
+		}, '.select-area .btn-result');
+
+		// 외부영역 클릭 시 셀렉트 박스
+		$(document).mouseup(function (e){
+			const selectBox = $(".select-box");
+			if(selectBox.has(e.target).length === 0){
+				selectBox.removeClass("on");
+			}
+		});
+
+		// chip event
+		// 2022-06-28 chip 스크립트 수정
+		$(document).on({
+			click: function(){
+				this.closest('.chip').remove();
+				// chip-area 2줄 이상
+				if($('.chip-area .box').outerHeight() > 34) {
+					$('.btn-more').css('display', 'block')
+				} else {
+					$('.btn-more').css('display', 'none')
+				}
+				// 2022-06-27 셀렉트 박스 제어함수 호출
+				deleteChips(this.closest('.chip'), 'tenant')
+			}
+		}, '.chip .btn-delete');
+
+		// 2022-06-28 chip 스크립트 수정
+		$(document).on({
+			click: function(){
+				const chipArea = $(this).parents(".box").parents(".chip-area");
+				if(chipArea.hasClass("on")) {
+					if($('.chip-area .box').outerHeight() <= 71) {
+						$(this).css('display', 'none')
+					}
+					chipArea.removeClass("on")
+				} else {
+					chipArea.addClass("on")
+				}
+			}
+		}, ".chip-area .btn-more")
+		
+		// accordion
+		$(document).on({
+			click: function(){
+				const accordionWrap = $(this).closest(".accordion-wrap");
+				const accordionTit = $(".accordion-tit");
+				const accordionCont = $(".accordion-cont");
+
+				if(accordionWrap.hasClass("on")) {
+					accordionWrap.removeClass("on")
+				} else {
+					accordionWrap.addClass("on").siblings().removeClass("on")
+				}
+			}
+		}, ".accordion-tit")
+
+		// switch
+		$(document).on({
+			click: function(){
+				const switchCheck = $(".mode input[type='checkbox']");
+				const switchTxt = $(".mode label");
+				const body = $("body");
+
+				if(switchCheck.is(":checked")) {
+					switchTxt.html("라이트모드")
+					body.attr("data-theme", "")
+				} else {
+					switchTxt.html("다크<br>모드")
+					body.attr("data-theme", "dark")
+				}
+			}
+		}, ".mode")
+
+		// donut chart
+		var chart = c3.generate({
+			data: {
+				columns: [
+					['data1', 1],
+					['data2', 1],
+					['data3', 3]
+				],
+				type: 'donut',
+				colors: {
+					'data1': 'var(--status-confirmed)',
+					'data2': 'var(--status-warning)',
+					'data3': 'var(--status-error)'
+				}
+			},
+			donut: {
+				width: 20,
+				expand: false,
+				label: {
+					show: false
+				}
+			},
+			legend: {
+				show: false
+			}
+		});
+		chart.resize({ width: 200, height: 235 });
+
+		// default swiper
+		const dftSwiper = new Swiper('#swiper2', {
+			// loop: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false
+			},
+			spaceBetween: 22,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			// 2022-06-27 스와이프 네비게이션 추가
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+		const dftSwiper2 = new Swiper('#swiper3', {
+			// loop: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false
+			},
+			spaceBetween: 22,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			// 2022-06-27 스와이프 네비게이션 추가
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+		// multi slide
+		const multiSwiper = new Swiper('.multi-slide', {
+			// loop: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false
+			},
+			slidesPerView: 2,
+			// <!-- 2022-07-21 swiper 2개씩 이동 -->
+			slidesPerGroup: 2,
+			spaceBetween: 22,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			// 2022-06-27 스와이프 네비게이션 추가
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+		// 2022-06-24 슬라이드 autoplay 제어 스크립트 추가
+		// slide 일시정지
+		$(document).on({
+			click: function(){
+				const btnNum = $(this).data("swiper");
+				const slide = $("#" + btnNum)[0];
+
+				if($(this).hasClass("on")) {
+					slide.swiper.autoplay.start();
+					$(this).removeClass("on");
+					$(this).text("일시정지");
+				} else {
+					slide.swiper.autoplay.stop();
+					$(this).addClass("on");
+					$(this).text("재생");
+				}
+			}
+		}, ".btn-stop")
+
+		// 2022-06-27 스와이프 호버 이벤트 추가        
+		// 2022-07-13 수정
+		$('.multi-slide, .default-slide').each(function(elem, target){
+			const swp = target.swiper;
+			const bts = $(this).find('.swiper-button-next, .swiper-button-prev')
+			$(this).closest('.type-accordion').hover(function() {
+				swp.autoplay.stop();
+				bts.show();
+			}, function() {
+				swp.autoplay.start();
+				bts.hide();
+			});
+		});
+
+	</script>
+
+</body>
+
+</html>

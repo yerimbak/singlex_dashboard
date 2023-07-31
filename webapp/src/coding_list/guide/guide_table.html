@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Table Guide</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover">
+	
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/modules.css">
+
+	<!-- 가이드용 -->
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/pretty.css">
+	<!--//  가이드용 -->
+
+	<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+
+	<style>
+		body {background: #FFFFFF}
+	</style>
+</head>
+<body>
+
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">Table Guide</h1>
+
+	<h2 class="h2_guide">01. Default</h2>
+	<div class="guide_wrap">
+		<div class="legend type-table">
+			범례 : 
+			<span class="good">Good</span>
+			<span class="warn">Warning</span>
+			<span class="bad">Bad</span>
+		</div>
+		<table>
+			<caption class="caption">Popup Title</caption>
+			<colgroup>
+			</colgroup>
+			<thead>
+			  <tr>
+				<th scope="col">Indicatore</th>
+				<th scope="col">전일</th>
+				<th scope="col">전주</th>
+				<th scope="col">전월</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+					<th scope="row">Database Health Check</th>
+					<td class="good">Good</td>
+					<td class="good">Good</td>
+					<td class="warn">Warning</td>
+			  </tr>
+				<tr>
+					<th scope="row">Frontend Health Check</th>
+					<td class="good">Good</td>
+					<td class="warn">Warning</td>
+					<td class="warn">Warning</td>
+			  </tr>
+				<tr>
+					<th scope="row">Backend Health Check</th>
+					<td class="good">Good</td>
+					<td class="good">Good</td>
+					<td class="warn">Warning</td>
+			  </tr>
+			</tbody>
+		</table>
+		<div data-theme="dark">
+			<div class="legend type-table">
+				범례 : 
+				<span class="good">Good</span>
+				<span class="warn">Warning</span>
+				<span class="bad">Bad</span>
+			</div>
+			<table>
+				<caption class="caption">Popup Title</caption>
+				<colgroup>
+				</colgroup>
+				<thead>
+				  <tr>
+					<th scope="col">Indicatore</th>
+					<th scope="col">전일</th>
+					<th scope="col">전주</th>
+					<th scope="col">전월</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+						<th scope="row">Database Health Check</th>
+						<td class="good">Good</td>
+						<td class="good">Good</td>
+						<td class="warn">Warning</td>
+				  </tr>
+					<tr>
+						<th scope="row">Frontend Health Check</th>
+						<td class="good">Good</td>
+						<td class="warn">Warning</td>
+						<td class="warn">Warning</td>
+				  </tr>
+					<tr>
+						<th scope="row">Backend Health Check</th>
+						<td class="good">Good</td>
+						<td class="good">Good</td>
+						<td class="warn">Warning</td>
+				  </tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+<!-- code -->
+<div class="d_desc code">
+<xmp class="prettyprint linenums javascript">
+<div class="legend type-table">
+	범례 : 
+	<span class="good">Good</span>
+	<span class="warn">Warning</span>
+	<span class="bad">Bad</span>
+</div>
+<table>
+	<caption class="caption">Popup Title</caption>
+	<colgroup>
+	</colgroup>
+	<thead>
+		<tr>
+		<th scope="col">Indicatore</th>
+		<th scope="col">전일</th>
+		<th scope="col">전주</th>
+		<th scope="col">전월</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<!-- 상황에 따라 good & warn & bad class 추가 -->
+			<th scope="row">Database Health Check</th>
+			<td class="good">Good</td>
+			<td class="good">Good</td>
+			<td class="warn">Warning</td>
+		</tr>
+		<tr>
+			<th scope="row">Frontend Health Check</th>
+			<td class="good">Good</td>
+			<td class="warn">Warning</td>
+			<td class="warn">Warning</td>
+		</tr>
+		<tr>
+			<th scope="row">Backend Health Check</th>
+			<td class="good">Good</td>
+			<td class="good">Good</td>
+			<td class="warn">Warning</td>
+		</tr>
+	</tbody>
+</table>
+</xmp>
+</div>
+<!-- //code -->
+
+<h2 class="h2_guide">02. Type1</h2>
+	<div class="guide_wrap">
+		<div class="legend type-table">
+			범례 : 
+			<span class="good">Good</span>
+			<span class="warn">Warning</span>
+			<span class="bad">Bad</span>
+		</div>
+		<table class="type1">
+			<caption class="caption">Popup Title</caption>
+			<colgroup>
+				<col style="width:180px">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+			</colgroup>
+			<thead>
+			  <tr>
+				<th scope="col">Tenant</th>
+				<th scope="col">Jan 2022</th>
+				<th scope="col">Dec 2021</th>
+				<th scope="col">Nov 2021</th>
+				<th scope="col">Oct 202</th>
+				<th scope="col">Sep 2021</th>
+				<th scope="col">S Aug 2021</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+					<th scope="row">LG CNS</th>
+					<td class="good">3</td>
+					<td class="warn">3</td>
+					<td class="bad">3</td>
+					<td class="good">3</td>
+					<td class="good">3</td>
+					<td class="good">3</td>
+			  </tr>
+				<tr>
+					<th scope="row">LG CNS</th>
+					<td class="good">3</td>
+					<td class="warn">3</td>
+					<td class="bad">3</td>
+					<td class="good">3</td>
+					<td class="good">3</td>
+					<td class="good">3</td>
+			  </tr>
+				<tr>
+					<th scope="row">LG CNS</th>
+					<td class="good">3</td>
+					<td class="warn">3</td>
+					<td class="bad">3</td>
+					<td class="good">3</td>
+					<td class="good">3</td>
+					<td class="good">3</td>
+			  </tr>
+			</tbody>
+		</table>
+		<div data-theme="dark">
+			<div class="legend type-table">
+				범례 : 
+				<span class="good">Good</span>
+				<span class="warn">Warning</span>
+				<span class="bad">Bad</span>
+			</div>
+			<table class="type1">
+				<caption class="caption">Popup Title</caption>
+				<colgroup>
+					<col style="width:180px">
+					<col style="width:">
+					<col style="width:">
+					<col style="width:">
+					<col style="width:">
+					<col style="width:">
+					<col style="width:">
+				</colgroup>
+				<thead>
+				  <tr>
+					<th scope="col">Tenant</th>
+					<th scope="col">Jan 2022</th>
+					<th scope="col">Dec 2021</th>
+					<th scope="col">Nov 2021</th>
+					<th scope="col">Oct 202</th>
+					<th scope="col">Sep 2021</th>
+					<th scope="col">S Aug 2021</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+						<th scope="row">LG CNS</th>
+						<td class="good">3</td>
+						<td class="warn">3</td>
+						<td class="bad">3</td>
+						<td class="good">3</td>
+						<td class="good">3</td>
+						<td class="good">3</td>
+				  </tr>
+					<tr>
+						<th scope="row">LG CNS</th>
+						<td class="good">3</td>
+						<td class="warn">3</td>
+						<td class="bad">3</td>
+						<td class="good">3</td>
+						<td class="good">3</td>
+						<td class="good">3</td>
+				  </tr>
+					<tr>
+						<th scope="row">LG CNS</th>
+						<td class="good">3</td>
+						<td class="warn">3</td>
+						<td class="bad">3</td>
+						<td class="good">3</td>
+						<td class="good">3</td>
+						<td class="good">3</td>
+				  </tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+<!-- code -->
+<div class="d_desc code">
+<xmp class="prettyprint linenums javascript">
+/*
+다크모드 기준으로 thead 배경색이 다릅니다.
+*/
+<div class="legend type-table">
+	범례 : 
+	<span class="good">Good</span>
+	<span class="warn">Warning</span>
+	<span class="bad">Bad</span>
+</div>
+<!-- "type1" class 추가 -->
+<table class="type1">
+	<caption class="caption">Popup Title</caption>
+	<colgroup>
+		<col style="width:180px">
+		<col style="width:">
+		<col style="width:">
+		<col style="width:">
+		<col style="width:">
+		<col style="width:">
+		<col style="width:">
+	</colgroup>
+	<thead>
+		<tr>
+		<th scope="col">Indicatore</th>
+		<th scope="col">전일</th>
+		<th scope="col">전주</th>
+		<th scope="col">전월</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<!-- 상황에 따라 good & warn & bad class 추가 -->
+			<th scope="row">Database Health Check</th>
+			<td class="good">Good</td>
+			<td class="good">Good</td>
+			<td class="warn">Warning</td>
+		</tr>
+		<tr>
+			<th scope="row">Frontend Health Check</th>
+			<td class="good">Good</td>
+			<td class="warn">Warning</td>
+			<td class="warn">Warning</td>
+		</tr>
+		<tr>
+			<th scope="row">Backend Health Check</th>
+			<td class="good">Good</td>
+			<td class="good">Good</td>
+			<td class="warn">Warning</td>
+		</tr>
+	</tbody>
+</table>
+</xmp>
+</div>
+<!-- //code -->
+
+<h2 class="h2_guide">03. Type2</h2>
+	<div class="guide_wrap">
+		<div class="table-wrap">
+			<div class="top-area">
+				<p class="write">작성 기준 : <strong>SLO 달성건</strong> / 전체 SLI건</p>
+				<div class="legend type-table">
+					범례 : 
+					<span class="good">Good</span>
+					<span class="warn">Warning</span>
+					<span class="bad">Bad</span>
+				</div>
+			</div>
+			<table class="type2">
+				<caption class="caption">Popup Title</caption>
+				<colgroup>
+					<col style="width:180px">
+					<col style="width:">
+					<col style="width:">
+					<col style="width:">
+					<col style="width:">
+					<col style="width:">
+					<col style="width:">
+				</colgroup>
+				<thead>
+					<tr>
+					<th scope="col">구분</th>
+					<th scope="col">Jan 2022</th>
+					<th scope="col">Dec 2021</th>
+					<th scope="col">Nov 2021</th>
+					<th scope="col">Oct 202</th>
+					<th scope="col">Sep 2021</th>
+					<th scope="col">S Aug 2021</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">LG CNS</th>
+						<td class="good"><strong>6</strong>/9</td>
+						<td class="warn"><strong>6</strong>/9</td>
+						<td class="bad"><strong>6</strong>/9</td>
+						<td class="good"><strong>6</strong>/9</td>
+						<td class="good"><strong>6</strong>/9</td>
+						<td class="good"><strong>6</strong>/9</td>
+					</tr>
+					<tr>
+						<th scope="row">LG CNS</th>
+						<td class="good"><strong>6</strong>/9</td>
+						<td class="warn"><strong>6</strong>/9</td>
+						<td class="bad"><strong>6</strong>/9</td>
+						<td class="good"><strong>6</strong>/9</td>
+						<td class="good"><strong>6</strong>/9</td>
+						<td class="gray">Service Launched</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div data-theme="dark">
+			<div class="table-wrap">
+				<div class="top-area">
+					<p class="write">작성 기준 : <strong>SLO 달성건</strong> / 전체 SLI건</p>
+					<div class="legend type-table">
+						범례 : 
+						<span class="good">Good</span>
+						<span class="warn">Warning</span>
+						<span class="bad">Bad</span>
+					</div>
+				</div>
+				<table class="type2">
+					<caption class="caption">Popup Title</caption>
+					<colgroup>
+						<col style="width:180px">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+					</colgroup>
+					<thead>
+						<tr>
+						<th scope="col">구분</th>
+						<th scope="col">Jan 2022</th>
+						<th scope="col">Dec 2021</th>
+						<th scope="col">Nov 2021</th>
+						<th scope="col">Oct 202</th>
+						<th scope="col">Sep 2021</th>
+						<th scope="col">S Aug 2021</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">LG CNS</th>
+							<td class="good"><strong>6</strong>/9</td>
+							<td class="warn"><strong>6</strong>/9</td>
+							<td class="bad"><strong>6</strong>/9</td>
+							<td class="good"><strong>6</strong>/9</td>
+							<td class="good"><strong>6</strong>/9</td>
+							<td class="good"><strong>6</strong>/9</td>
+						</tr>
+						<tr>
+							<th scope="row">LG CNS</th>
+							<td class="good"><strong>6</strong>/9</td>
+							<td class="warn"><strong>6</strong>/9</td>
+							<td class="bad"><strong>6</strong>/9</td>
+							<td class="good"><strong>6</strong>/9</td>
+							<td class="good"><strong>6</strong>/9</td>
+							<td class="gray">Service Launched</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<!-- code -->
+<div class="d_desc code">
+	<xmp class="prettyprint linenums javascript">
+<div class="table-wrap">
+	<div class="top-area">
+		<p class="write">작성 기준 : <strong>SLO 달성건</strong> / 전체 SLI건</p>
+		<div class="legend type-table">
+			범례 : 
+			<span class="good">Good</span>
+			<span class="warn">Warning</span>
+			<span class="bad">Bad</span>
+		</div>
+	</div>
+	<!-- "type2" class 추가 -->
+	<table class="type2">
+		<caption class="caption">Popup Title</caption>
+		<colgroup>
+			<col style="width:180px">
+			<col style="width:">
+			<col style="width:">
+			<col style="width:">
+			<col style="width:">
+			<col style="width:">
+			<col style="width:">
+		</colgroup>
+		<thead>
+			<tr>
+			<th scope="col">구분</th>
+			<th scope="col">Jan 2022</th>
+			<th scope="col">Dec 2021</th>
+			<th scope="col">Nov 2021</th>
+			<th scope="col">Oct 202</th>
+			<th scope="col">Sep 2021</th>
+			<th scope="col">S Aug 2021</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<!-- 상황에 따라 good & warn & bad class 추가 -->
+				<th scope="row">LG CNS</th>
+				<td class="good"><strong>6</strong>/9</td>
+				<td class="warn"><strong>6</strong>/9</td>
+				<td class="bad"><strong>6</strong>/9</td>
+				<td class="good"><strong>6</strong>/9</td>
+				<td class="good"><strong>6</strong>/9</td>
+				<td class="good"><strong>6</strong>/9</td>
+			</tr>
+			<tr>
+				<th scope="row">LG CNS</th>
+				<td class="good"><strong>6</strong>/9</td>
+				<td class="warn"><strong>6</strong>/9</td>
+				<td class="bad"><strong>6</strong>/9</td>
+				<td class="good"><strong>6</strong>/9</td>
+				<td class="good"><strong>6</strong>/9</td>
+				<td class="good"><strong>6</strong>/9</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	</xmp>
+</div>
+<!-- //code -->
+
+<h2 class="h2_guide">04. Type3</h2>
+	<div class="guide_wrap">
+		<div class="legend type-table square">
+			범례 : 
+			<span class="good">50% 이상</span>
+			<span class="warn">50% 미만</span>
+			<span class="bad">20% 미만</span>
+		</div>
+		<table class="type3">
+			<caption class="caption">Popup Title</caption>
+			<colgroup>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">Error Budget</th>
+					<th scope="col">잔여 Error Budget</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="">67‘</td>
+					<td class="residual up good">34’</td>
+				</tr>
+				<tr>
+					<td class="">67‘</td>
+					<td class="residual up good">34’</td>
+				</tr>
+			</tbody>
+		</table>
+		<div data-theme="dark">
+			<div class="legend type-table square">
+				범례 : 
+				<span class="good">50% 이상</span>
+				<span class="warn">50% 미만</span>
+				<span class="bad">20% 미만</span>
+			</div>
+			<table class="type3">
+				<caption class="caption">Popup Title</caption>
+				<colgroup>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">Error Budget</th>
+						<th scope="col">잔여 Error Budget</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="">67‘</td>
+						<td class="residual up good">34’</td>
+					</tr>
+					<tr>
+						<td class="">67‘</td>
+						<td class="residual up good">34’</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<!-- code -->
+<div class="d_desc code">
+	<xmp class="prettyprint linenums javascript">
+<div class="legend type-table square">
+	범례 : 
+	<span class="good">50% 이상</span>
+	<span class="warn">50% 미만</span>
+	<span class="bad">20% 미만</span>
+</div>
+<!-- "type3" class 추가 -->
+<table class="type3">
+	<caption class="caption">Popup Title</caption>
+	<colgroup>
+	</colgroup>
+	<thead>
+		<tr>
+			<th scope="col">Error Budget</th>
+			<th scope="col">잔여 Error Budget</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="">67‘</td>
+			<!-- 잔여 Error Budget 셀에 "residual" class 추가 -->
+			<td class="residual up good">34’</td>
+		</tr>
+		<tr>
+			<td class="">67‘</td>
+			<td class="residual up good">34’</td>
+		</tr>
+	</tbody>
+</table>
+	</xmp>
+</div>
+
+	<!-- code -->
+	<h2 class="h2_guide">05. Type4</h2>
+	<div class="guide_wrap">
+		<div class="top-area">
+			<p class="detail-status">서비스별 상세상태 <span>(서비스: 15개,테넌트: 3개)</span></p>
+			<div class="detail-icon-area">
+				<button class="detail-icon">크게보기</button>
+			</div>
+		</div>
+		<!-- "type4" class 추가 -->
+		<table class="type4 scroll">
+			<caption class="caption">서비스, 테넌트, 완료, 진행, 2일이상대기, 데이터생성시간, 연결시스템에 대한 표</caption>
+			<colgroup>
+			<col style="width: 130px;">
+			<col style="width: 125px;">
+			<col style="width: 70px;">
+			<col style="width: 70px;">
+			<col style="width: 100px;">
+			<col style="width: 100px;">
+			<col style="width: 120px;">
+			</colgroup>
+			<thead>
+			<tr>
+					<th scope="col">서비스</th>
+					<th scope="col">테넌트</th>
+					<th scope="col">완료</th>
+					<th scope="col">진행</th>
+					<th scope="col" class="delay">2일이상대기</th>
+					<th scope="col" class="">데이터생성시간</th>
+					<th scope="col">연결시스템</th>
+			</tr>
+			</thead>
+			<tbody style="max-height:204px">
+			<tr>
+					<td class="detail" scope="row">설비관리(EMS)</td>
+					<td class="detail tenant" scope="row">LG에너지솔루션</td>
+					<td class="">0</td>
+					<td class="">4</td>
+					<td class="">35</td>
+					<td class="">2022.12.12 14:20</td>
+					<td class="connectedsystem">RoadMap Town</td>
+			</tr>
+			<tr>
+					<td class="detail" scope="row">설비관리(EMS)</td>
+					<td class="detail tenant" scope="row">LG이노텍</td>
+					<td class="">0</td>
+					<td class="">4</td>
+					<td class="">35</td>
+					<td class="">2022.12.12 14:20</td>
+					<td class="connectedsystem">RoadMap Town</td>
+			</tr>
+			<tr>
+					<td class="detail" scope="row">설비관리(EMS)</td>
+					<td class="detail tenant" scope="row">LG전자</td>
+					<td class="">0</td>
+					<td class="">4</td>
+					<td class="">35</td>
+					<td class="">2022.12.12 14:20</td>
+					<td class="connectedsystem">RoadMap Town</td>
+			</tr>
+			<tr>
+					<td class="detail" scope="row">설비관리(EMS)</td>
+					<td class="detail tenant" scope="row">LX판토스</td>
+					<td class="">0</td>
+					<td class="">4</td>
+					<td class="">35</td>
+					<td class="">2022.12.12 14:20</td>
+					<td class="connectedsystem">RoadMap Town</td>
+			</tr>
+			<tr>
+					<td class="detail" scope="row">설비관리(EMS)</td>
+					<td class="detail tenant" scope="row">LG화학</td>
+					<td class="">0</td>
+					<td class="">4</td>
+					<td class="">35</td>
+					<td class="">2022.12.12 14:20</td>
+					<td class="connectedsystem">RoadMap Town</td>
+			</tr>
+			</tbody>
+	</table>
+		<div data-theme="dark">
+			<div class="top-area">
+				<p class="detail-status">서비스별 상세상태 <span>(서비스: 15개,테넌트: 3개)</span></p>
+				<div class="detail-icon-area">
+					<button class="detail-icon">크게보기</button>
+				</div>
+			</div>
+			<!-- "type4" class 추가 -->
+			<table class="type4 scroll">
+				<caption class="caption">서비스, 테넌트, 완료, 진행, 2일이상대기, 데이터생성시간, 연결시스템에 대한 표</caption>
+				<colgroup>
+				<col style="width: 130px;">
+				<col style="width: 125px;">
+				<col style="width: 70px;">
+				<col style="width: 70px;">
+				<col style="width: 100px;">
+				<col style="width: 100px;">
+				<col style="width: 120px;">
+				</colgroup>
+				<thead>
+				<tr>
+						<th scope="col">서비스</th>
+						<th scope="col">테넌트</th>
+						<th scope="col">완료</th>
+						<th scope="col">진행</th>
+						<th scope="col" class="delay">2일이상대기</th>
+						<th scope="col" class="">데이터생성시간</th>
+						<th scope="col">연결시스템</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+						<td class="detail" scope="row">설비관리(EMS)</td>
+						<td class="detail tenant" scope="row">LG에너지솔루션</td>
+						<td class="">0</td>
+						<td class="">4</td>
+						<td class="">35</td>
+						<td class="">2022.12.12 14:20</td>
+						<td class="connectedsystem">RoadMap Town</td>
+				</tr>
+				<tr>
+						<td class="detail" scope="row">설비관리(EMS)</td>
+						<td class="detail tenant" scope="row">LG이노텍</td>
+						<td class="">0</td>
+						<td class="">4</td>
+						<td class="">35</td>
+						<td class="">2022.12.12 14:20</td>
+						<td class="connectedsystem">RoadMap Town</td>
+				</tr>
+				<tr>
+						<td class="detail" scope="row">설비관리(EMS)</td>
+						<td class="detail tenant" scope="row">LG전자</td>
+						<td class="">0</td>
+						<td class="">4</td>
+						<td class="">35</td>
+						<td class="">2022.12.12 14:20</td>
+						<td class="connectedsystem">RoadMap Town</td>
+				</tr>
+				<tr>
+						<td class="detail" scope="row">설비관리(EMS)</td>
+						<td class="detail tenant" scope="row">LX판토스</td>
+						<td class="">0</td>
+						<td class="">4</td>
+						<td class="">35</td>
+						<td class="">2022.12.12 14:20</td>
+						<td class="connectedsystem">RoadMap Town</td>
+				</tr>
+				<tr>
+						<td class="detail" scope="row">설비관리(EMS)</td>
+						<td class="detail tenant" scope="row">LG화학</td>
+						<td class="">0</td>
+						<td class="">4</td>
+						<td class="">35</td>
+						<td class="">2022.12.12 14:20</td>
+						<td class="connectedsystem">RoadMap Town</td>
+				</tr>
+				</tbody>
+		</table>
+		</div>
+	</div>
+
+<!-- code -->
+<div class="d_desc code">
+	<xmp class="prettyprint linenums javascript">
+<div class="top-area">
+	<p class="detail-status">서비스별 상세상태 <span>(서비스: 15개,테넌트: 3개)</span></p>
+	<div class="detail-icon-area">
+		<button class="detail-icon">크게보기</button>
+	</div>
+</div>
+<!-- "type4" class 추가 -->
+<!-- scroll 클래스 추가 시 테이블 내 스크롤 생성 -->
+<table class="type4 scroll">
+	<caption class="caption">서비스, 테넌트, 완료, 진행, 2일이상대기, 데이터생성시간, 연결시스템에 대한 표</caption>
+	<colgroup>
+	<col style="width: 130px;">
+	<col style="width: 125px;">
+	<col style="width: 70px;">
+	<col style="width: 70px;">
+	<col style="width: 100px;">
+	<col style="width: 100px;">
+	<col style="width: 120px;">
+	</colgroup>
+	<thead>
+	<tr>
+		<th scope="col">서비스</th>
+		<th scope="col">테넌트</th>
+		<th scope="col">완료</th>
+		<th scope="col">진행</th>
+		<th scope="col" class="delay">2일이상대기</th>
+		<th scope="col" class="">데이터생성시간</th>
+		<th scope="col">연결시스템</th>
+	</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="detail" scope="row">설비관리(EMS)</td>
+			<td class="detail tenant" scope="row">LG에너지솔루션</td>
+			<td class="">0</td>
+			<td class="">4</td>
+			<td class="">35</td>
+			<td class="">2022.12.12 14:20</td>
+			<td class="connectedsystem">RoadMap Town</td>
+		</tr>
+		<tr>
+			<td class="detail" scope="row">설비관리(EMS)</td>
+			<td class="detail tenant" scope="row">LG이노텍</td>
+			<td class="">0</td>
+			<td class="">4</td>
+			<td class="">35</td>
+			<td class="">2022.12.12 14:20</td>
+			<td class="connectedsystem">RoadMap Town</td>
+		</tr>
+		<tr>
+			<td class="detail" scope="row">설비관리(EMS)</td>
+			<td class="detail tenant" scope="row">LG전자</td>
+			<td class="">0</td>
+			<td class="">4</td>
+			<td class="">35</td>
+			<td class="">2022.12.12 14:20</td>
+			<td class="connectedsystem">RoadMap Town</td>
+		</tr>
+		<tr>
+			<td class="detail" scope="row">설비관리(EMS)</td>
+			<td class="detail tenant" scope="row">LX판토스</td>
+			<td class="">0</td>
+			<td class="">4</td>
+			<td class="">35</td>
+			<td class="">2022.12.12 14:20</td>
+			<td class="connectedsystem">RoadMap Town</td>
+		</tr>
+		<tr>
+			<td class="detail" scope="row">설비관리(EMS)</td>
+			<td class="detail tenant" scope="row">LG화학</td>
+			<td class="">0</td>
+			<td class="">4</td>
+			<td class="">35</td>
+			<td class="">2022.12.12 14:20</td>
+			<td class="connectedsystem">RoadMap Town</td>
+		</tr>
+	</tbody>
+</table>
+	</xmp>
+</div>
+</div>
+
+<script type="text/javascript" src="../../coding_list/js/pretty.js"></script>
+</body>
+</html>

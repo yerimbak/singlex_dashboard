@@ -1,0 +1,78 @@
+<div class="accordion-wrap good">
+    <!-- 2022-06-27 아코디언 구조 수정 (아코디언 클릭영역 수정) -->
+    <div class="accordion-box">
+        <button class="accordion-tit">
+            <span class="svc-name">기준정보 관리(MDM)</span>
+            <span class="svc-status">
+                <span class="status good">3</span>
+                <span class="status warn">1</span>
+                <span class="status bad">0</span>
+            </span>
+        </button>
+        <button type="button" class="btn-popup cl-black">Health check Report 팝업 열기</button>
+    </div>
+    <div class="accordion-cont">
+        <ul class="health-check">
+            <li>
+                <p class="health-check-name">Database Health Check</p>
+                <p class="status good">Good</p>
+                <div class="all-status">
+                    <div class="status-bar-area">
+                        <span class="status good"></span>
+                        <span class="status warn"></span>
+                        <span class="status bad"></span>
+                        @@for (var i = 0; i < 47; i++) {
+                            <span class="status good"></span>
+                        }
+                    </div>
+                    <div class="time-area">
+                        <p class="time">11:20</p>
+                        <p class="time">13:20</p>
+                        <p class="time">15:20</p>
+                        <p class="time">17:20</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p class="health-check-name">Database Health Check</p>
+                <p class="status warn">Warning</p>
+                <div class="all-status">
+                    <div class="status-bar-area">
+                        <span class="status good"></span>
+                        <span class="status warn"></span>
+                        <span class="status bad"></span>
+                        @@for (var i = 0; i < 47; i++) {
+                            <span class="status good"></span>
+                        }
+                    </div>
+                    <div class="time-area">
+                        <p class="time">11:20</p>
+                        <p class="time">13:20</p>
+                        <p class="time">15:20</p>
+                        <p class="time">17:20</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p class="health-check-name">Database Health Check</p>
+                <p class="status bad">Bad</p>
+                <div class="all-status">
+                    <div class="status-bar-area">
+                        <span class="status good"></span>
+                        <span class="status warn"></span>
+                        <span class="status bad"></span>
+                        @@for (var i = 0; i < 47; i++) {
+                            <span class="status good"></span>
+                        }
+                    </div>
+                    <div class="time-area">
+                        <p class="time">11:20</p>
+                        <p class="time">13:20</p>
+                        <p class="time">15:20</p>
+                        <p class="time">17:20</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

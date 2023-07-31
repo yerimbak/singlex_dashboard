@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<title>Button Guide</title>
+	
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/assets/css/modules.css"> -->
+
+	<!-- 가이드용 -->
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/pretty.css">
+	<!--//  가이드용 -->
+
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>	
+	<style>
+		.tag:not(body){
+			align-items : baseline;
+			background : none;
+			display : inline;
+			padding : 0;
+			height : auto;
+		}
+	</style>
+</head>
+<body>
+
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">Button Guide</h1>
+	<h2 class="h2_guide">01. Header</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<button type="button" class="btn-bookmark">즐겨찾기</button>
+		<a href="javascript:;" class="link">바로가기</a>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<button type="button" class="btn-bookmark">즐겨찾기</button>
+<a href="javascript:;" class="link">바로가기</a>
+		</xmp>
+	</div>
+	<!-- // code -->
+
+	<h2 class="h2_guide">02. Tab Content</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="btn-wrap">
+			<button type="button" class="btn bookmark-pop">Tenant 즐겨찾기 등록 팝업</button>
+			<button type="button" class="btn bookmark-list-pop">Tenant 즐겨찾기 리스트 팝업</button>
+		</div>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<div class="btn-wrap">
+	<button type="button" class="btn bookmark-pop">Tenant 즐겨찾기 등록 팝업</button>
+	<button type="button" class="btn bookmark-list-pop">Tenant 즐겨찾기 리스트 팝업</button>
+</div>
+		</xmp>
+	</div>
+	<!-- // code -->
+
+	<h2 class="h2_guide">03. Popup</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<button class="btn-popup">전체서비스의 SLO 상태 제공 팝업 열기</button>
+		<button class="btn-popup cl-black">전체서비스의 SLO 상태 제공 팝업 열기</button>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<button class="btn-popup">전체서비스의 SLO 상태 제공 팝업 열기</button>
+<!-- (라이트버전 기준) 버튼이 검정색인 경우 cl-black 클래스 추가 -->
+<button class="btn-popup cl-black">전체서비스의 SLO 상태 제공 팝업 열기</button>
+		</xmp>
+	</div>
+	<!-- // code -->
+
+	<h2 class="h2_guide">04. Dark & Light Mode Switch</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="mode">
+			<input type="checkbox" id="mode" checked>
+			<label for="mode">라이트모드</label>
+		</div>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<div class="mode">
+	<input type="checkbox" id="mode" checked>
+	<label for="mode">라이트모드</label>
+</div>
+
+
+<!-- script -->
+// switch
+$(document).on({
+	click: function(){
+		const switchCheck = $(".mode input[type='checkbox']");
+		const switchTxt = $(".mode label");
+		const body = $("body");
+
+		if(switchCheck.is(":checked")) {
+				switchTxt.html("라이트모드")
+				body.attr("data-theme", "")
+		} else {
+				switchTxt.html("다크<br>모드")
+				body.attr("data-theme", "dark")
+		}
+	}
+}, ".mode")
+		</xmp>
+	</div>
+	<!-- // code -->
+
+	<h2 class="h2_guide">05. Tooltip</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<button type="button" class="tooltip"></button>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<button type="button" class="tooltip"></button>
+		</xmp>
+	</div>
+	<!-- // code -->
+
+	
+
+</div>
+<script type="text/javascript" src="../../coding_list/js/pretty.js"></script>
+<script>
+	// switch
+	$(document).on({
+		click: function(){
+			const switchCheck = $(".mode input[type='checkbox']");
+			const switchTxt = $(".mode label");
+			const body = $("body");
+
+			if(switchCheck.is(":checked")) {
+					switchTxt.html("라이트모드")
+					// body.attr("data-theme", "")
+					$(".mode").css("background", "#E9EFF5")
+			} else {
+					switchTxt.html("다크<br>모드")
+					// body.attr("data-theme", "dark")
+					$(".mode").css("background", "#181C20")
+			}
+		}
+	}, ".mode")
+</script>
+</body>
+</html>

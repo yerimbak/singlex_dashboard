@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>페이지</title>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link type="text/css" rel="stylesheet" href="./resources/css/reset.css">
+<style>
+	.modifyGrid{
+	   margin-top:50px;
+	   padding:0 20px;
+	}
+	th,td{
+		border:1px solid #ddd;
+		padding:5px;
+		line-height:20px;
+	}
+	th{
+		line-height:24px;
+	}
+	td:nth-child(1),
+	td:nth-child(3)
+	{
+		text-align:center;
+	}
+	em {
+		color:green;
+		font-size:11px;
+		font-style:italic;
+		padding-left:5px;
+	}
+</style>.
+</head>
+<body>
+
+<p style="margin-top:50px; text-align:center; color:#438bd5; font-size:20px; font-weight:bold;">SINGLEX Dashboard 코딩 진행표</p><!-- 프로젝트명 및 폰트 컬러는 바뀔수 있음. -->
+<div class="modifyGrid">
+	<table style="width:100%;">
+		<colgroupd>
+			<col style="width:10%">
+			<col>
+			<col style="width:40%">
+			<col style="width:10%">
+		</colgroupd>
+		<thead>
+			<tr>
+				<th scope="col">날짜</th>
+				<th scope="col">변경파일 / 수정내역</th>
+				<th scope="col">주석명</th>
+				<th scope="col">작성자</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>22.06.07</td>
+				<td> 
+					메인 대시보드 작업
+				</td>
+				<td></td>
+				<td>홍정아</td>
+			</tr>
+			<tr>
+				<td>22.06.21</td>
+				<td> 
+					- main_tenant.html(Tenant 탭 내에 section 태그 삭제)(주석)<br>
+					- main_one_service.html 생성<br>
+					- subpage.html 생성
+				</td>
+				<td>
+					&lt;!-- 2022-06-21 section태그 삭제 --&gt;
+				</td>
+				<td>홍정아</td>
+			</tr>
+			<tr>
+				<td>22.06.22</td>
+				<td>
+					- 셀렉트박스 스크립트 수정(주석)<br>
+					- 메인 대시보드 탭 내용 1개로 수정(주석)<br>
+					- 라이트모드 색상 변경 작업
+				</td>
+				<td>
+					// 2022-06-22 셀렉트박스 스크립트 수정<br>
+					&lt;!-- 2022-06-22 tab 내용 1개로 수정 --&gt;
+				</td>
+				<td>홍정아</td>
+			</tr>
+			<tr>
+				<td>22.06.23</td>
+				<td>
+					팝업 페이지 추가
+				</td>
+				<td></td>
+				<td>홍정아</td>
+			</tr>
+			<tr>
+				<td>22.06.24</td>
+				<td>
+					- 팝업 띄우는 버튼에 data-modal 속성 추가<br>
+					- 스와이퍼 슬라이드에 id 속성 추가<br>
+					- 스와이퍼 autoplay 제어 버튼 추가<br>
+					- 스와이퍼 autoplay 제어 스크립트 추가<br>
+					- 팝업 스크립트 추가<br>
+					- 서브페이지 아코디언 스크립트 수정
+				</td>
+				<td>
+					&lt;!-- 2022-06-24 data-modal 속성 추가 --&gt;<br>
+					&lt;!-- 2022-06-24 id 속성 추가 --&gt;<br>
+					&lt;!-- 2022-06-24 일시정지버튼 생성 --&gt;<br>
+					// 2022-06-24 슬라이드 autoplay 제어 스크립트 추가<br>
+					// 2022-06-24 팝업 스크립트 추가<br>
+					// 2022-06-24 subpage 아코디언 스크립트 수정
+				</td>
+				<td>홍정아</td>
+			</tr>
+			<tr>
+				<td>22.06.27</td>
+				<td>
+					- subpage 분리 (health check , slo)<br>
+					- 즐겨찾는 그룹 목록 레이어팝업 내용 수정<br>
+					- 셀렉트박스 내용 수정<br>
+					- 슬라이드 이전&다음버튼 생성<br>
+					- 팝업페이지 구조 변경<br>
+					- 셀렉트박스 제어함수 추가<br>
+					- 스와이프 호버 이벤트 추가<br>
+					- 스와이프 네비게이션 추가<br>
+					- main_one_service.html 아코디언 구조 수정<br>
+					- 원 차트에 레이어팝업 추가
+				</td>
+				<td>
+					&lt!-- 2022-06-27 즐겨찾는 그룹 목록 레이어팝업 내용 수정 --&gt;<br>
+					&lt!-- 2022-06-27 selectbox 내용 수정 --&gt;<br>
+					&lt!-- 2022-06-27 이전 다음버튼 생성 --&gt;<br>
+					&lt!-- 2022-06-27 팝업페이지 구조 변경 --&gt;<br>
+					// 2022-06-27 셀렉트 박스 제어함수 추가<br>
+					// 2022-06-27 스와이프 호버 이벤트 추가<br>
+					// 2022-06-27 스와이프 네비게이션 추가<br>
+					&lt!-- 2022-06-27 아코디언 구조 수정 (아코디언 클릭영역 수정) --&gt;<br>
+					// 2022-06-27 원 차트에 마우스 오버 시 팝업 이벤트<br>
+					&lt!-- 2022-06-27 원 차트 레이어팝업 생성 --&gt;
+				</td>
+				<td>홍정아</td>
+			</tr>
+			<tr>
+				<td>22.06.28</td>
+				<td>
+					원 차트 css 추가<br>
+					chip 영역 디자인 반영 및 구조, 스크립트 수정
+				</td>
+				<td>
+					&lt!-- 2022-06-28 data-num 속성 추가 --&gt;<br>
+					&lt!-- 2022-06-28 chip-area 구조 수정 --&gt;<br>
+					// 2022-06-28 chip 스크립트 수정
+				</td>
+				<td>홍정아</td>
+			</tr>
+			<tr>
+				<td>22.06.29</td>
+				<td>
+					도넛 차트 css 수정<br>
+					원 차트 레이어팝업 css 수정<br>
+					슬라이드 좌,우 이동버튼 css 추가<br>
+					섹션별 타이틀 수정(main_service.html & main_one_service.html)<br>
+					메인페이지 툴팁 삭제
+				</td>
+				<td>
+					&lt!-- 2022-06-29 타이틀 수정 --&gt;<br>
+					&lt!-- 2022-06-29 툴팁 삭제 --&gt;<br>
+				</td>
+				<td>홍정아</td>
+			</tr>
+			<tr>
+				<td>22.07.05</td>
+				<td>
+					적용버튼 추가 (main_tenant.html)<br>
+					nodata 페이지 추가
+				</td>
+				<td>
+					&lt!-- 2022-07-05 버튼 추가 --&gt;<br>
+					&lt!-- 2022-07-05 추가 --&gt;<br>
+				</td>
+				<td>손상만</td>
+			</tr>
+			<tr>
+				<td>22.07.11</td>
+				<td>
+					차트 수정 (main_tenant.html)<br>
+					스크립트 수정 (main_tenant.html)<br>
+					스크립트 수정 (subpage_slo.html)<br>
+					스크립트 수정 (subpage_health_check.html)<br>
+					텍스트 수정 (tenant_all_slo_p.html)<br>
+					마크업 위치 이동 (main_tenant.html)<br>
+				</td>
+				<td>
+					&lt!-- 2022-07-11 추가 --&gt;<br>
+					&lt!-- 2022-07-11 수정 --&gt;<br>
+					&lt!-- 2022-07-11 태그 수정 --&gt;<br>
+					&lt!-- 2022-07-11 태그 수정 --&gt;<br>
+					&lt!-- 2022-07-11 마크업 위치 이동 --&gt;<br>
+				</td>
+				<td>손상만</td>
+			</tr>
+			<tr>
+				<td>22.07.11</td>
+				<td>
+					스크립트 수정 (main_service.html)<br>
+					스크립트 수정 (main_service.html)<br>
+				</td>
+				<td>
+					&lt!-- 2022-07-13 TOP값 변경 --&gt;<br>
+					&lt!-- 2022-07-13 수정 --&gt;<br>
+				</td>
+				<td>손상만</td>
+			</tr>
+			<tr>
+				<td>22.07.21</td>
+				<td>
+					스크립트 수정 (main_tenant.html)<br>
+					스크립트 수정 (main_service.html, main_service_nodata.html)<br>
+					html, 스크립트 수정 (main_service.html)<br>
+					html 수정 (subpage_slo.html, subpage_health_check.html)<br>
+					html 추가 (subpage_slo_p.html)<br>
+				</td>
+				<td>
+					&lt!-- 2022-07-21 아코디언 열림 스크립트 추가 --&gt;<br>
+					&lt!-- 2022-07-21 swiper 2개씩 이동 --&gt;<br>
+					&lt!-- 2022-07-21 선택시 적용버튼(class추가및, 스크립트수정) --&gt;<br>
+					&lt!-- 2022-07-21 아코디언 구조 수정 --&gt;<br>
+				</td>
+				<td>이동걸</td>
+			</tr>
+			<tr>
+				<td>22.07.22</td>
+				<td>
+					스크립트 수정 (main_service.html)<br>
+				</td>
+				<td>
+					&lt!-- 2022-07-22 선택시 적용버튼수정 --&gt;<br>
+				</td>
+				<td>이동걸</td>
+			</tr>
+			<tr>
+				<td>22.07.28</td>
+				<td>
+					스크립트 수정 (main_service.html, main_one_service.html)<br>
+					스크립트 수정 (main_service.html)<br>
+				</td>
+				<td>
+					&lt!-- 2022-07-28 hover수정 --&gt;<br>
+					&lt!-- 2022-07-28 셀렉트 박스 전체 수정 --&gt;<br>
+				</td>
+				<td>이동걸</td>
+			</tr>
+			<tr>
+				<td>22.07.29</td>
+				<td>
+					html, 스크립트 수정 (main_service.html)<br>
+				</td>
+				<td>
+					&lt!-- 2022-07-29 셀렉트 박스 전체 수정 --&gt;<br>
+				</td>
+				<td>이동걸</td>
+			</tr>
+			<tr>
+				<td>23.04.14</td>
+				<td> 
+					html 추가 (main_devops.html, gate_detail_info_p.html, gate_detail_info_expand_p.html, gate_detail_info_chart_p.html, gate_detail_info_chip_p.html)
+				</td>
+				<td></td>
+				<td>박예림</td>
+			</tr>
+			<tr>
+				<td>23.04.17</td>
+				<td> 
+					툴팁 스크립트 추가 (main_devops.html)<br>
+					html 추가 (header_devops.html)
+				</td>
+				<td>// 2023 04.17 툴팁 스크립트 추가</td>
+				<td>박예림</td>
+			</tr>
+			<tr>
+				<td>23.04.19</td>
+				<td> 
+					border 스크립트 추가 (main_devops.html)
+				</td>
+				<td>// 2023.04.19 버튼개수에 따른 border 스크립트 추가</td>
+				<td>박예림</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

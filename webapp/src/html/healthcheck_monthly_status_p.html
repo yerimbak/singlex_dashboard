@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../lib/jquery/jquery.min.js"></script>
+
+    <title>SLO 월별 현황 - Service 전체</title>  
+</head>
+<body>
+  <!-- 2022-06-27 팝업페이지 구조 변경 -->
+  <modal>
+    <div style="height:100%;">
+      <wsg-dialog style="max-width: 120rem; width: 973px;">
+        <wd-title>
+            SLO 월별 현황 - Service 전체
+            <small>(기간 : <i>2021.08~2022.01</i>)</small>
+        </wd-title>
+        <button type="button" class="close">닫기</button>
+        <wd-message>
+            <div class="legend type-table">
+                범례 : 
+                <span class="good">SLO 99% 이상</span>
+                <span class="warn">SLO 70~99% 미만</span>
+                <span class="bad">SLO 70% 미만</span>
+            </div>
+            <table class="type1">
+                <caption class="caption">Service, Tenant, Jan 2022, Dec 2021, Nov 2021, Oct 2021, Sep 2021, Aug 2021 에 대한 표</caption>
+                <colgroup>
+                <col style="width: 180px">
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">Service</th>
+                    <th scope="col">Jan 2022</th>
+                    <th scope="col">Dec 2021</th>
+                    <th scope="col">Nov 2021</th>
+                    <th scope="col">Oct 2022</th>
+                    <th scope="col">Sep 2021</th>
+                    <th scope="col">Aug 2021</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">기준정보관리</th>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                </tr>
+                <tr>
+                    <th scope="row">사용자 경비관리(UAS) </th>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                </tr>
+                <tr>
+                    <th scope="row">설비관리(EMS)</th>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                </tr>
+                <tr>
+                    <th scope="row">마케팅자동화</th>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                </tr>
+                <tr>
+                    <th scope="row">고객정보관리</th>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="gray"></td>
+                </tr>
+                <tr>
+                    <th scope="row">구매관리</th>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="gray"></td>
+                    <td class="gray"></td>
+                    <td class="gray"></td>
+                </tr>
+                <tr>
+                    <th scope="row">고객경험관리</th>
+                    <td class="good">3</td>
+                    <td class="warn">3</td>
+                    <td class="warn">3</td>
+                    <td class="warn">3</td>
+                    <td class="warn">3</td>
+                    <td class="warn">3</td>
+                </tr>
+                <tr>
+                    <th scope="row">영업파이프라인관리</th>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="warn">3</td>
+                </tr>
+                <tr>
+                    <th scope="row">수익성/리스크분석</th>
+                    <td class="good">3</td>
+                    <td class="warn">3</td>
+                    <td class="warn">3</td>
+                    <td class="warn">3</td>
+                    <td class="warn">3</td>
+                    <td class="warn">3</td>
+                </tr>
+                <tr>
+                    <th scope="row">고객정보통합관리</th>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                </tr>
+                <tr>
+                    <th scope="row">협력사평판관리</th>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                </tr>
+                <tr>
+                    <th scope="row">MI</th>
+                    <td class="warn">3</td>
+                    <td class="bad">3</td>
+                    <td class="good">3</td>
+                    <td class="bad">3</td>
+                    <td class="good">3</td>
+                    <td class="bad">3</td>
+                </tr>
+                <tr>
+                    <th scope="row">메타프로세스관리</th>
+                    <td class="warn">3</td>
+                    <td class="bad">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="warn">3</td>
+                    <td class="good">3</td>
+                </tr>
+                <tr>
+                    <th scope="row">방문예약포털</th>
+                    <td class="bad">3</td>
+                    <td class="bad">3</td>
+                    <td class="good">3</td>
+                    <td class="bad">3</td>
+                    <td class="bad">3</td>
+                    <td class="bad">3</td>
+                </tr>
+                <tr>
+                    <th scope="row">서비스명작성</th>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                    <td class="good">3</td>
+                </tr>
+                </tbody>
+            </table>
+        </wd-message>
+      </wsg-dialog>
+    </div>
+  </modal>
+</body>
+</html>

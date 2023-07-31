@@ -1,0 +1,364 @@
+
+.top-area
+  .write,
+  .legend.type-table
+    color: var(--text-popup-table-legend)
+
+
+  
+.table-box
+  @include flex-box-sb
+  align-items: flex-end
+  gap: 21px
+
+  .legend
+    line-height: 20px
+
+.legend 
+  &.type-table
+    text-align: right
+    // padding-right: 10px
+
+  &.square
+    span
+      &::before
+        content: "■"
+table 
+  margin-top: 10px
+  th, 
+  td
+    font-size: 12px
+    text-align: center
+    line-height: 19px
+    padding: 4.5px 20px
+    background: var(--bg-table)
+    color: var(--text-table)
+    border: 1px solid var(--border-table)
+
+  thead
+    th
+      font-weight: 500
+      text-align: center
+      background: var(--bg-popup-table-thead)
+      &:first-child
+        text-align: left
+
+  tbody
+    th
+      font-weight: 400
+      text-align: left
+      background: var(--bg-popup-table-tbody)
+      &.cl-black1
+        background: var(--bg-table-type1)
+      &.cl-black2
+        background: var(--bg-table-type4)
+      &[rowspan]
+        padding: 14px
+        vertical-align: top
+        border:
+          top: none
+          bottom: none
+    td
+      color: #FFFFFF
+      &.normal
+        text-align: left
+        background: var(--bg-table-type2)
+      &.good
+        background: var(--status-confirmed)
+      &.warn
+        background: var(--status-warning)
+      &.bad
+        background: var(--status-error)
+      &.gray
+        background: var(--bg-table-gray)
+        color: var(--text-table-gray)
+      &.slo
+        background: var(--bg-table-type2)
+        color: var(--text-table)
+        font-weight: 500
+      &.normal
+        background: var(--bg-table-type2)
+        color: var(--text-table)
+        text-align: left
+        &.good
+          color: var(--status-confirmed)
+        &.warn
+          color: var(--status-warning)
+        &.bad
+          color: var(--status-error)
+        
+        
+
+  &.type1
+    thead
+      th
+        background: var(--bg-table-type1)
+        color: var(--text-table-type1)
+
+  &.type2
+    margin-top: 11px
+    
+    th,
+    td
+      background: transparent
+      border: 1px solid var(--border-table)
+    
+    thead
+      th
+        background: var(--bg-table-type1)
+        font-weight: 500
+        &:first-child
+          font-weight: 700
+          border-left: none
+        &:last-child
+          border-right: none
+
+    tbody
+      th
+        background: var(--bg-popup-table-tbody)
+        font-weight: 500
+        border-left: none
+      td
+        font-size: 11px
+        &:last-child
+          border-right: none
+        strong
+          font:
+            size: 13px
+            font-weight: 500
+
+  &.type3
+    th,
+    td
+      text-align: center
+      font:
+        size: 14px 
+        weight: 500
+      border: 1px solid var(--border-table)
+
+    th
+      &:first-child
+        text-align: center
+        font:
+          size: 13px
+
+    tbody
+      td
+        color: var(--text-table-gray)
+        font:
+          size: 12px
+          weight: 500
+        background: var(--bg-table-type2)
+        height: 29px
+        &.good
+          color: var(--status-confirmed)
+        &.warn
+          color: var(--status-warning)
+        &.bad
+          color: var(--status-error)
+
+        &.residual
+          background: var(--bg-table-residual)
+          &::before
+            content: "●"
+            margin-right: 5px
+          &.good
+            &::before
+              color: var(--status-confirmed)
+          &.warn
+            &::before
+              color: var(--status-warning)
+          &.bad
+            &::before
+              color: var(--status-error)
+          
+          &.gray
+            &::before
+              display: none
+          // &.up
+          //   &::before
+          //     content: "▲"
+          // &.down
+          //   &::before
+          //     content: "▼"
+
+  &.type4 // Gate상세정보 팝업 테이블
+    border: 1px solid var(--border-detail-table)
+    width: 100%
+    th,td
+      border: none
+    thead
+      tr
+        border-bottom: 1px solid var(--border-detail-table)
+        &:first-child
+          height: 40px
+        th
+          color: var(--text-body-title)
+          text-align: center
+          &.time
+            padding: 0
+          &.delay,&.sort-time
+            padding: 0
+          &.occurrencetime
+            padding: 0
+    tbody
+      tr
+        height: 40px
+        border-bottom: 1px solid var(--border-detail-table)
+        &:last-child
+          border: none
+        td
+          background: var(--bg-popup2)
+          color: var(--text-detail-table)
+          height: 40px
+          &.detail
+            text-align: left
+            white-space: nowrap
+            &.service
+              padding-left: 15px
+              padding-right: 0
+            &.tenant
+              padding-right: 0
+          &.timerunning
+            display: flex
+            flex-wrap: nowrap
+            justify-content: center
+            align-items: center
+            span
+              color: var(--text-time-chip)
+            &.pass
+              span
+                background: var(--status-pass)
+                padding: 3px 15px
+                border-radius: 20px
+            &.fail
+              span
+                background: var(--status-fail)
+                padding: 3px 15px
+                border-radius: 20px
+          &.occurrencetime
+            padding: 0
+          &.connectedsystem
+            color: var(--text-connected)
+            padding: 0
+.top-area
+  .detail-status
+    color: var(--text-table-top-area)
+    font-size: 13px
+    font-weight: 700
+    span
+      font-size: 12px
+      font-weight: 400
+          
+table // table 내 scroll
+  &.scroll
+    display: inline-block
+    tbody
+      display: block
+      overflow-y: scroll
+      // width: calc(100% + 17px)
+      tr
+        display: table
+        table-layout: fixed
+        width: 100%
+    thead
+      position: relative
+      display: table
+      table-layout: fixed
+      width: 100%
+      tr
+        width: 100%        
+
+          
+.table-wrap
+  background: var(--bg-table-wrap)
+  padding: 20px
+  border-radius: 10px
+
+  .top-area
+    @include flex-box-sb
+    .legend
+      margin-top: 0
+
+.write
+  font:
+    size: 11px
+    weight: 500
+
+  strong
+    font-weight: 400
+    color: var(--text-table-strong)
+
+
+
+[data-theme="dark"]
+  table
+    th,
+    td
+      &:first-child
+        border-left: none
+      &:last-child
+        border-right: none
+
+    thead
+      th
+        border-top: none
+    
+    tbody
+      tr
+        &:last-child
+          td
+            border-bottom: none
+
+    &.type2
+      th,
+      td
+        border: 1px solid #3B434A
+        
+      thead
+        th
+          border:
+            top: 1px solid #3B434A
+            left: none
+            bottom: none
+            right: none
+      tbody
+        th
+          background: transparent
+          border-left: none
+        td
+          border-bottom: 1px solid #3B434A
+          &:last-child
+            border-right: none
+    &.type4
+      &.scroll
+        tbody // 테이블 내 스크롤 바
+          &::-webkit-scrollbar
+            background: #3E454D
+          &::-webkit-scrollbar-thumb
+            background: #8996A3
+            border: 2px solid #3E454D
+          &::-webkit-scrollbar-thumb:hover
+            background-color: rgb(112, 112, 112)
+          /* Buttons */
+          &::-webkit-scrollbar-button:single-button
+            background-color: #3E454D
+            display: block
+            background-size: 10px
+            background-repeat: no-repeat
+          /* Up */
+          &::-webkit-scrollbar-button:single-button:vertical:decrement
+            height: 16px
+            width: 16px
+            background-position: center 7px
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='rgb(136, 150, 153)'><polygon points='50,00 0,50 100,50'/></svg>")
+          &::-webkit-scrollbar-button:single-button:vertical:decrement:hover
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='rgb(112, 112, 112)'><polygon points='50,00 0,50 100,50'/></svg>")
+          /* Down */
+          &::-webkit-scrollbar-button:single-button:vertical:increment
+            height: 16px
+            width: 16px
+            background-position: center 5px
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='rgb(136, 150, 153)'><polygon points='0,0 100,0 50,50'/></svg>")
+          &::-webkit-scrollbar-button:single-button:vertical:increment:hover
+              background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='rgb(112, 112, 112)'><polygon points='0,0 100,0 50,50'/></svg>")

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang='ko'>
+
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <title>코딩진행표</title>
+  <link rel='stylesheet' type='text/css' href='./css/reset.css'>
+  <link rel='stylesheet' type='text/css' href='./css/base.css'>
+  <script type='text/javascript' src='./js/dtree.js'></script>
+  <style>
+    body {
+      padding: 20px 10px;
+    }
+
+    ol {
+      list-style-position: inside;
+      padding-left: 2px
+    }
+
+    li {
+      padding: 2px
+    }
+
+    .t_ing {
+      color: #999999
+    }
+
+    .t_js {
+      color: brown
+    }
+
+    .t_app {
+      color: #0042ff
+    }
+
+    .t_app_js {
+      color: #7395d9
+    }
+
+    .t_confirm {
+      color: #9600ff
+    }
+
+    .t_confirm_js {
+      color: #40724b
+    }
+
+    .t_melon {
+      color: #000
+    }
+
+    .t_modify {
+      color: #ff0000
+    }
+
+    img {
+      vertical-align: middle
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 class='c_left'>코딩진행표</h1>
+  <h2 class='c_left'>프로세스</h2>
+  <ol>
+    <li><span class='t_ing'>작업진행중</span></li> <!-- 상태메시지 : 일반 -->
+    <li><span class='t_js'>스크립트작업</span></li> <!-- 상태메시지 : 스크립트 -->
+    <li><span class='t_melon'>일반</span></li> <!-- 상태메시지 : 일반 -->
+  </ol>
+
+  <div class='dtree'>
+    <p><a href='javascript: p.openAll();'><img src='img/btn_expand.gif' alt='Expand All' /></a> <a
+        href='javascript: p.closeAll();'><img src='img/btn_collapse.gif' alt='Collapse All' /></a></p>
+    <script type='text/javascript'>
+      var dir = './guide/'
+      var tree1 = {
+        'SINGLEX Dashboard': {
+          '기본결정사항': {
+          },
+          'Guide': {
+            'Accordian': [dir + 'guide_accordian.html', '일반', 'mainFrame'],
+            'Button': [dir + 'guide_button.html', '일반', 'mainFrame'],
+            'Chart': [dir + 'guide_chart.html', '일반', 'mainFrame'],
+            'Color': [dir + 'guide_color.html', '일반', 'mainFrame'],
+            'Font': [dir + 'guide_font.html', '일반', 'mainFrame'],
+            'Layout': [dir + 'guide_layout.html',     '일반', 'mainFrame'],
+            'Popup': [dir + 'guide_popup.html', '일반', 'mainFrame'],
+            'Select': [dir + 'guide_select.html', '일반', 'mainFrame'],
+            'Tab': [dir + 'guide_tab.html', '일반', 'mainFrame'],
+            'Table': [dir + 'guide_table.html', '일반', 'mainFrame'],
+          },
+        }
+      };
+      var p = new dTree('p', tree1);
+      document.write(p);
+    </script>
+
+
+    <p><a href='javascript: d.openAll();'><img src='img/btn_expand.gif' alt='Expand All' /></a> <a
+        href='javascript: d.closeAll();'><img src='img/btn_collapse.gif' alt='Collapse All' /></a></p>
+    <script type='text/javascript'>
+      var dir = '../templete/'
+      var tree = {
+        '메뉴': {
+          '메인': {
+            '메인 대시보드_Service': [dir + 'main_service.html', '완료', 'mainFrame'],
+            '메인 대시보드_Tenant': [dir + 'main_tenant.html', '완료', 'mainFrame'],
+            '메인 대시보드_nodata': [dir + 'main_service_nodata.html', '완료', 'mainFrame'],
+            '메인 대시보드_하나의 서비스': [dir + 'main_one_service.html', '완료', 'mainFrame'],
+            '메인 대시보드_Devops': [dir + 'main_devops.html', '완료', 'mainFrame'],
+          },
+          '서브페이지': {
+            '메인>헬스체크에서 테넌트선택시': [dir + 'subpage_health_check.html', '완료', 'mainFrame'],
+            '메인>SLO에서 테넌트선택시': [dir + 'subpage_slo.html', '완료', 'mainFrame'],
+          },
+          '팝업': {
+            '서비스1 헬스체크': [dir + 'service1_healthcheck_p.html', '완료', 'mainFrame'],
+            '서비스1 SLO': [dir + 'service1_slo_p.html', '완료', 'mainFrame'],
+            '테넌트기준 서비스헬스체크': [dir + 'tenant_healthcheck_p.html', '완료', 'mainFrame'],
+            '테넌트기준 서비스SLO': [dir + 'tenant_service_slo_p.html', '완료', 'mainFrame'],
+            '테넌트 통합헬스체크': [dir + 'tenant_all_healthcheck_p.html', '완료', 'mainFrame'],
+            '테넌트 통합SLO': [dir + 'tenant_all_slo_p.html', '완료', 'mainFrame'],
+            'SLO 월별 현황': [dir + 'slo_monthly_status_p.html', '완료', 'mainFrame'],
+            'Health Check 월별 현황': [dir + 'healthcheck_monthly_status_p.html', '완료', 'mainFrame'],
+            '상세정보': [dir + 'subpage_slo_p.html', '완료', 'mainFrame'],
+            'Gate상세정보 지표상태': [dir + 'gate_detail_info_p.html', '완료', 'mainFrame'],
+            'Gate상세정보 지표상태 확장': [dir + 'gate_detail_info_expand_p.html', '완료', 'mainFrame'],
+            'Gate상세정보 지표상태_그래프': [dir + 'gate_detail_info_chart_p.html', '완료', 'mainFrame'],
+            'Gate상세정보 지표상태_칩': [dir + 'gate_detail_info_chip_p.html', '완료', 'mainFrame']
+            
+          }
+        },
+      }
+      var d = new dTree('d', tree);
+      document.write(d);
+    </script>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,437 @@
+/* button */
+.btn-bookmark,
+#MainFrame .btn-bookmark
+    @include reset-bt
+    width: 16px
+    height: 33px
+    font-size: 0
+    background: url("../image/light/icon-star01.png") center no-repeat !important
+    margin-left: 10px
+    &.devops
+        background: url("../image/light/icon-star03.png") center no-repeat !important
+
+.link,
+#MainFrame .link
+    @include reset-bt
+    display: block
+    width: 15px
+    height: 33px
+    font-size: 0
+    background: url("../image/light/icon-link.png") center no-repeat !important
+    margin-left: 10px
+    &.devops
+        background: url("../image/light/icon-link02.png") center no-repeat !important
+
+.member,
+#MainFrame .member
+    position: relative
+    font-size: 12px
+    line-height: 24px
+    color: var(--text-member) !important
+    padding-right: 44px
+    &::after
+        content: ""
+        display: block
+        width: 24px
+        height: 24px
+        background: url("../image/light/icon-member.png") no-repeat !important
+        position: absolute
+        right: 10px
+        top: 0
+
+.btn-back,
+#MainFrame .btn-back
+    @include reset-bt
+    width: 28px
+    height: 39px
+    font-size: 0
+    background: url("../image/light/icon-back.png") center no-repeat !important
+    vertical-align: middle
+
+.btn-sort,
+#MainFrame .btn-sort
+    @include flex-box-sb
+    align-items: center
+    width: 312px
+    line-height: 25px
+    border-radius: 10px
+    background-color: var(--bg-sort-button-total) !important
+    // background-image: url("../image/light/icon-sort-arrow2-off.png")
+    background-position: right 23px center !important
+    background-repeat: no-repeat !important
+    padding: 10px 50px 10px 30px
+    margin-left: 20px 
+    &:first-child
+        margin-left: 0  
+    &.good
+        background-color: var(--status-confirmed) !important
+    &.warn
+        background-color: var(--status-warning) !important
+    &.bad
+        background-color: var(--status-error) !important
+    &.on
+        // background-image: url("../image/light/icon-sort-arrow2-on.png")
+    &.total
+        // background-image: url("../image/light/icon-sort-arrow-off.png")
+        &.on
+            // background-image: url("../image/light/icon-sort-arrow-on.png")
+        .status,
+        .count,
+        .tit
+            color: var(--text-sort-btn-total) !important     
+
+    .tit
+        font:
+            size: 20px
+            weight: 700
+        color: #FFFFFF !important
+        small
+            font-size: 12px
+
+    .status
+        position: relative
+        font: 
+            size: 20px
+            weight: 700
+        padding-left: 30px
+        &::before
+            content: "●"
+            display: block
+            position: absolute
+            left: 0
+            top: 0
+        &.good
+            &::before
+                color: var(--status-confirmed) !important
+        &.warn
+            &::before
+                color: var(--status-warning) !important
+        &.bad
+            &::before
+                color: var(--status-error) !important
+
+    .count
+        font:
+            size: 18px
+            weight: 700
+        color: #FFFFFF !important
+
+// DevOps 메인페이지 btn-devops
+.btn-devops,
+#MainFrame .btn-devops
+    @include flex-box-sb
+    align-items: center
+    width: 250px
+    line-height: 25px
+    border-radius: 28px
+    padding: 12px 20px
+    margin-left: 20px
+    &:first-child
+        margin-left: 0
+    > span
+        color: var(--text-status-btn) !important
+    .tit
+        font-size: 20px
+        font-weight: 500
+    .count
+        font-size: 18px
+        font-weight: 700
+    &.good
+        background-color: var(--status-confirmed) !important
+    &.warn
+        background-color: var(--status-warning) !important
+    &.bad
+        background-color: var(--status-bad) !important
+    &.noresult
+        background-color: var(--status-nothing) !important
+
+
+// DevOps 메인페이지 list 
+.type-list
+    .list-box-wrap
+        .list-box
+            &.twoborder
+                .btn-wrap
+                    &:nth-child(2)
+                        border-radius: 5px 5px 0px 0px
+                    &:last-child
+                        border-radius: 0px 0px 5px 5px
+            &.allborder
+                .btn-wrap
+                    border-radius: 5px
+            .btn-wrap
+                background: var(--list-box-bg)
+                padding: 10px
+                margin: 1px 0
+                position: relative
+                .tooltip
+                    margin-left: auto
+                .list-tit
+                    width: 225px
+                    text-align: left
+                    .svc-name
+                        position: relative
+                        display: inline-block
+                        font-weight: 500
+                        font-size: 16px
+                        line-height: 24px
+                        color: var(--list-btn-title)
+                        white-space: nowrap
+                        padding-left: 22px
+                        &::before
+                            content: ""
+                            position: absolute
+                            left: 0
+                            top: 2px
+                            width: 15px
+                            height: 15px
+                            border-radius: 50%
+                            top: 50%
+                            transform: translateY(-50%)
+                &.good
+                    .svc-name
+                        &::before
+                            background: var(--status-confirmed) !important
+                &.warn
+                    .svc-name
+                        &::before
+                            background: var(--status-warning) !important
+                &.bad
+                    .svc-name
+                        &::before
+                            background: var(--status-bad) !important
+                &.noresult
+                    .svc-name
+                        color: var(--text-no-result)
+                        &::before
+                            background-color: var(--status-nothing) !important
+
+.btn-popup,
+#MainFrame .btn-popup
+    @include reset-bt
+    width: 24px
+    height: 24px
+    font-size: 0
+    background: var(--btn-bg) center no-repeat !important
+    background-size: 16px
+    &.cl-black
+        background: var(--btn-bg) center no-repeat !important
+        background-size: 16px
+
+.btn-stop,
+#MainFrame .btn-stop
+    @include reset-bt
+    display: flex
+    font-size: 0
+    padding: 1px 3px
+    &::before
+        content: ""
+        display: block
+        width: 2px
+        height: 10px
+        background: var(--bg-stop-button) !important
+    &::after
+        content: ""
+        display: block
+        width: 2px
+        height: 10px
+        background: var(--bg-stop-button) !important
+        margin-left: 2px
+
+    &.on
+        padding: 0
+        margin-right: -3px
+        margin-left: 3px
+        &::before
+            display: none
+        &::after
+            display: none
+        width: 0px
+        height: 0px
+        border:
+            top: 6px solid transparent !important
+            left: 6px solid var(--bg-stop-button) !important
+            right: 6px solid transparent !important
+            bottom: 6px solid transparent !important
+
+.btn-wrap,
+#MainFrame .btn-wrap
+    @include flex-box
+    .btn
+        display: inline-block
+        width: 33px
+        height: 33px
+        @include font-h5
+        font:
+            size: 0
+            weight: 400
+        color: var(--text-btn) !important
+        line-height: 20px
+        margin-left: 10px
+        transition: none
+        &:first-child
+            margin-left: 0
+        &.bookmark-pop
+            background: url("../image/light/icon-star02.png") no-repeat !important
+        &.bookmark-list-pop
+            background: url("../image/light/icon-dot.png") no-repeat !important
+        &.health-check-pop,
+        &.slo-report-pop
+            font-size: 12px
+            line-height: 18px
+            text-align: left
+            border-radius: 3px
+            border: 1px solid var(--border-btn) !important
+            padding: 7px 33px 7px 12px
+            background: var(--bg-btn) var(--btn-bg) center right 10px no-repeat !important
+            background-size: 16px
+        
+        &.health-check-pop
+            width: 190px
+        
+        &.slo-report-pop
+            width: 136px
+    
+    .basic
+        font:
+            size: 12px
+            weight: 700
+        line-height: 17px
+        color: var(--text-popup-button) !important
+        background: var(--bg-popup-button) !important
+        border: 1px solid var(--border-popup-button) !important
+        border-radius: 3px
+        padding: 8.5px 12px
+        margin-left: 8px
+        &:first-child
+            margin-left: 0
+            
+        &.cl-gray
+            background: var(--bg-popup-button-gray) !important
+            color: var(--text-popup-button-gray) !important
+            border: none !important
+
+.btn-more, 
+#MainFrame .btn-more
+    @include reset-bt
+    display: none
+    font-size: 0
+    width: 32px
+    height: 32px
+    background: url("../image/light/icon-chip-arrow-off.png") center no-repeat !important
+
+.tooltip,
+#MainFrame .tooltip
+    @include reset-bt
+    width: 24px
+    height: 24px
+    font-size: 0
+    background: url("../image/light/icon-info.png") center center no-repeat !important
+
+.btn-close,
+#MainFrame .btn-close
+    @include reset-bt
+    position: absolute
+    right: 20px
+    top: 20px
+    font-size: 0
+    width: 25px
+    height: 29px
+    background: url("../image/light/icon-close.png") no-repeat !important
+
+.btn-result,
+#MainFrame .btn-result
+    background: 
+        color: var(--bg-btn2) !important
+    color: var(--text-btn2) !important
+    border:
+        radius: 3px
+    font:
+        size: 12px
+        weight: 700
+    line:
+        height: 17px
+    padding: 7.5px 12px
+    height: 34px
+    word-break: keep-all
+.btn-top,
+#MainFrame .btn-top
+    border: 1px solid var(--border-table) !important
+    background:
+        color: var(--bg-popup-table-tbody) !important
+    width: 32px
+    height: 32px
+    position: absolute
+    bottom: 32px
+    right: 32px
+    span
+        font:
+            size: 11px
+            weight: 400
+        line
+            height: 16px
+        color: var(--text-legend) !important
+        display: block
+        background:
+            image: url('../image/light/icon-accordion-arrow2-on.png') !important
+            repeat: no-repeat !important
+            position: center top !important
+        padding:
+            top: 12px
+
+page-button
+    display: inline-block
+    position: relative
+    top: 16px
+    margin:
+        left: 10px
+    button
+        width: 16px
+        height: 16px
+        line-height: 16px
+        padding: 0
+        background: none
+        border: none
+        i
+            color: #909090
+            font:
+                size: 1.3rem
+
+.btn-help
+    padding: 5px 10px
+    background:
+        color: var(--bg-btn3)
+    border:
+        radius: 3px
+    border: 1px solid var(--border-btn3)
+    &:hover
+        padding: 5px 10px
+        background-color: var(--bg-btn3)
+        border-radius: 3px
+        border: 1px solid var(--border-btn3)
+    span
+        font:
+            weight: 700
+            size: 12px  
+        color: var(--text-btn3)
+        display: block
+        position: relative
+        padding:
+            left: 20px
+        &::before
+            content: '?'
+            width: 15px
+            height: 15px
+            border: 1px solid var(--border-icon-btn3)
+            border:
+                radius: 100%
+            line-height: 12px
+            text-align: center
+            color: var(--text-btn3)
+            position: absolute
+            top: 50%
+            left: 0
+            font:
+                size: 12px
+            transform: translateY(-50%)
+        

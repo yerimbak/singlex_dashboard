@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<title>Accordian Guide</title>
+
+	<link rel="stylesheet" href="../../lib/swiper/swiper-bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	
+	<!-- 가이드용 -->
+	<script type="text/javascript" src="../../lib/swiper/swiper-bundle.min.js"></script>	
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/pretty.css">
+	<!--//  가이드용 -->
+	
+
+	
+	<style>
+		.tag:not(body){
+			align-items : baseline;
+			background : none;
+			display : inline;
+			padding : 0;
+			height : auto;
+		}
+		body {
+			background: transparent
+		}
+	</style>
+</head>
+<body>
+
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">Accordian Guide</h1>
+
+	<h2 class="h2_guide">01. Default</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="type-accordion">
+			<div class="service">
+				<div class="accordion-wrap good">
+					<button type="button" class="accordion-tit">
+						<span class="svc-name">기준정보 관리(MDM)</span>
+						<span class="svc-status">
+							<span class="status good">3</span>
+							<span class="status warn">1</span>
+							<span class="status bad">0</span>
+						</span>
+					</button>
+					<div class="accordion-cont">
+						<a href="javascript:;" class="good">LG이노텍</a>
+						<a href="javascript:;" class="good">LG화학</a>
+						<a href="javascript:;" class="good">LX판토스</a>
+						<a href="javascript:;" class="warn">LGCNS</a>
+						<a href="javascript:;" class="bad">지투알</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<div class="type-accordion">
+	<div class="service">
+		<!-- 아코디언 펼쳤을 때 accordion-wrap 에 "on" 클래스 추가됨 -->
+		<!-- "accordion-wrap" 에 현재 상태 good & warn & bad 클래스 추가 -->
+		<div class="accordion-wrap good">
+			<button type="button" class="accordion-tit">
+				<span class="svc-name">기준정보 관리(MDM)</span>
+				<span class="svc-status">
+					<span class="status good">3</span>
+					<span class="status warn">1</span>
+					<span class="status bad">0</span>
+				</span>
+			</button>
+			<div class="accordion-cont">
+				<!-- 상태에 따른 클래스명 : good & warn & bad -->
+				<a href="javascript:;" class="good">LG이노텍</a>
+				<a href="javascript:;" class="good">LG화학</a>
+				<a href="javascript:;" class="good">LX판토스</a>
+				<a href="javascript:;" class="warn">LGCNS</a>
+				<a href="javascript:;" class="bad">지투알</a>
+			</div>
+		</div>
+	</div>
+</div>
+		</xmp>
+	</div>
+	<!-- // code -->
+
+	<h2 class="h2_guide">02. Multi (slide)</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="type-accordion multi">
+			<div class="multi-slide" id="swiper1">
+				<div class="swiper-wrapper service">
+					<div class="swiper-slide">
+						<div class="accordion-wrap good">
+							<button type="button" class="accordion-tit">
+									<span class="svc-name">기준정보 관리(MDM)</span>
+									<span class="svc-status">
+										<span class="status good">3</span>
+										<span class="status warn">1</span>
+										<span class="status bad">0</span>
+									</span>
+							</button>
+							<div class="accordion-cont">
+								<a href="javascript:;" class="good">LG이노텍</a>
+								<a href="javascript:;" class="good">LG화학</a>
+								<a href="javascript:;" class="good">LX판토스</a>
+								<a href="javascript:;" class="warn">LGCNS</a>
+								<a href="javascript:;" class="bad">지투알</a>
+							</div>
+						</div>
+						<div class="accordion-wrap good">
+							<button type="button" class="accordion-tit">
+								<span class="svc-name">기준정보 관리(MDM)</span>
+								<span class="svc-status">
+									<span class="status good">3</span>
+									<span class="status warn">1</span>
+									<span class="status bad">0</span>
+								</span>
+							</button>
+							<div class="accordion-cont">
+								<a href="javascript:;" class="good">LG이노텍</a>
+								<a href="javascript:;" class="good">LG화학</a>
+								<a href="javascript:;" class="good">LX판토스</a>
+								<a href="javascript:;" class="warn">LGCNS</a>
+								<a href="javascript:;" class="bad">지투알</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="accordion-wrap good">
+							<button type="button" class="accordion-tit">
+								<span class="svc-name">기준정보 관리(MDM)</span>
+								<span class="svc-status">
+									<span class="status good">3</span>
+									<span class="status warn">1</span>
+									<span class="status bad">0</span>
+								</span>
+							</button>
+							<div class="accordion-cont">
+								<a href="javascript:;" class="good">LG이노텍</a>
+								<a href="javascript:;" class="good">LG화학</a>
+								<a href="javascript:;" class="good">LX판토스</a>
+								<a href="javascript:;" class="warn">LGCNS</a>
+								<a href="javascript:;" class="bad">지투알</a>
+							</div>
+						</div>
+						<div class="accordion-wrap good">
+							<button type="button" class="accordion-tit">
+								<span class="svc-name">기준정보 관리(MDM)</span>
+								<span class="svc-status">
+									<span class="status good">3</span>
+									<span class="status warn">1</span>
+									<span class="status bad">0</span>
+								</span>
+							</button>
+							<div class="accordion-cont">
+								<a href="javascript:;" class="good">LG이노텍</a>
+								<a href="javascript:;" class="good">LG화학</a>
+								<a href="javascript:;" class="good">LX판토스</a>
+								<a href="javascript:;" class="warn">LGCNS</a>
+								<a href="javascript:;" class="bad">지투알</a>
+							</div>
+						</div>
+					</div>
+				</div>		
+				
+				<!-- swiper 좌, 우 버튼 -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				
+				<div class="bottom-area">
+					<div class="swiper-pagination"></div>
+					<button type="button" class="btn-stop" data-swiper="swiper1">일시정지</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<!-- default에 "multi" class 추가 -->
+<div class="type-accordion multi">
+	<!-- 한 섹션에 아코디언이 두 줄로 정렬되는 경우 "multi-slide"로 감싸기 -->
+	<!-- data-swiper 속성값 슬라이드 id와 맞추기 -->
+	<div class="multi-slide" id="swiper1">
+		<div class="swiper-wrapper service">
+			<div class="swiper-slide">
+				<!-- 아코디언 펼쳤을 때 accordion-wrap 에 "on" 클래스 추가됨 -->
+				<!-- "accordion-wrap" 에 현재 상태 good & warn & bad 클래스 추가 -->
+				<div class="accordion-wrap good">
+					<button type="button" class="accordion-tit">
+						<span class="svc-name">기준정보 관리(MDM)</span>
+						<span class="svc-status">
+							<span class="status good">3</span>
+							<span class="status warn">1</span>
+							<span class="status bad">0</span>
+						</span>
+					</button>
+					<div class="accordion-cont">
+						<!-- 상태에 따른 클래스명 : good & warn & bad -->
+						<a href="javascript:;" class="good">LG이노텍</a>
+						<a href="javascript:;" class="good">LG화학</a>
+						<a href="javascript:;" class="good">LX판토스</a>
+						<a href="javascript:;" class="warn">LGCNS</a>
+						<a href="javascript:;" class="bad">지투알</a>
+					</div>
+				</div>
+				<div class="accordion-wrap good">
+					<button type="button" class="accordion-tit">
+						<span class="svc-name">기준정보 관리(MDM)</span>
+						<span class="svc-status">
+							<span class="status good">3</span>
+							<span class="status warn">1</span>
+							<span class="status bad">0</span>
+						</span>
+					</button>
+					<div class="accordion-cont">
+						<a href="javascript:;" class="good">LG이노텍</a>
+						<a href="javascript:;" class="good">LG화학</a>
+						<a href="javascript:;" class="good">LX판토스</a>
+						<a href="javascript:;" class="warn">LGCNS</a>
+						<a href="javascript:;" class="bad">지투알</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- swiper 좌, 우 버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+
+		<div class="bottom-area">
+			<div class="swiper-pagination"></div>
+			<!-- data-swiper 속성값 슬라이드 id와 맞추기 -->
+			<button type="button" class="btn-stop" data-swiper="swiper1">일시정지</button>
+		</div>
+	</div>
+</div>
+		</xmp>
+	</div>
+	<!-- // code -->
+
+	<h2 class="h2_guide">03. Simple (slide)</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="type-accordion simple">
+			<div class="default-slide" id="swiper2">
+				<div class="swiper-wrapper service">
+					<div class="swiper-slide">
+						<div class="accordion-wrap good">
+							<button type="button" class="accordion-tit">
+								<span class="svc-name">Common Service</span>
+								<span class="status">Good</span>
+							</button>
+							<div class="accordion-cont">
+								<a href="javascript:;" class="good">
+									<i class="tenent">LG 이노텍</i><i class="minute up">100’</i>
+								</a>
+								<a href="javascript:;" class="warn">
+									<i class="tenent">LG전자</i><i class="minute up">80’</i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="accordion-wrap warn">
+							<button type="button" class="accordion-tit">
+								<span class="svc-name">Common Service</span>
+								<span class="status">Warn</span>
+							</button>
+							<div class="accordion-cont">
+								<a href="javascript:;" class="good">
+									<i class="tenent">LG 이노텍</i><i class="minute up">100’</i>
+								</a>
+								<a href="javascript:;" class="warn">
+									<i class="tenent">LG전자</i><i class="minute up">80’</i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- swiper 좌, 우 버튼 -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+
+				<div class="bottom-area">
+					<div class="swiper-pagination"></div>
+					<button type="button" class="btn-stop" data-swiper="swiper2">일시정지</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<!-- default에 "simple" class 추가 -->
+<div class="type-accordion simple">
+	<!-- data-swiper 속성값 슬라이드 id와 맞추기 -->
+	<div class="default-slide" id="swiper2">
+		<div class="swiper-wrapper service">
+			<div class="swiper-slide">
+				<!-- 아코디언 펼쳤을 때 accordion-wrap 에 "on" 클래스 추가됨 -->
+				<!-- "accordion-wrap" 에 현재 상태 good & warn & bad 클래스 추가 -->
+				<div class="accordion-wrap good">
+					<button type="button" class="accordion-tit">
+						<span class="svc-name">Common Service</span>
+						<span class="status">Good</span>
+					</button>
+					<div class="accordion-cont">
+						<a href="javascript:;" class="good">
+							<!-- minute에 up & down 으로 삼각형 변형 -->
+							<i class="tenent">LG 이노텍</i><i class="minute up">100’</i>
+						</a>
+						<a href="javascript:;" class="warn">
+							<i class="tenent">LG전자</i><i class="minute up">80’</i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="accordion-wrap warn">
+					<button type="button" class="accordion-tit">
+						<span class="svc-name">Common Service</span>
+						<span class="status">Warn</span>
+					</button>
+					<div class="accordion-cont">
+						<a href="javascript:;" class="good">
+							<i class="tenent">LG 이노텍</i><i class="minute up">100’</i>
+						</a>
+						<a href="javascript:;" class="warn">
+							<i class="tenent">LG전자</i><i class="minute up">80’</i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- swiper 좌, 우 버튼 -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+
+		<div class="bottom-area">
+			<div class="swiper-pagination"></div>
+			<!-- data-swiper 속성값 슬라이드 id와 맞추기 -->
+			<button type="button" class="btn-stop" data-swiper="swiper2">일시정지</button>
+		</div>
+	</div>
+</div>
+		</xmp>
+	</div>
+	<!-- // code -->
+
+	<h2 class="h2_guide">04. One Service Accordion (health check)</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="content one-service">
+			<div class="type-accordion one">
+				<div class="service">
+					<div class="accordion-wrap good">
+						<div class="accordion-box">
+							<button type="button" class="accordion-tit">
+								<span class="svc-name">기준정보 관리(MDM)</span>
+								<span class="svc-status">
+									<span class="status good">3</span>
+									<span class="status warn">1</span>
+									<span class="status bad">0</span>
+								</span>
+							</button>
+							<button type="button" class="btn-popup cl-black">Health check Report 팝업 열기</button>
+						</div>
+						<div class="accordion-cont">
+							<ul class="health-check">
+								<li>
+									<p class="health-check-name">Database Health Check</p>
+									<p class="status good">Good</p>
+									<div class="all-status">
+										<div class="status-bar-area">
+											<span class="status good"></span>
+											<span class="status warn"></span>
+											<span class="status bad"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status warn"></span>
+											<span class="status bad"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status warn"></span>
+											<span class="status bad"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status warn"></span>
+											<span class="status bad"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status warn"></span>
+											<span class="status bad"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+											<span class="status good"></span>
+										</div>
+										<div class="time-area">
+											<p class="time">11:20</p>
+											<p class="time">13:20</p>
+											<p class="time">15:20</p>
+											<p class="time">17:20</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+/*
+전체 서비스가 아닌, 하나의 서비스에 포함된 테넌트들의 상태를 확인하는 화면은 status icon이 사각형으로 나타납니다.
+이 경우 최상단의 content 클래스를 가진 div에 "one-service" 클래스를 추가하면 변경될수 있게 해두었습니다.
+*/
+<div class="content one-service">
+	<!-- "type-accordion"에 "one" class 추가 -->
+	<div class="type-accordion one">
+		<div class="service">
+			<!-- "accordion-wrap" 에 현재 상태 good & warn & bad 클래스 추가 -->
+			<div class="accordion-wrap good">
+				<div class="accordion-box">
+					<button type="button" class="accordion-tit">
+						<span class="svc-name">기준정보 관리(MDM)</span>
+						<span class="svc-status">
+							<span class="status good">3</span>
+							<span class="status warn">1</span>
+							<span class="status bad">0</span>
+						</span>
+					</button>
+					<button type="button" class="btn-popup cl-black">Health check Report 팝업 열기</button>
+				</div>
+				<div class="accordion-cont">
+					<ul class="health-check">
+						<li>
+							<p class="health-check-name">Database Health Check</p>
+							<p class="status good">Good</p>
+							<div class="all-status">
+								<div class="status-bar-area">
+									<span class="status good"></span>
+									<span class="status warn"></span>
+									<span class="status bad"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status warn"></span>
+									<span class="status bad"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status warn"></span>
+									<span class="status bad"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status warn"></span>
+									<span class="status bad"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status warn"></span>
+									<span class="status bad"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+									<span class="status good"></span>
+								</div>
+								<div class="time-area">
+									<p class="time">11:20</p>
+									<p class="time">13:20</p>
+									<p class="time">15:20</p>
+									<p class="time">17:20</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		</xmp>
+	</div>
+
+	<!-- code -->
+
+	<h2 class="h2_guide">06. One Service Accordion (SLO)</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="content one-service">
+			<div class="type-accordion one">
+				<div class="service">
+					<div class="accordion-wrap good">
+						<div class="accordion-box">
+							<button type="button" class="accordion-tit">
+								<span class="svc-name">기준정보 관리(MDM)</span>
+								<span class="svc-status">
+									<span class="status good">3</span>
+									<span class="status warn">1</span>
+									<span class="status bad">0</span>
+								</span>
+							</button>
+							<button type="button" class="btn-popup cl-black">Health check Report 팝업 열기</button>
+						</div>
+						<div class="accordion-cont">
+							<div class="legend-area">
+								<div class="legend">
+									SLO 범례 : 
+									<span class="good">Good</span>
+									<span class="warn">Warning</span>
+									<span class="bad">Bad</span>
+								</div>
+								<div class="legend square">
+									Error Budget 범례 : 
+									<span class="good">Good</span>
+									<span class="warn">Warning</span>
+									<span class="bad">Bad</span>
+								</div>
+							</div>
+							<ul class="slo">
+								<li>
+									<p class="slo-name">Availability - 신규등록시 존재여부체크</p>
+									<div class="slo-info">
+										<p class="status good">Good</p>
+										<p class="error-budget">Error Budget</p>
+										<p class="residual up good">34’</p>
+										<p class="btn">
+											<button type="button" class="modal-open tooltip" data-modal="modal1">
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+/*
+전체 서비스가 아닌, 하나의 서비스에 포함된 테넌트들의 상태를 확인하는 화면은 status icon이 사각형으로 나타납니다.
+이 경우 최상단의 content 클래스를 가진 div에 "one-service" 클래스를 추가하면 변경될수 있게 해두었습니다.
+*/
+<div class="content one-service">
+	<!-- "type-accordion"에 "one" class 추가 -->
+	<div class="type-accordion one">
+		<div class="service">
+			<!-- "accordion-wrap" 에 현재 상태 good & warn & bad 클래스 추가 -->
+			<div class="accordion-wrap good">
+				<div class="accordion-tit">
+					<span class="svc-name">기준정보 관리(MDM)</span>
+					<span class="svc-status">
+						<span class="status good">3</span>
+						<span class="status warn">1</span>
+						<span class="status bad">0</span>
+					</span>
+					<button type="button" class="btn-popup cl-black">Health check Report 팝업 열기</button>
+					<button type="button" class="btn-more">더보기</button>
+				</div>
+				<div class="accordion-cont">
+					<div class="legend-area">
+						<div class="legend">
+							SLO 범례 : 
+							<span class="good">Good</span>
+							<span class="warn">Warning</span>
+							<span class="bad">Bad</span>
+						</div>
+						<div class="legend square">
+							Error Budget 범례 : 
+							<span class="good">Good</span>
+							<span class="warn">Warning</span>
+							<span class="bad">Bad</span>
+						</div>
+					</div>
+					<ul class="slo">
+						<li>
+							<p class="slo-name">Availability - 신규등록시 존재여부체크</p>
+							<div class="slo-info">
+								<p class="status good">Good</p>
+								<p class="error-budget">Error Budget</p>
+								<!-- residual에 up & down으로 삼각형 모양 변형 -->
+								<p class="residual up good">34’</p>
+								<p class="btn">
+									<button type="button" class="modal-open tooltip" data-modal="modal1">
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		</xmp>
+	</div>
+
+	<h2 class="h2_guide">05. script</h2>
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+// accordion
+$(document).on({
+	click: function(){
+		if($(this).closest(".accordion-wrap").closest(".service").closest(".type-accordion").hasClass("one")){
+			return;
+		};
+		const accordionWrap = $(this).closest(".accordion-wrap");
+		const accordionTit = $(".accordion-tit");
+		const accordionCont = $(".accordion-cont");
+
+		if(accordionWrap.hasClass("on")) {
+			accordionWrap.removeClass("on")
+		} else {
+			accordionWrap.addClass("on")
+		}
+	}
+}, ".accordion-tit")
+
+
+// 팝업 버튼이 포함된 아코디언의 경우
+$(document).on({
+	click: function(){
+		const accordionWrap = $(this).closest(".accordion-tit").closest(".accordion-wrap");
+
+		if(accordionWrap.hasClass("on")) {
+			accordionWrap.removeClass("on")
+		} else {
+			accordionWrap.addClass("on")
+		}
+	}
+}, ".type-accordion.one .btn-more")
+
+
+// slide 일시정지
+$(document).on({
+	click: function(){
+		const btnNum = $(this).data("swiper");
+		const slide = $("#" + btnNum)[0];
+
+		if($(this).hasClass("on")) {
+			slide.swiper.autoplay.start();
+			$(this).removeClass("on");
+			$(this).text("일시정지");
+		} else {
+			slide.swiper.autoplay.stop();
+			$(this).addClass("on");
+			$(this).text("재생");
+		}
+	}
+}, ".btn-stop")
+		</xmp>
+	</div>
+	<!-- // code -->
+
+</div>
+
+</body>
+<script type="text/javascript" src="../../coding_list/js/pretty.js"></script>
+<script>
+	// multi slide
+	const multiSwiper = new Swiper('.multi-slide', {
+		loop: true,
+		autoplay: {
+				delay: 5000
+		},
+		slidesPerView: 2,
+		spaceBetween: 22,
+		pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+		},
+		// 2022-06-27 스와이프 네비게이션 추가
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	// default swiper
+	const dftSwiper = new Swiper('.default-slide', {
+		loop: true,
+		spaceBetween: 22,
+		pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+		},
+		// 2022-06-27 스와이프 네비게이션 추가
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	// accordion
+	$(document).on({
+		click: function(){
+			const accordionWrap = $(this).closest(".accordion-wrap");
+			const accordionTit = $(".accordion-tit");
+			const accordionCont = $(".accordion-cont");
+
+			if(accordionWrap.hasClass("on")) {
+				accordionWrap.removeClass("on")
+			} else {
+				accordionWrap.addClass("on")
+			}
+		}
+	}, ".accordion-tit")
+
+	// slide 일시정지
+	$(document).on({
+		click: function(){
+			const btnNum = $(this).data("swiper");
+			const slide = $("#" + btnNum)[0];
+
+			if($(this).hasClass("on")) {
+				slide.swiper.autoplay.start();
+				$(this).removeClass("on");
+				$(this).text("일시정지");
+			} else {
+				slide.swiper.autoplay.stop();
+				$(this).addClass("on");
+				$(this).text("재생");
+			}
+		}
+	}, ".btn-stop")
+
+	// 2022-06-27 스와이프 호버 이벤트 추가
+	$('.multi-slide, .default-slide').each(function(elem, target){
+		const swp = target.swiper;
+		const bts = $(this).find('.swiper-button-next, .swiper-button-prev')
+		$(this).hover(function() {
+			swp.autoplay.stop();
+			bts.show();
+		}, function() {
+			swp.autoplay.start();
+			bts.hide();
+		});
+	});
+</script>
+</body>
+</html>

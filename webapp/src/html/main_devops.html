@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('./include/head.html')
+</head>
+
+<body data-theme="dark">
+    <!--  data-theme="dark" -->
+    <div class="wrap">
+			@@include('./include/header_devops.html')
+        <div class="content" data-content="new">
+            <div class="tab-content-wrap" id="tab1">
+                <div class="tab-content on">
+                    <div class="top-area">
+                        <div>
+                            <div class="select-area">
+                                <div class="select-box service" style="width:200px">
+                                    <button class="label">Service 전체</button>
+                                    <ul class="option">
+                                        <li><a href="javascript:;" data-value="Service 전체">Service 전체</a></li>
+                                        <li><a href="javascript:;" data-value="A Service">A Service</a></li>
+                                        <li><a href="javascript:;" data-value="B Service">B Service</a></li>
+                                        <li><a href="javascript:;" data-value="C Service">C Service</a></li>
+                                        <li><a href="javascript:;" data-value="가 Service">가 Service</a></li>
+                                        <li><a href="javascript:;" data-value="나 Service">나 Service</a></li>
+                                        <li><a href="javascript:;" data-value="다 Service">다 Service</a></li>
+                                        <li><a href="javascript:;" data-value="라 Service">라 Service</a></li>
+                                    </ul>
+                                </div>
+																<!-- tenant class 추가 -->
+																<div class="select-box tenant type-check" style="width:200px">
+																	<!-- 2022-07-29 셀렉트 박스 전체 수정 -->
+																	<button class="label">Tenant <span>전체</span></button>
+																	<ul class="option">
+																		<li class="all" data-code="0000">
+																			<!-- 2022-07-29 셀렉트 박스 전체 수정 -->
+																			<input type="checkbox" id="tenant01" checked>
+																			<label for="tenant01">전체</label>
+																		</li>
+																		<li data-code="0001">
+																			<input type="checkbox" id="tenant02">
+																			<label for="tenant02">LG CNS</label>
+																		</li>
+																		<li data-code="0002">
+																			<input type="checkbox" id="tenant03">
+																			<label for="tenant03">LG 디스플레이</label>
+																		</li>
+																		<li data-code="0003">
+																			<input type="checkbox" id="tenant04">
+																			<label for="tenant04">LG 이노텍</label>
+																		</li>
+																		<li data-code="0004">
+																			<input type="checkbox" id="tenant05">
+																			<label for="tenant05">LG 전자</label>
+																		</li>
+																		<li data-code="0005">
+																			<input type="checkbox" id="tenant06">
+																			<label for="tenant06">LG 화학</label>
+																		</li>
+																		<li data-code="0006">
+																			<input type="checkbox" id="tenant07">
+																			<label for="tenant07">LX 판토스</label>
+																		</li>
+																		<li data-code="0007">
+																			<input type="checkbox" id="tenant08">
+																			<label for="tenant08">교보생명</label>
+																		</li>
+																		<li data-code="0008">
+																			<input type="checkbox" id="tenant09">
+																			<label for="tenant09">지투알</label>
+																		</li>
+																		<li data-code="0009">
+																			<input type="checkbox" id="tenant10">
+																			<label for="tenant10">투썸플레이스</label>
+																		</li>
+																		<li data-code="0010">
+																			<input type="checkbox" id="tenant11">
+																			<label for="tenant11">스타벅스</label>
+																		</li>
+																		<li data-code="0011">
+																			<input type="checkbox" id="tenant12">
+																			<label for="tenant12">웅진코웨이</label>
+																		</li>
+																		<li data-code="0012">
+																			<input type="checkbox" id="tenant13">
+																			<label for="tenant13">LG 화학</label>
+																		</li>
+																		<li data-code="0013">
+																			<input type="checkbox" id="tenant14">
+																			<label for="tenant14">LX 판토스</label>
+																		</li>
+																		<li data-code="0014">
+																			<input type="checkbox" id="tenant15">
+																			<label for="tenant15">교보생명</label>
+																		</li>
+																		<li data-code="0015">
+																			<input type="checkbox" id="tenant16">
+																			<label for="tenant16">LX 지투알</label>
+																		</li>
+																	</ul>
+																</div>
+																<!-- 2022-07-05 버튼 추가-->
+																<div>
+																	<button class="btn-result">적용</button>
+																</div>
+                            </div>
+                            <!-- 2022-06-28 chip-area 구조 수정 -->
+                            <div class="chip-area">
+                                <div class="box">
+                                    <div class="sort-box"></div>
+                                    <button type="button" class="btn-more">더보기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="select-box refresh" style="width:136px">
+                                <button class="label">Refresh 10분</button>
+                                <ul class="option">
+                                    <li><a href="javascript:;" data-value="Refresh 10분">Refresh 10분</a></li>
+                                    <li><a href="javascript:;" data-value="10분">10분</a></li>
+                                    <li><a href="javascript:;" data-value="20분">20분</a></li>
+                                    <li><a href="javascript:;" data-value="30분">30분</a></li>
+                                    <li><a href="javascript:;" data-value="40분">40분</a></li>
+                                    <li><a href="javascript:;" data-value="50분">50분</a></li>
+                                    <li><a href="javascript:;" data-value="60분">60분</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" data-content="new">
+                        <div class="top-area type-service">
+                            <h2 class="sub-title">Service 전체</h2>
+                            <div class="devops total">
+                                <p class="total-service">Total Gate   : <i class="sum">19</i></p>
+                            </div>
+                            <div class="btn-devops noresult">
+                                <span class="tit">No Setup/Result</span>
+                                <span class="count">2</span>
+                            </div>
+                            <div class="btn-devops good">
+                                <span class="tit">Good</span>
+                                <span class="count">1</span>
+                            </div>
+                            <div class="btn-devops warn">
+                                <span class="tit">Warning</span>
+                                <span class="count">1</span>
+                            </div>
+                            <div class="btn-devops bad">
+                                <span class="tit">Bad</span>
+                                <span class="count">0</span>
+                            </div>
+                        </div>
+                        <div class="type-list-title">Service</div>
+                        <div class="main-area list-nowrap">
+                            <div class="type-list">
+                                <div class="title">
+                                    <h3 class="list-title">Plan</h3>
+                                </div>
+                                <div class="list-box-wrap">
+                                    <div class="list-box">
+                                        <div class="list-title">Demand 통합영향도 점검</div>
+                                        <div class="btn-wrap good">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">통합영향도 분석 수행율</span>
+                                            </button>
+                                            <button type="button" class="tooltip" >상세정보</button>
+                                        </div>
+                                    </div>
+                                    <div class="list-box">
+                                        <div class="list-title">Demand 통합영향도 점검</div>
+                                        <div class="btn-wrap warn">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">통합영향도 분석 수행율</span>
+                                            </button>
+                                            <button type="button" class="tooltip" >상세정보</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="next-icon">
+                                <i></i>
+                            </div>
+                            <div class="type-list">
+                                <div class="title">
+                                    <h3 class="list-title">Code & Build</h3>
+                                </div>
+                                <div class="list-box-wrap">
+                                    <div class="list-box">
+                                        <div class="list-title">개발코드 정합성 점검</div>
+                                        <div class="btn-wrap good">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">개발환경 정상 빌드/배포</span>
+                                            </button>
+                                            <button type="button" class="tooltip" >상세정보</button>
+                                        </div>
+                                    </div>
+                                    <div class="list-box">
+                                        <div class="list-title">단위기능 점검</div>
+                                        <div class="btn-wrap warn">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">모듈테스트자동화 수행결과(Dev)</span>
+                                            </button>
+                                            <button type="button" class="tooltip" >상세정보</button>
+                                        </div>
+                                    </div>
+                                    <div class="list-box">
+                                        <div class="list-title">보안준수 점검</div>
+                                        <div class="btn-wrap good">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">Secure Coding 준수</span>
+                                            </button>
+                                            <button type="button" class="tooltip" >상세정보</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="next-icon">
+                                <i></i>
+                            </div>
+                            <div class="type-list">
+                                <div class="title">
+                                    <h3 class="list-title">Test</h3>
+                                </div>
+                                <div class="list-box-wrap">
+                                    <div class="list-box">
+                                        <div class="list-title">QA코드 정합성 점검</div>
+                                        <div class="btn-wrap good">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">Stage 환경 정상 빌드/배포</span>
+                                            </button>
+                                            <button type="button" class="tooltip" >상세정보</button>
+                                        </div>
+                                    </div>
+                                    <div class="list-box">
+                                        <div class="list-title">단위/연계기능 점검</div>
+                                        <div class="btn-wrap good">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">모듈테스트 자동화수행결과</span>
+                                            </button>
+                                            <button type="button" class="tooltip">상세정보</button>
+                                        </div>
+                                        <div class="btn-wrap noresult">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">Regression 점검결과(Stage)</span>
+                                            </button>
+                                            <button type="button" class="tooltip">상세정보</button>
+                                        </div>
+                                        <div class="btn-wrap bad">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">3자점검 결과</span>
+                                            </button>
+                                            <button type="button" class="tooltip">상세정보</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="next-icon">
+                                <i></i>
+                            </div>
+                            <div class="type-list">
+                                <div class="title">
+                                    <h3 class="list-title">Release & Deploy</h3>
+                                </div>
+                                <div class="list-box-wrap">
+                                    <div class="list-box">
+                                        <div class="list-title">단위/연계기능 점검</div>
+                                        <div class="btn-wrap good">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">통합영향도 분석 수행율</span>
+                                            </button>
+                                            <button type="button" class="tooltip" >상세정보</button>
+                                        </div>
+                                    </div>
+                                    <div class="list-box">
+                                        <div class="list-title">SSR 접수처리</div>
+                                        <div class="btn-wrap warn">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">SSR 접수 완료율</span>
+                                            </button>
+                                            <button type="button" class="tooltip" >상세정보</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="next-icon">
+                                <i></i>
+                            </div>
+                            <div class="type-list">
+                                <div class="title">
+                                    <h3 class="list-title">Operate & Monitor</h3>
+                                </div>
+                                <div class="list-box-wrap">
+                                    <div class="list-box">
+                                        <div class="list-title">운영코드 정합성 점검</div>
+                                        <div class="btn-wrap good">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">운영환경 정상 빌드/배포</span>
+                                            </button>
+                                            <button type="button" class="tooltip">상세정보</button>
+                                        </div>
+                                    </div>
+                                    <div class="list-box">
+                                        <div class="list-title">사용자 체감 품질</div>
+                                        <div class="btn-wrap good">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">서비스 응답속도 점검</span>
+                                            </button>
+                                            <button type="button" class="tooltip">상세정보</button>
+                                        </div>
+                                        <div class="btn-wrap good">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">서비스 가용성 목표달성율</span>
+                                            </button>
+                                            <button type="button" class="tooltip">상세정보</button>
+                                        </div>
+                                    </div>
+                                    <div class="list-box">
+                                        <div class="list-title">서비스 기본기능점검</div>
+                                        <div class="btn-wrap good">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">HealthCheck 점검(배포직후)</span>
+                                            </button>
+                                            <button type="button" class="tooltip">상세정보</button>
+                                        </div>
+                                        <div class="btn-wrap good">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">주요서비스 인스턴스 정상 수행율</span>
+                                            </button>
+                                            <button type="button" class="tooltip">상세정보</button>
+                                        </div>
+                                        <div class="btn-wrap bad">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">HealthCheck 점검(Daily)</span>
+                                            </button>
+                                            <button type="button" class="tooltip">상세정보</button>
+                                        </div>
+                                    </div>
+                                    <div class="list-box">
+                                        <div class="list-title">장애 관리 절차</div>
+                                        <div class="btn-wrap good">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">장애모의 훈련 수행율</span>
+                                            </button>
+                                            <button type="button" class="tooltip">상세정보</button>
+                                        </div>
+                                        <div class="btn-wrap noresult">
+                                            <button type="button" class="list-tit">
+                                                <span class="svc-name">장애 유사사례 사전 점검 수행율</span>
+                                            </button>
+                                            <button type="button" class="tooltip">상세정보</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mode">
+                <input type="checkbox" id="mode" checked>
+                <label for="mode">라이트모드</label>
+            </div>
+        </div>
+
+	<script>
+		// 2023 04.17 툴팁 스크립트 추가
+			const svcname = document.querySelectorAll('.svc-name');
+			const typebtn = document.querySelectorAll('.type-list .btn-wrap');
+
+		function svcWidth() {
+			for(let i=0; i<svcname.length; i++) {
+				if(svcname[i].offsetWidth >= 225){
+					svcname[i].classList.add('overWidth');
+          let nowTt = cate(svcname[i].innerText)
+          svcname[i].closest('.btn-wrap').insertAdjacentHTML('beforeend', nowTt)
+				}
+			}
+		}
+		svcWidth()
+		
+		function cate(cateData) {
+			ct = "";
+			ct += `<div class="cateDetail"><p class="detailTit">${cateData}</p></div>`
+			return ct;
+		}
+
+		function svctootip() {
+			for(let x=0; x<svcname.length; x++) {
+			if(svcname[x].offsetWidth >= 225){
+				for(let i=0; i<typebtn.length; i++){
+					typebtn[i].addEventListener("mouseover", function(){
+						typebtn[i].classList.add('active')
+					})
+					typebtn[i].addEventListener("mouseleave", function(){
+					typebtn[i].classList.remove('active')
+				})
+				}
+			}
+		}
+	}
+	svctootip();
+
+	// 2023.04.19 버튼개수에 따른 border 스크립트 추가
+	let listBox = document.querySelectorAll('.type-list .list-box');
+	function bord() {
+		for(let i = 0; i<listBox.length; i++) {
+			let list_box = listBox[i].querySelectorAll('.btn-wrap').length;
+			if(list_box > 1) {
+				listBox[i].classList.add('twoborder')
+			} else if(list_box === 1){
+				listBox[i].classList.add('allborder')
+			} else {
+				listBox[i].classList.remove('twoborder')
+			}
+		}
+	}
+	bord();
+
+		// popup 닫기 이벤트
+		$(document).on({
+			click: function(){
+				const popup = $(this).parents(".modal-wrap");
+				popup.hide();
+			}
+		}, ".modal-wrap .btn-close")
+
+		// 외부영역 클릭 시 popup 닫기
+		$(document).mouseup(function (e){
+			const modalWrap = $('.modal-wrap');
+			if(!modalWrap.is(e.target) && modalWrap.has(e.target).length === 0){
+				modalWrap.hide();
+			}
+		});
+
+		// Select Box Default
+		// Open
+		$(document).on({
+			click: function(){
+				if($(this).closest('.select-box').hasClass('on')){
+					$(this).closest('.select-box').removeClass('on')  
+				} else {
+					$(this).closest('.select-box').addClass('on');
+				};
+			}
+		}, '.select-box .label');
+
+		// 2022-06-22 셀렉트박스 스크립트 수정
+		// Option selected
+		$(document).on({
+			click: function(){
+				if($(this).closest('.select-box').hasClass('type-check')){
+					return;
+				};
+
+				const selectWrap = $(this).parents('.option').parents('.select-box');
+				const value = $(this).data('value');
+				const index = $(this).closest('li').index();
+
+				// alert(`value : ${value} / index : ${index}`)
+				$(".select-box .option a").removeClass('checked');
+				if(selectWrap.hasClass("service")) {
+					$(this).closest('.select-box').find('.label').text("Service " + value);
+				} else if(selectWrap.hasClass("tenant")) {
+					$(this).closest('.select-box').find('.label').text("Tenant " + value);
+				} else if(selectWrap.hasClass("refresh")) {
+					$(this).closest('.select-box').find('.label').text("Refresh " + value);
+				}
+				$(this).closest('.select-box').removeClass("on");
+				$(this).addClass('checked');
+			}
+		}, '.select-box .option a');
+
+		// Select Box Type Check
+
+		// 2022-06-27 셀렉트 박스 제어함수 추가
+		const changeCheckbox = (target) => {
+			const selectBox = $(target).closest('.select-box'),
+				textTarget = selectBox.find('.label span'),
+				checkedItems = selectBox.find('input[type="checkbox"]:checked');
+				targetStr = $(checkedItems[0]).parent().find('label').text();
+			let resultStr = '';
+
+			// console.log(checkedItems, targetStr, checkedItems.length)
+			if(targetStr !== '전체' && checkedItems.length > 1) {
+				resultStr = `<span class="result-txt">${targetStr}</span> 외 ${checkedItems.length-1}개`;
+			} else {
+				resultStr = targetStr;
+			}
+			
+			// 2022-07-11 추가
+			if(checkedItems.length < 1){
+				// <!-- 2022-07-29 셀렉트 박스 전체 수정 -->
+				textTarget.html('전체');
+				$(`.select-box.tenant .all`).find('input[type="checkbox"]').prop('checked', true)
+			} else {
+				textTarget.html(resultStr);
+			}
+		};
+		const deleteChips = (item, target) => {
+			const code = $(item).attr('data-code');
+			const allItem = $(`.select-box.${target}`).find('.all')
+			const targetItem = $(`.select-box.${target}`).find(`[data-code="${code}"]`)
+			// console.log(item, code, targetItem)
+			allItem.find('input[type="checkbox"]').prop('checked', false)
+			targetItem.find('input[type="checkbox"]').prop('checked', false)
+			// <!-- 2022-07-22 선택시 적용버튼수정 -->
+			/*
+			if ($(`.select-box.${target}`).find('input[type="checkbox"]:checked').length === 0) {
+				$('.chip-area').addClass('off'); 
+			}
+			*/
+			changeCheckbox(targetItem)
+		};
+		// <!-- 2022-07-22 선택시 적용버튼수정-->
+		const generateChips = (target) => {
+			let result = '';
+			const targets = $(`.select-box.${target}`).find('input[type="checkbox"]:checked');
+			// console.log(targets)
+			$.each(targets, (idx, target) => {
+				const value = $(target).closest('li').find('label').text(),
+						code = $(target).closest('li').data('code');
+				const html = `
+					<div class="chip" data-code="${code}">
+						<a href="#">${value}</a>
+						<button type="button" class="btn-delete">삭제하기</button>
+					</div>
+				`;
+				result += html;
+			});
+
+			return result;
+		}
+		const renderChips = () => {
+			const renderChipsString = generateChips('tenant');
+			// console.log(renderChipsString)
+			const chipArea = $('.chip-area .box .sort-box');
+			$.each(chipArea.find('.chip'), (idx, target) => {
+				$(target).remove();
+			});
+			chipArea.append(renderChipsString);
+		};
+		$(document).on({
+			click: function(){
+
+				const checked = $(this).is(':checked'),
+					  chipArea = $('.chip-area .box .sort-box');
+
+				// 2022-07-11 수정
+				if($(this).closest('li').hasClass('all')){
+					// 전체 선택시
+					if(checked){
+						$.each($(this).closest('.option').find('li'), function(){
+							// <!-- 2022-07-28 셀렉트 박스 전체 수정 -->
+							if ($(this).hasClass('all')) return
+							$(this).find('input[type="checkbox"]').prop('checked', false);
+						});
+					}
+					// <!-- 2022-07-22 선택시 적용버튼수정 -->
+					/*
+					$.each(chipArea.find('.chip'), function(){
+						$(this).remove();
+					});
+					*/
+				} else {
+					// 개별 선택시
+					// <!-- 2022-07-22 선택시 적용버튼수정 -->
+					/*
+					const value = $(this).closest('li').find('label').text(),
+						  code = $(this).closest('li').data('code');
+					*/
+					let itemChecked = true;
+					// <!-- 2022-07-22 선택시 적용버튼수정 -->
+					/*
+					if(checked){
+						let html = `
+							<div class="chip" data-code="${code}">
+								<a href="#">${value}</a>
+								<button type="button" class="btn-delete">삭제하기</button>
+							</div>
+						`;
+						chipArea.append(html);
+					} else {
+						chipArea.find(`div[data-code="${code}"]`).remove();                        
+					}; 
+					*/
+					$.each($(this).closest('.select-box').find('li'), function(k, v){
+						if(!itemChecked) return;
+						if(k != 0){
+							if(!$(this).find('input[type="checkbox"]').is(':checked')){
+								itemChecked = false;
+							} else {
+								itemChecked = true;
+							};
+						};
+					});
+					if(!itemChecked){
+						$(this).closest('.select-box').find('.all input[type="checkbox"]').prop('checked', false);
+					} else {
+						$(this).closest('.select-box').find('.all input[type="checkbox"]').prop('checked', true);
+					};
+				};
+				if($(this).checked) {
+					$(this).closest("li").addClass("checked");
+				}
+				// chip-area 2줄 이상
+				// 202t2-06-28 chip 스크립트 수정
+				if($(".chip-area .box").outerHeight() > 34) {
+					$(".btn-more").css("display", "block")
+				} else {
+					$(".btn-more").css("display", "none")
+				}
+				// 2022-06-27 셀렉트 박스 제어함수 호출
+				changeCheckbox(this);
+			}
+		}, '.select-box.type-check input[type="checkbox"]');
+
+		// <!-- 2022-07-21 선택시 적용버튼(class추가및, 스크립트수정) -->
+		$(document).on({
+			click: function(){
+				if ($(`.select-box.tenant`).find('input[type="checkbox"]:checked').length === 0) {
+					alert('선택된 값이 없습니다');
+				} else {
+					// <!-- 2022-07-22 선택시 적용버튼수정 -->
+					// $('.chip-area').removeClass('off'); 
+					renderChips();
+				}
+			}
+		}, '.select-area .btn-result');
+
+		// 외부영역 클릭 시 셀렉트 박스
+		$(document).mouseup(function (e){
+			const selectBox = $(".select-box");
+			if(selectBox.has(e.target).length === 0){
+				selectBox.removeClass("on");
+			}
+		});
+
+		// chip event
+		// 2022-06-28 chip 스크립트 수정
+		$(document).on({
+			click: function(){
+				this.closest('.chip').remove();
+				// chip-area 2줄 이상
+				if($('.chip-area .box').outerHeight() > 34) {
+					$('.btn-more').css('display', 'block')
+				} else {
+					$('.btn-more').css('display', 'none')
+				}
+				// 2022-06-27 셀렉트 박스 제어함수 호출
+				deleteChips(this.closest('.chip'), 'tenant')
+			}
+		}, '.chip .btn-delete');
+
+		// 2022-06-28 chip 스크립트 수정
+		$(document).on({
+			click: function(){
+				const chipArea = $(this).parents(".box").parents(".chip-area");
+				if(chipArea.hasClass("on")) {
+					if($('.chip-area .box').outerHeight() <= 71) {
+						$(this).css('display', 'none')
+					}
+					chipArea.removeClass("on")
+				} else {
+					chipArea.addClass("on")
+				}
+			}
+		}, ".chip-area .btn-more")
+		
+
+		// switch
+		$(document).on({
+			click: function(){
+				const switchCheck = $(".mode input[type='checkbox']");
+				const switchTxt = $(".mode label");
+				const body = $("body");
+
+				if(switchCheck.is(":checked")) {
+					switchTxt.html("라이트모드")
+					body.attr("data-theme", "")
+				} else {
+					switchTxt.html("다크<br>모드")
+					body.attr("data-theme", "dark")
+				}
+			}
+		}, ".mode")
+    </script>
+
+</body>
+
+</html>

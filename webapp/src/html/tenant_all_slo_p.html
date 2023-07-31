@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../lib/jquery/jquery.min.js"></script>
+
+    <title>서비스별 SLO 월별 현황</title>  
+</head>
+<body>
+    <!-- 2022-06-27 팝업페이지 구조 변경 -->
+    <modal>
+        <div style="height:100%;">
+            <wsg-dialog style="max-width: 120rem; width: 1183px;">
+                <wd-title>
+                    서비스별 SLO 월별 현황
+                    <small>(기간 : <i>2021.08~2022.01</i>)</small>
+                </wd-title>
+                <button type="button" class="close">닫기</button>
+                <wd-message>
+                    <div class="table-wrap">
+                        <div class="top-area">
+                            <p class="write">작성 기준 : <strong>SLO충족한 SLI건수</strong> / 전체 SLI건수</p>
+                            <div class="legend type-table">
+                                범례 : 
+                                <span class="good">SLO 99% 이상</span>
+                                <span class="warn">SLO 70~99% 미만</span>
+                                <span class="bad">SLO 70% 미만</span>
+                            </div>
+                        </div>
+                        <!-- "type2" class 추가 -->
+                        <table class="type2">
+                            <caption class="caption">Service, Jan 2022, Dec 2021, Nov 2021, Oct 2021, Sep 2021, Aug 2021 에 대한 표</caption>
+                            <colgroup>
+                                <col style="width:180px">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                <th scope="col">Tenant</th> <!-- 2022-07-11 텍스트 수정 -->
+                                <th scope="col">Jan 2022</th>
+                                <th scope="col">Dec 2021</th>
+                                <th scope="col">Nov 2021</th>
+                                <th scope="col">Oct 202</th>
+                                <th scope="col">Sep 2021</th>
+                                <th scope="col">S Aug 2021</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!-- 상황에 따라 good & warn & bad class 추가 -->
+                                    <th scope="row">기준정보관리</th>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="warn"><strong>6</strong>/9</td>
+                                    <td class="bad"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">사용자경비관리</th>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="warn"><strong>6</strong>/9</td>
+                                    <td class="bad"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="gray">Service Launched</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Common Infra</th>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="warn"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">설비관리(EMS)</th>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="warn"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="warn"><strong>6</strong>/9</td>
+                                    <td class="bad"><strong>6</strong>/9</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Common Service</th>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="warn"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                    <td class="good"><strong>6</strong>/9</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+        
+                    <div class="table-box">
+                        <div class="sort-box">
+                            <div class="top-box">
+                                <p class="tenant-name">기준정보관리</p>
+                                <div class="legend type-table">
+                                    범례 : 
+                                    <span class="good">SLO 99% 이상</span>
+                                    <span class="warn">SLO 70~99% 미만</span>
+                                    <span class="bad">SLO 70% 미만</span>
+                                </div>
+                            </div>
+                            <table>
+                                <caption class="caption">Indicatore, SLO, 전일, 전주, 전월에 대한 표</caption>
+                                <colgroup>
+                                    <col style="width:330px">
+                                    <col style="width:110px">
+                                    <col style="width:110px">
+                                    <col style="width:110px">
+                                    <col style="width:110px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Indicator</th>
+                                        <th scope="col">SLO</th>
+                                        <th scope="col">Jan 2022</th>
+                                        <th scope="col">Dec 2021</th>
+                                        <th scope="col">Nov 2021</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @@for(var i = 0; i < 6; i++) {
+                                        <tr>
+                                            <th scope="row">Availability - 신규등록시 존재여부체크</th>
+                                            <td class="slo">99%</td>
+                                            <td class="good">100%</td>
+                                            <td class="good">99.5%</td>
+                                            <td class="warn">99.5%</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="sort-box">
+                            <div class="legend type-table">
+                                범례 : 
+                                <span class="good">50% 이상 잔여</span>
+                                <span class="warn">20~50% 미만 잔여</span>
+                                <span class="bad">20% 미만 잔여</span>
+                            </div>
+                            <!-- "type3" class 추가 -->
+                            <table class="type3">
+                                <caption class="caption">Popup Title</caption>
+                                <colgroup>
+                                    <col style="width:160px">
+                                    <col style="width:160px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Error Budget</th>
+                                        <th scope="col">잔여 Error Budget</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @@for (var i = 0; i < 6; i++) {
+                                        <tr>
+                                            <td class="">67‘</td>
+                                            <td class="residual up good">34’</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </wd-message>
+            </wsg-dialog>
+        </div>
+    </modal>
+</body>
+</html>

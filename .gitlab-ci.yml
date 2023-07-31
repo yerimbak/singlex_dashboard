@@ -1,0 +1,27 @@
+stages:
+  #- build
+  #- deploy
+  - pages
+
+pages:
+  rules: 
+    - if: '$CI_COMMIT_REF_NAME == "main" && $CI_COMMIT_MESSAGE =~ /^\[deploy]/' # job진행조건: 1.main branch 2. [deploy] message로 시작하는 커밋
+  image: node:14.17.3
+  # Cache node modules - speeds up future builds
+  cache:
+    paths:
+    - node_modules
+  stage: pages
+  variables:
+    PUBLIC_URL: /$CI_PROJECT_NAME #화면이 안보여서 퍼블릭url설정
+  script:
+    - echo "Start building App"
+    - echo /$CI_PROJECT_NAME
+    - npm install gulp -g
+    - npm install
+    - gulp build
+    - mv webapp/dist public
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - public

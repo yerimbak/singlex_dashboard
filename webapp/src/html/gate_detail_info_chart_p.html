@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/c3/d3-5.4.0.min.js"></script>
+    <script src="../lib/c3/c3.min.js"></script>
+    <link rel="stylesheet" href="../lib/c3/c3.min.css">
+
+    <title>Gate상세정보</title>  
+</head>
+<body data-theme="dark">
+  <modal>
+    <div style="height:100%;">
+      <wsg-dialog style="max-width: 120rem; width: 780px;">
+        <wd-title>
+          Gate상세정보
+          <div class="entire">
+              <p>Service 전체</p>
+          </div>
+        </wd-title>
+        <button type="button" class="close">닫기</button>
+        <div class="detail-info">
+          <div class="detail-box">
+            <div class="top-area">
+              <p class="detail-status">단계</p>
+            </div>
+            <div class="box">
+              <p>Test</p>
+            </div>
+          </div>
+          <div class="detail-box">
+            <div class="top-area">
+              <p class="detail-status">게이트명</p>
+            </div>
+            <div class="box">
+              <p>단위/연계기능 점검</p>
+            </div>
+          </div>
+        </div>
+        <div class="detail-info">
+          <div class="detail-box">
+            <div class="top-area">
+              <p class="detail-status">지표상태</p>
+            </div>
+            <div class="box">
+              <div class="status-box">
+                <span class="bad">Failed</span>
+            </div>
+            </div>
+          </div>
+          <div class="detail-box">
+            <div class="top-area">
+              <p class="detail-status">지표명</p>
+            </div>
+            <div class="box">
+              <p>응용 영향도 분석 수행율</p>
+            </div>
+          </div>
+        </div>
+        <!--차트 영역-->
+        <div class="type-chart donut detail">
+          <div class="top-area">
+            <p class="detail-status">지표 상세 상태</p>
+          </div>
+          <div class="box">
+              <div class="chart-area">
+                <div id="chart"></div>
+                <!-- 2022-07-11 추가 -->
+                <div class="title-box">
+                  <div class="inner-box">
+                    <div class="count">26</div>
+                    <div class="title">Total</div>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-content">
+                  <ul class="chart-info">
+                      <li>
+                          <div class="type-txt">
+                              <p class="detail pass_type2">Pass</p>
+                          </div>
+                          <p class="count"><span>25</span>건</p>
+                      </li>
+                      <li>
+                          <div class="type-txt">
+                              <p class="detail fail">Failed</p>
+                          </div>
+                          <p class="count"><span>1</span>건</p>
+                      </li>
+                  </ul>
+                  <div class="total-case">
+                    <span class="txt">Total</span>
+                    <span class="result"><i class="sum">26</i>건</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <wd-message>
+            <div class="top-area">
+              <p class="detail-status">서비스별 상세상태 <span>(서비스: 15개,테넌트: 3개)</span></p>
+              <div class="detail-icon-area">
+                <button class="detail-icon">크게보기</button>
+              </div>
+            </div>
+            <!-- "type4" class 추가 -->
+            <table class="type4 scroll">
+              <caption class="caption">서비스, 테넌트, 완료, 진행, 2일이상대기, 데이터생성시간, 연결시스템에 대한 표</caption>
+              <colgroup>
+              <col style="width: 130px;">
+              <col style="width: 125px;">
+              <col style="width: 70px;">
+              <col style="width: 70px;">
+              <col style="width: 100px;">
+              <col style="width: 100px;">
+              <col style="width: 120px;">
+              </colgroup>
+              <thead>
+              <tr>
+                  <th scope="col">서비스</th>
+                  <th scope="col">테넌트</th>
+                  <th scope="col">완료</th>
+                  <th scope="col">진행</th>
+                  <th scope="col" class="delay">2일이상대기</th>
+                  <th scope="col" class="occurrencetime">데이터생성시간</th>
+                  <th scope="col">연결시스템</th>
+              </tr>
+              </thead>
+              <tbody style="max-height:204px">
+              <tr>
+                  <td class="detail" scope="row">설비관리(EMS)</td>
+                  <td class="detail tenant" scope="row">LG에너지솔루션</td>
+                  <td class="">0</td>
+                  <td class="">4</td>
+                  <td class="">35</td>
+                  <td class="occurrencetime">2022.12.12 14:20</td>
+                  <td class="connectedsystem">RoadMap Town</td>
+              </tr>
+              <tr>
+                  <td class="detail" scope="row">설비관리(EMS)</td>
+                  <td class="detail tenant" scope="row">LG이노텍</td>
+                  <td class="">0</td>
+                  <td class="">4</td>
+                  <td class="">35</td>
+                  <td class="occurrencetime">2022.12.12 14:20</td>
+                  <td class="connectedsystem">RoadMap Town</td>
+              </tr>
+              <tr>
+                  <td class="detail" scope="row">설비관리(EMS)</td>
+                  <td class="detail tenant" scope="row">LG전자</td>
+                  <td class="">0</td>
+                  <td class="">4</td>
+                  <td class="">35</td>
+                  <td class="occurrencetime">2022.12.12 14:20</td>
+                  <td class="connectedsystem">RoadMap Town</td>
+              </tr>
+              <tr>
+                  <td class="detail" scope="row">설비관리(EMS)</td>
+                  <td class="detail tenant" scope="row">LX판토스</td>
+                  <td class="">0</td>
+                  <td class="">4</td>
+                  <td class="">35</td>
+                  <td class="occurrencetime">2022.12.12 14:20</td>
+                  <td class="connectedsystem">RoadMap Town</td>
+              </tr>
+              <tr>
+                  <td class="detail" scope="row">설비관리(EMS)</td>
+                  <td class="detail tenant" scope="row">LG화학</td>
+                  <td class="">0</td>
+                  <td class="">4</td>
+                  <td class="">35</td>
+                  <td class="occurrencetime">2022.12.12 14:20</td>
+                  <td class="connectedsystem">RoadMap Town</td>
+              </tr>
+              </tbody>
+          </table>
+        </wd-message>
+        <div class="block-detail-box">
+            <div class="top-area">
+              <p class="detail-status">지표 목적</p>
+            </div>
+            <div class="block-box">
+              <p>해당 게이트에서는 변경으로 인한 통합 연계와 서비스 무결성 점검을 위한 영향도 분석을 진행합니다.</p>
+            </div>
+        </div>
+      </wsg-dialog>
+    </div>
+  </modal>
+
+  <script>
+		// donut chart
+		var chart = c3.generate({
+			data: {
+				columns: [
+					['data1', 25],
+					['data2', 1],
+				],
+				type: 'donut',
+				colors: {
+					'data1': 'var(--status-pass)',
+					'data2': 'var(--status-bad)',
+				}
+			},
+			donut: {
+				width: 15,
+				expand: false,
+				label: {
+					show: false
+				}
+			},
+			legend: {
+				show: false
+			}
+		});
+		chart.resize({ width: 116, height: 116 });
+	</script>
+</body>
+</html>

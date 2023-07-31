@@ -1,0 +1,443 @@
+.modal-wrap
+  display: none
+  position: absolute
+  z-index: 10
+  width: 285px
+  background: var(--bg-popup)
+  border: 1px solid var(--border-popup)
+  border-radius: 8px
+  padding: 20px 20px 12px
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.22), 0px 7px 10px rgba(0, 0, 0, 0.12)
+
+  .tit
+    font:
+      size: 14px
+      weight: 500
+    line-height: 18px
+    color: var(--text-popup)
+
+  .input-box
+    position: relative
+    margin-top: 20px
+
+    input[type="text"]
+      width: 100%
+      height: 32px
+      border: 1px solid var(--border-popup-input)
+      border-radius: 3px
+      vertical-align: middle
+      & + label
+        font-size: 0
+        position: absolute
+        left: 0
+        top: 0
+
+    input[type="radio"]
+      & + label
+        font:
+          size: 12px
+          weight: 500
+        line-height: 18px
+        color: var(--text-popup)
+        vertical-align: middle      
+
+  .btn-wrap
+    justify-content: flex-end
+    margin-top: 20px
+
+
+  &.bookmark-list
+    .input-box
+      margin-top: 0
+      &:first-child
+        margin-top: 10px
+    
+    .btn-wrap
+      margin-top: 20px
+
+  &.information
+    width: 500px
+    padding: 20px
+
+  .table
+    @include flex-box
+    flex-wrap: wrap
+    margin-top: 20px
+    border: 1px solid var(--border-popup-table)
+    border-top: none
+    
+    dt,
+    dd
+      font:
+        size: 14px
+      line-height: 20px
+      padding: 4px 20px
+      border-top: 1px solid var(--border-popup-table)
+      color: var(--text-popup-table)
+
+    dt
+      width: 172px
+      background: var(--bg-popup-table)
+
+    dd
+      width: calc(100% - 172px)
+      border-left: 1px solid var(--border-popup-table)
+      &::before
+        content: ""
+        display: inline-block
+        margin-right: 5px
+      // &.up
+      //   &::before
+      //     content: "▲"
+      // &.down
+      //   &::before
+      //     content: "▼"
+
+      &.good
+        color: var(--status-confirmed)
+      &.warn
+        color: var(--status-warning)
+      &.bad
+        color: var(--status-error)
+          
+  &.dot
+    min-width: 364px
+    width: auto
+    padding: 20px
+
+    ul
+      li
+        position: relative
+        font:
+          size: 15px
+          weight: 700
+        line-height: 22px
+        padding-left: 24px
+        margin-top: 4px
+        &:first-child
+          margin-top: 0
+        
+        &::before
+          content: ""
+          display: block
+          position: absolute
+          left: 10px
+          top: 50%
+          transform: translateY(-50%)
+          width: 3px
+          height: 3px
+          border-radius: 3px
+          background: var(--text-popup3)
+
+        .hc-status
+          position: relative
+          padding-left: 24px
+          margin-left: 6px
+          &::before
+            content: ""
+            display: block
+            width: 16px
+            height: 16px
+            border-radius: 16px
+            position: absolute
+            left: 0
+            top: 3px
+
+          &.good
+            color: var(--status-confirmed)
+            &::before
+              background: var(--status-confirmed)
+          &.warn
+            color: var(--status-warning)
+            &::before
+              background: var(--status-warning)
+          &.bad
+            color: var(--status-error)
+            &::before
+              background: var(--status-error)
+
+    .tenant-box
+      @include flex-box
+      gap: 12px
+      background: var(--bg-popup-tenant-box)
+      border-radius: 5px
+      padding: 6px 12px
+      font:
+        size: 12px
+        weight: 500
+      line-height: 18px
+      margin-top: 12px
+
+      .tenant
+        color: var(--text-popup-tenant)
+
+      .status
+        position: relative
+        color: #FFFFFF
+        padding-left: 16px
+        &::before
+          content: ""
+          display: block
+          width: 10px
+          height: 10px
+          border-radius: 10px
+          position: absolute
+          left: 0
+          top: 4px
+        &.good
+          &::before
+            background: var(--status-confirmed)
+        &.warn
+          &::before
+            background: var(--status-warning)
+        &.bad
+          &::before
+            background: var(--status-error)
+
+    .tenant-name
+      @include flex-box
+      flex-wrap: wrap
+      gap: 4px
+      margin-top: 12px
+
+      .status
+        display: block
+        padding: 3px 20px
+        border-radius: 25px
+        color: #FFFFFF
+        font:
+          size: 12px
+          weight: 500
+        line-height: 18px
+
+        &.good
+          background: var(--status-confirmed)
+        &.warn
+          background: var(--status-warning)
+        &.bad
+          background: var(--status-error)
+
+    &.one
+      .tenant-name
+        flex-flow: wrap
+
+modal
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(0,0,0,0.5)
+  align-items: center
+  z-index: 100
+  > div
+    display: flex
+    align-items: center
+    justify-content: center
+
+  wsg-dialog
+    position: relative
+    background: var(--bg-popup2)
+    padding: 21px 32px 32px
+    border-radius: 8px
+    border: none
+    .close
+      position: absolute
+      right: 33px
+      top: 22px
+      font-size: 0
+      width: 25px
+      height: 25px
+      background: url("../image/light/icon-close.png") no-repeat
+      padding: 0
+      span
+        background: none
+    .detail-info // gate상세정보 popup창 내 스타일 
+      position: relative
+      width: 100%
+      display: flex
+      margin-bottom: 10px
+      .detail-box
+        width: 100%
+        &:first-child
+          margin-right: 20px
+        .top-area
+          margin-bottom: 4px
+        .box
+          border-radius: 3px
+          padding: 7px 10px
+          background: var(--bg-popup-detail-box)
+          border: 1px solid var(--bg-popup-detail-border)
+          p, span
+            color: var(--text-box-inner)
+            font-size: 13px
+          .status-box
+            text-align: left
+            display: flex
+            span
+              display: inline-block
+              line-height: 17px
+              &::before
+                content: "●"
+                margin-right: 3px
+              &.fail
+                &::before
+                  color: var(--status-fail)
+              &.bad
+                &::before
+                  color: var(--status-bad-box)
+              &.pass, &.good
+                &::before
+                  color: var(--status-pass)
+              &.warn
+                &::before
+                  color: var(--status-warning)
+
+    .block-detail-box
+      padding-top: 20px
+      .block-box
+        height: 50px
+        background: var(--bg-popup-detail-box)
+        border: 1px solid var(--bg-popup-detail-border)
+        border-radius: 3px
+        padding: 7px 78px 7px 10px
+        margin-top: 4px
+        p
+          font-size: 13px
+          color: var(--text-box-inner)
+
+  wd-title
+    display: block
+    font:
+      size: 18px
+      weight: 700
+    line-height: 25px
+    color: var(--text-popup2)
+    background: transparent
+    border: none
+    margin-bottom: 22px
+    padding: 0
+    small
+      font:
+        size: 12px
+        weight: 400
+      line-height: 18px
+      color: var(--text-popup-title-small)
+    .entire // Gate상세정보 service전체 칩
+      display: inline-block
+      height: 28px
+      background: var(--text-total-chip-bg)
+      border-radius: 100px
+      font:
+          size: 13px
+          weight: 500
+      line:
+          height: 17px
+      padding: 5px 10px
+      word-break: keep-all
+      p
+        color: var(--text-total-chip)
+        font-weight: 500
+
+
+  wd-message
+    padding: 0
+    padding-right: 10px
+
+  .top-box
+    @include flex-box-sb
+    align-items: flex-end
+
+  .tenant-name
+    font:
+      size: 15px
+      weight: 700
+    line-height: 22px
+    color: var(--text-popup2)
+    margin-top: 20px
+  
+  .table-box
+    margin-top: 10px
+    .tenant-name
+      margin-top: 0
+  .table
+    @include flex-box
+    flex-wrap: wrap
+    margin-top: 20px
+    border: 1px solid var(--border-table)
+    border-top: none
+    
+    dt,
+    dd
+      font:
+        size: 14px
+      line-height: 20px
+      padding: 4px 20px
+      border-top: 1px solid var(--border-table)
+      color: var(--text-table)
+
+    dt
+      width: 172px
+      background: var(--bg-popup-table-thead)
+    dd
+      width: calc(100% - 172px)
+      border-left: 1px solid var(--border-table)
+      background: var(--bg-table-type2)
+      &::before
+        content: ""
+        display: inline-block
+        margin-right: 5px
+      // &.up
+      //   &::before
+      //     content: "▲"
+      // &.down
+      //   &::before
+      //     content: "▼"
+
+      &.good
+        color: var(--status-confirmed)
+      &.warn
+        color: var(--status-warning)
+      &.bad
+        color: var(--status-error)
+.detail-icon
+  width: 16px
+  height: 16px
+  font-size: 0
+  background: url(../image/light/icon-table-expansion.png) center no-repeat !important
+    
+.profile-main p
+  color: var(--text-accordion)
+.profile-contact li span
+  color: var(--text-accordion)
+.fa-envelope-o:before
+  color: var(--text-accordion)
+
+// 툴팁
+.type-list
+  .btn-wrap
+    &.active
+      .cateDetail
+        display: block
+.cateDetail
+  display: none
+  position: absolute
+  z-index: 10
+  border-radius: 4px
+  padding: 5px 10px
+  left: 32px
+  top: 36px
+  background: var(--bg-popup)
+  border: 1px solid #8996A3
+  // border: 1px solid var(--border-popup)
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.22), 0px 7px 10px rgba(0, 0, 0, 0.12)
+  .detailTit
+    fontsize: 14px
+    font-weight: 400
+    line-height: 18px
+    color: #2c3238
+    // color: var(--text-popup)
+.overWidth
+    width: 225px
+    overflow: hidden
+    text-overflow: ellipsis

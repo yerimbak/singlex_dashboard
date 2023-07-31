@@ -1,0 +1,44 @@
+/* switch */
+    
+.mode
+    position: relative
+    width: 30px
+    height: 60px
+    border-radius: 20px
+    background: var(--bg-switch)
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.06)
+
+    input[type="checkbox"]
+        & + label
+            display: block
+            width: 100%
+            color: #A5B3C2
+            font-size: 10px
+            line-height: 11px
+            word-break: break-all
+            padding: 29px 0 0
+            text-align: center
+            &::before
+                content: ""
+                position: absolute;
+                left: 3px
+                top: 3px
+                display: block
+                width: 24px
+                height: 24px
+                background: #50575C url("../image/dark/icon-theme.png") center no-repeat
+                box-shadow: inset 0px 1px 0.5px rgba(255, 255, 255, 0.1)
+                filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25))
+                border-radius: 20px
+                cursor: pointer
+                transition: .3s
+            
+        &:checked
+            & + label
+                color: #A5B3C2
+                padding: 8px 0
+                &::before
+                    top: 32px
+                    background: #FFFFFF url("../image/light/icon-theme.png") center no-repeat
+                    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.06)
+                    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25))

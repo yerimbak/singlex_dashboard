@@ -1,0 +1,68 @@
+<div class="accordion-wrap good">
+    <!-- 2022-06-27 아코디언 구조 수정 (아코디언 클릭영역 수정) -->
+    <div class="accordion-box">
+        <!-- 2022-06-29 subpage 아코디언 status 수정 -->
+        <button class="accordion-tit sub">
+            <span class="svc-name">LG 이노텍</span>
+            <!-- <span class="svc-status">
+                <span class="status good">3</span>
+                <span class="status warn">1</span>
+                <span class="status bad">0</span>
+            </span> -->
+            <span class="svc-status">
+                <span class="status good">Satisfied : <i>7</i></span>
+                <span class="status bad">Unsatisfied : <i>2</i></span>
+            </span>
+        </button>
+        <button type="button" class="btn-popup cl-black">Health check Report 팝업 열기</button>
+    </div>
+    <div class="accordion-cont">
+        <!-- 2022-06-29 하나의 범례만 있는 경우 only 클래스 추가 -->
+        <div class="legend-area only">
+            <div class="legend">
+                Error Budget 범례 : 
+                <span class="good">50% 이상 잔여</span>
+                <span class="warn">20~50% 미만 잔여</span>
+                <span class="bad">20% 미만 잔여</span>
+            </div>
+        </div>
+        <ul class="slo">
+            <li>
+                <p class="slo-name">Availability - 신규등록시 존재여부체크</p>
+                <div class="slo-info">
+                    <p class="status good">Satisfied <small>(99.51%)</small></p>
+                    <p class="error-budget">Error Budget</p>
+                    <p class="residual up good">34분 (00%)</p>
+                    <!-- 2022-06-24 data-modal 속성 추가 -->
+                    <div class="btn">
+                        <button type="button" class="modal-open tooltip" data-modal="modal1">상세정보</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p class="slo-name">Availability - 신규등록시 존재여부체크</p>
+                <div class="slo-info">
+                    <p class="status good">Satisfied <small>(99.51%)</small></p>
+                    <p class="error-budget">Error Budget</p>
+                    <p class="residual up good">34분 (00%)</p>
+                    <!-- 2022-06-24 data-modal 속성 추가 -->
+                    <div class="btn">
+                        <button type="button" class="modal-open tooltip" data-modal="modal1">상세정보</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p class="slo-name">Availability - 신규등록시 존재여부체크</p>
+                <div class="slo-info">
+                    <p class="status bad">Unsatisfied <small>(99.51%)</small></p>
+                    <p class="error-budget">Error Budget</p>
+                    <p class="residual up good">34분 (00%)</p>
+                    <!-- 2022-06-24 data-modal 속성 추가 -->
+                    <div class="btn">
+                        <button type="button" class="modal-open tooltip" data-modal="modal1">상세정보</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

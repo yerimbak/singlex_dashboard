@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../lib/jquery/jquery.min.js"></script>
+
+    <title>Health Check 월별 현황 - Service 전체</title>  
+</head>
+<body data-theme="dark">
+  <!-- 2022-06-27 팝업페이지 구조 변경 -->
+  <modal>
+    <div style="height:100%;">
+      <wsg-dialog style="max-width: 120rem; width: 1064px;">
+        <wd-title>
+            Health Check 월별 현황 - Service 전체
+            <small>(기간 : <i>2021.08~2022.01</i>)</small>
+        </wd-title>
+        <button type="button" class="close">닫기</button>
+        <wd-message>
+            <div class="top-area">
+                <p class="write">작성 기준 : <strong>SLO 달성건</strong> / 전체 SLI건</p>
+                <div class="legend type-table">
+                    범례 : 
+                    <span class="good">SLO 99% 이상</span>
+                    <span class="warn">SLO 70~99% 미만</span>
+                    <span class="bad">SLO 70% 미만</span>
+                </div>
+            </div>
+            <table class="type1">
+                <caption class="caption">Service, Tenant, Jan 2022, Dec 2021, Nov 2021, Oct 2021, Sep 2021, Aug 2021 에 대한 표</caption>
+                <colgroup>
+                <col style="width: 180px">
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">Service</th>
+                    <th scope="col">Tenant</th>
+                    <th scope="col">Jan 2022</th>
+                    <th scope="col">Dec 2021</th>
+                    <th scope="col">Nov 2021</th>
+                    <th scope="col">Oct 2022</th>
+                    <th scope="col">Sep 2021</th>
+                    <th scope="col">Aug 2021</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row" rowspan="2" class="cl-black1">기준정보관리</th>
+                    <td class="normal" scope="row">LG전자</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                <tr>
+                    <td class="normal" scope="row">LG이노텍</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <th scope="row"></th>
+                </tr>
+                <tr>
+                    <th scope="row" rowspan="3" class="cl-black2">사용자 경비관리</th>
+                    <td class="normal" scope="row">LG전자</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                <tr>
+                    <td class="normal" scope="row">LG CNS</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                <tr>
+                    <td class="normal" scope="row">LG화학</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                <tr>
+                    <th scope="row" rowspan="3" class="cl-black1">설비관리</th>
+                    <td class="normal" scope="row">LG화학</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                <tr>
+                    <td class="normal" scope="row">LG디스플레이</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                <tr>
+                    <td class="normal" scope="row">LX판토스</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                <tr>
+                    <th scope="row" rowspan="3" class="cl-black2">Common Infra</th>
+                    <td class="normal" scope="row">LG화학</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                <tr>
+                    <td class="normal" scope="row">LG디스플레이</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                <tr>
+                    <td class="normal" scope="row">LX판토스</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                <tr>
+                    <th scope="row" rowspan="3" class="cl-black1">Common Service</th>
+                    <td class="normal" scope="row">LG화학</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                <tr>
+                    <td class="normal" scope="row">LG디스플레이</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                <tr>
+                    <td class="normal" scope="row">LX판토스</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="warn"><strong>6</strong>/9</td>
+                    <td class="bad"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                    <td class="good"><strong>6</strong>/9</td>
+                </tr>
+                </tbody>
+            </table>
+        </wd-message>
+      </wsg-dialog>
+    </div>
+  </modal>
+</body>
+</html>

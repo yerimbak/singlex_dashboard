@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<title>Tab Guide</title>
+
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/assets/css/modules.css"> -->
+
+	<!-- 가이드용 -->
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/base.css">
+	<link rel="stylesheet" type="text/css" href="../../coding_list/css/pretty.css">
+	<!--//  가이드용 -->
+
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.js"></script>
+	
+	<style>
+		.tag:not(body){
+			align-items : baseline;
+			background : none;
+			display : inline;
+			padding : 0;
+			height : auto;
+		}
+	</style>
+</head>
+<body>
+
+<div id="wrap" class="coding_guide">
+	<h1 class="h1_guide">Tab Guide</h1>
+
+	<h2 class="h2_guide">01. Default</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="tab-btn" data-tab="tab1">
+			<a href="javascript:;" class="on">
+				<h2 class="tab-title">Service</h2>
+			</a>
+			<a href="javascript:;">
+				<h2 class="tab-title">Tenant</h2>
+			</a>
+		</div>
+		<div class="tab-content-wrap" id="tab1">
+			<div class="tab-content on">
+				(현재 탭은 링크이동으로 수정되어있습니다)<br>
+				탭 내용1
+			</div>
+			<div class="tab-content">탭 내용2</div>
+		</div>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<!-- "tab-btn"의 data-tab값과 "tab-content-wrap"의 id값 맞춰야함 -->
+<div class="tab-btn" data-tab="tab1">
+	<!-- tab 클릭시 "on" class 추가 -->
+	<a href="javascript:;" class="on">
+		<h2 class="tab-title">Service</h2>
+	</a>
+	<a href="javascript:;">
+		<h2 class="tab-title">Tenant</h2>
+	</a>
+</div>
+<div class="tab-content-wrap" id="tab1">
+	<!-- "tab-content"에 "on" class 추가 -->
+	<div class="tab-content on">탭 내용1</div>
+	<div class="tab-content">탭 내용2</div>
+</div>
+		</xmp>
+	</div>
+	<!-- // code -->
+
+	<h2 class="h2_guide">02. Tenant Accordion 내부 tab</h2>
+	<!-- View -->
+	<div class="guide_wrap">
+		<div class="accordion-cont">
+			<div class="tab-btn" data-tab="tab2">
+				<button type="button" class="on"><h2 class="tab-title">Health Check</h2></button>
+				<button type="button"><h2 class="tab-title">SLO</h2></button>
+			</div>
+			<div class="tab-content-wrap" id="tab2">
+				<div class="tab-content on">탭 내용 3</div>
+				<div class="tab-content">탭 내용 4</div>
+			</div>
+		</div>
+	</div>
+	<!-- // View -->
+
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+<!-- "accordion-cont" 내부에 data-tab 값 정하여 같은 방식으로 넣어줌 -->
+<div class="accordion-cont">
+	<div class="tab-btn" data-tab="tab2">
+		<button type="button" class="on"><h2 class="tab-title">Health Check</h2></button>
+		<button type="button"><h2 class="tab-title">SLO</h2></button>
+	</div>
+	<div class="tab-content-wrap" id="tab2">
+		<div class="tab-content on">탭 내용 3</div>
+		<div class="tab-content">탭 내용 4</div>
+	</div>
+</div>
+		</xmp>
+	</div>
+	<!-- // code -->
+
+	<h2 class="h2_guide">03. script</h2>
+	<!-- code -->
+	<div class="d_desc code">
+		<xmp class="prettyprint linenums javascript">
+// tab
+$(document).on({
+	click: function(){
+		const tabBtn = $(this).parents(".tab-btn");
+		const tabNum = tabBtn.attr("data-tab");
+		const thisTabCon = $("#" + tabNum).children(".tab-content");
+		const tabContWrap = $(".tab-content-wrap");
+		const tabBtnIdx = $(this).index();
+
+		tabBtn.find("button").removeClass("on");
+		thisTabCon.removeClass("on");
+		$(this).addClass("on");
+		thisTabCon.eq(tabBtnIdx).addClass("on");
+	}
+}, ".tab-btn button")
+		</xmp>
+	</div>
+	<!-- // code -->
+
+</div>
+</body>
+<script type="text/javascript" src="../../coding_list/js/pretty.js"></script>
+<script>
+// tab
+$(document).on({
+	click: function(){
+		const tabBtn = $(this).parents(".tab-btn");
+		const tabNum = tabBtn.attr("data-tab");
+		const thisTabCon = $("#" + tabNum).children(".tab-content");
+		const tabContWrap = $(".tab-content-wrap");
+		const tabBtnIdx = $(this).index();
+
+		tabBtn.find("button").removeClass("on");
+		thisTabCon.removeClass("on");
+		$(this).addClass("on");
+		thisTabCon.eq(tabBtnIdx).addClass("on");
+	}
+}, ".tab-btn button")
+</script>
+</body>
+</html>

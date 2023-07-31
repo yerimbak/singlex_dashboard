@@ -1,0 +1,131 @@
+/* select box */
+.select-box,
+#MainFrame .select-box
+    position: relative
+    margin-left: 10px
+
+    &:first-child 
+        margin-left: 0
+
+    .label 
+        width: 100%
+        font-size: 12px
+        color: var(--text-select) !important
+        text-align: left
+        background: var(--bg-select) !important
+        border-radius: 3px
+        border: 1px solid var(--border-select) !important
+        padding: 7px 17px 7px 12px
+        cursor: pointer
+        min-height: 34px
+        &::after 
+            content: ""
+            display: block
+            position: absolute
+            right: 17px
+            top: 12px
+            width: 10px
+            height: 10px
+            background: url("../image/light/icon-arrow-off.png") center no-repeat
+        .result-txt
+            max-width: 70px
+            text-overflow: ellipsis
+            white-space: nowrap
+            display: inline-block
+            overflow: hidden
+            vertical-align: top
+
+    .option 
+        position: absolute
+        left: 0
+        top: 33px
+        z-index: 10
+        width: 100%
+        max-height: 196px
+        overflow-y: auto
+        padding: 8px 0 12px
+        background: var(--bg-select)
+        border-radius: 0 0 3px 3px
+        border: 1px solid var(--border-select)
+        display: none
+
+        &::-webkit-scrollbar
+            width: 5px
+        
+        &::-webkit-scrollbar-thumb
+            background: var(--bg-select-scroll)
+            border-radius: 3px
+            
+        &::-webkit-scrollbar-track
+         
+        a
+            font: 
+                size: 12px
+            color: var(--text-select)
+            display: block
+            padding: 6px 26px 6px 12px
+            @include ellipsis
+            
+            &:hover
+                background: var(--bg-select-active)
+                color: var(--text-select-hover)
+
+            &.checked
+                background: var(--bg-select-active) url("../image/light/icon-select-check.png") right 13px center no-repeat
+
+    &.on
+        .label
+            border-radius: 3px 3px 0 0
+            &::after
+               background: url("../image/light/icon-arrow-on.png") center no-repeat 
+
+        .option
+            display: block
+
+
+    &.type-check
+        position: relative
+
+        li
+            font: 
+                size: 12px
+            color: var(--text-select)
+            display: block
+            &:hover
+                background: var(--bg-select-active)
+                color: var(--text-select-hover)
+
+        input[type="checkbox"]
+            & + label
+                display: block
+                position: relative
+                width: 100%
+                cursor: pointer
+                padding: 6px 12px 6px 34px
+                &::before
+                    content: ""
+                    display: block
+                    width: 14px
+                    height: 14px
+                    position: absolute
+                    left: 12px
+                    top: 8px
+                    background: url("../image/light/icon-select-off.png") no-repeat
+
+            &:checked
+                & + label
+                    background: var(--bg-select-active)
+                    &::before
+                        background: url("../image/light/icon-select-on.png") no-repeat           
+
+// Disabled important
+body
+    [data-content="new"]
+        .select-area
+            .select-box
+                button
+                    &.label
+                        color: var(--text-select) !important
+                        background: var(--bg-select) !important
+                        border:
+                            color: var(--border-select) !important

@@ -1,0 +1,233 @@
+
+$selector: "[data-content='new']"   
+
+input[type="checkbox"]
+    display: none
+body 
+    background: var(--body-color)
+
+.wrap 
+    position: relative
+    width: 90%
+    // width: 1720px
+    min-width: 1720px
+    margin: 0 auto
+    .mode
+        position: fixed
+        right: 18px
+        bottom: 20px
+        z-index: 10
+
+.content 
+    width: 100%
+    height: 100%
+    padding-top: 18px
+    padding-bottom: 10px
+
+.top-area
+    @include flex-box-sb
+
+    > div
+        @include flex-box
+
+    .select-area
+        @include flex-box        
+        > div
+            margin:
+                left: 10px
+            &:first-child
+                margin:
+                    left: 0
+    .chip-area
+        .box
+            @include flex-box
+        .sort-box
+            @include flex-box
+            flex-wrap: wrap
+            gap: 10px 5px
+
+    .refresh
+        margin-right: 10px
+    
+    .tenant-name
+        font:
+            size: 13px
+            weight: 500
+        line-height: 34px
+        color: var(--text-tenant-name)
+        margin-right: 10px
+    
+    &.type-sub
+        @include flex-box
+        justify-content: center
+        background: var(--bg-top-area)
+        border-radius: 12px
+        padding: 20px 38px 24px
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08)
+
+
+.content-tit
+    margin: 30px 0 20px 10px
+    color: var(--text-content-title)
+    .write
+        color: var(--text-content-title-small)
+        font:
+            size: 11px
+            weight: 500
+        strong
+            font-weight: 400
+            color: var(--text-table-strong)
+
+.main-area 
+    @include flex-box-sb
+    align-items: flex-start
+    flex-wrap: wrap
+    gap: 20px
+    width: 100%
+    margin-top: 15px
+
+    &.accordion
+        .sort-box
+            width: calc((100% - 20px) / 2)
+            
+            [class*="type"]
+                margin-top: 20px
+                &:first-child
+                    margin-top: 0
+    &.list-nowrap
+        flex-wrap: nowrap
+
+.main-area-half 
+    @include flex-box-sb
+    align-items: flex-start
+    .main-area
+        width: calc((100% - 20px) / 2)
+        .sort-box 
+            width: 100%
+
+
+// devops incident management 영역 스타일 추가 시작
+.top-area
+    &.type-service
+        @include flex-box
+        background: var(--type-bar-bg)
+        align-items: center
+        height: 80px
+        border-radius: 8px
+        padding: 15px 30px
+        border: 1px solid var(--type-bar-border)
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.11)
+        .sub-title
+            font-weight: 700
+            font-size: 20px
+            line-height: 29px
+            color: var(--text-main-subtitle)
+            margin-right: auto
+        .devops
+            &.total
+                font-weight: 700
+                font-size: 18px
+                line-height: 26px
+                display: flex
+                align-items: center
+                text-align: right
+                color: var(--text-total-title)
+.next-icon
+    background: url(../image/light/icon-list-step-on.png) center no-repeat !important
+    width: 20px
+    height: 80px
+.type-list
+    width: calc(100%/5)
+    background: var(--type-list-bg)
+    height: 100%
+    border-radius: 8px
+    position: relative
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.11)
+    &:last-child
+        &::after
+            display: none
+    .title
+        background: var(--list-title-bg)
+        padding: 10px
+        height: 71px
+        width: 100%
+        border-radius: 8px 8px 0px 0px
+        display: flex
+        align-items: center
+        justify-items: center
+        .list-title
+            width: 100%
+            text-align: center
+            font-size: 24px
+            color: var(--text-list-title)
+            font-weight: 500
+    .list-box-wrap
+        padding: 10px 0 16px 0
+        height: 600px
+        .list-box
+            padding: 0 10px 0 10px
+            margin-top: 10px
+            &:first-child
+                margin-top: 0
+            .list-title
+                padding: 8px 11px
+                font-weight: 700
+                font-size: 13px
+                line-height: 19px
+                color: var(--text-list-subtitle)
+.type-list-title
+    margin: 12px 0 10px 0
+    font-size: 20px
+    font-weight: 700
+    color: var(--text-list-top-title)
+// devops incident management 영역 스타일 추가 끝
+
+
+
+
+section 
+    @include flex-box-sb
+    align-items: flex-start
+    gap: 20px
+    width: calc((100% - 20px) / 2)
+
+    > [class*="type"] 
+        width: 100%
+        
+        background: var(--bg-section)
+        border-radius: 5px
+        padding: 19px 22px 24px 22px
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08)
+
+    .type-accordion
+        padding: 20px 22px 10px 22px
+        min-height: 432px
+        .swiper-slide
+            min-height: 320px
+
+.no-data
+    > div
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 235px
+    p
+        background:
+            image: url('../image/light/warning.png')
+            repeat: no-repeat
+            position: center top
+        font:
+            size: 16px
+            weight: 400
+        line:
+            height: 24px
+        padding:
+            top: 57px
+        color: var(--text-section-title)
+    
+[data-theme="dark"] .profile-contact li i 
+    color: #fff !important
+// $selector
+    
+
+

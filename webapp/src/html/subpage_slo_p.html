@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../lib/jquery/jquery.min.js"></script>
+
+    <title>기준정보관리 Health Check 현황</title>  
+</head>
+<body data-theme="dark">
+  <!-- 2022-06-27 팝업페이지 구조 변경 -->
+  <modal>
+    <div style="height:100%;">
+      <wsg-dialog style="max-width: 120rem; width: 960px;">
+        <wd-title>상세정보</wd-title>
+        <button type="button" class="close">닫기</button>
+        <wd-message>
+          <table>
+            <colgroup>
+              <col style="width: 172px">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="cl-black1">Indicator</th>
+                <td class="normal">Latency - 결재선 찾기</td>
+              </tr>
+              <tr>
+                <th class="cl-black1">SLO</th>
+                <td class="normal">99%</td>
+              </tr>
+              <tr>
+                <th class="cl-black1">State</th>
+                <td class="normal bad">Unsatisfied</td>
+              </tr>
+              <tr>
+                <th class="cl-black1">Error Budget</th>
+                <td class="normal">67’</td>
+              </tr>
+              <tr>
+                <th class="cl-black1">잔여 Error Budget</th>
+                <td class="normal warn">24’</td>
+              </tr>
+              <tr>
+                <th class="cl-black1">Details</th>
+                <td class="normal">원인을 상세하게 작성합니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </wd-message>
+      </wsg-dialog>
+    </div>
+  </modal>
+</body>
+</html>

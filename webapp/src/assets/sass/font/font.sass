@@ -1,0 +1,93 @@
+// 숫자 : font-family: 'Spoqa Han Sans Neo', 'sans-serif'
+
+/* 국문 + 영문 */
+@font-face 
+  font:
+    family: 'NotoSansCJKkr'
+    style: normal
+    weight: 300
+  src: url("../fonts/NotoSansCJKkr-DemiLight.oft") format("opentype")
+
+@font-face 
+  font:
+    family: 'NotoSansCJKkr'
+    style: normal
+    weight: 400
+  src: url("../fonts/NotoSansCJKkr-Regular.woff2") format("woff2"),
+  url("../fonts/NotoSansCJKkr-Regular.woff") format("woff"),
+  url("../fonts/NotoSansCJKkr-Regular.otf") format("opentype")
+
+@font-face 
+  font:
+    family: 'NotoSansCJKkr'
+    style: normal
+    weight: 500
+  src: url("../fonts/NotoSansCJKkr-Medium.woff2") format("woff2"),
+  url("../fonts/NotoSansCJKkr-Medium.woff") format("woff"),
+  url("../fonts/NotoSansCJKkr-Medium.otf") format("opentype")
+
+@font-face 
+  font:
+    family: 'NotoSansCJKkr'
+    style: normal
+    weight: 700
+  src: url("../fonts/NotoSansCJKkr-Bold.woff2") format("woff2"),
+  url("../fonts/NotoSansCJKkr-Bold.woff") format("woff"),
+  url("../fonts/NotoSansCJKkr-Bold.otf") format("opentype")
+
+/* 숫자 */
+
+@font-face 
+  font:
+    family: 'SpoqaHanSans'
+    style: normal
+    weight: 300
+  src: url("../fonts/SpoqaHanSans-Thin.woff2") format("woff2"),
+  url("../fonts/SpoqaHanSans-Thin.woff") format("woff"),
+  url("../fonts/SpoqaHanSans-Thin.otf") format("opentype")
+
+@font-face 
+  font:
+    family: 'SpoqaHanSans'
+    style: normal
+    weight: 400
+  src: url("../fonts/SpoqaHanSans-Regular.woff2") format("woff2"),
+  url("../fonts/SpoqaHanSans-Regular.woff") format("woff"),
+  url("../fonts/SpoqaHanSans-Regular.otf") format("opentype")
+
+@font-face 
+  font:
+    family: 'SpoqaHanSans'
+    style: normal
+    weight: 500
+  src: url("../fonts/SpoqaHanSans-Midium.woff2") format("woff2"),
+  url("../fonts/SpoqaHanSans-Midium.woff") format("woff"),
+  url("../fonts/SpoqaHanSans-Midium.otf") format("opentype")
+
+@font-face 
+  font-family: 'SpoqaHanSans'
+    style: normal
+  font-weight: 700
+  src: url("../fonts/SpoqaHanSans-Bold.woff2") format("woff2"),
+  url("../fonts/SpoqaHanSans-Bold.woff") format("woff"),
+  url("../fonts/SpoqaHanSans-Bold.otf") format("opentype")
+    
+body [data-content="new"] *
+  &:not(.fa)
+    font:
+      family: 'NotoSansCJKkr', sans-serif
+  button:not(.close):not(.fav):not(.newWin):disabled,
+  .btn:disabled
+    background: var(--bg-select)
+  .fa
+    font:
+      size: 20px
+  page-button
+    top: 8px
+    button
+      width: 20px
+      height: 20px
+      line-height: 20px
+      + button
+        margin:
+          left: 5px
